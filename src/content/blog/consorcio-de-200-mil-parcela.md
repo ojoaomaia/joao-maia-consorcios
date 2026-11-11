@@ -8,7 +8,7 @@ reading_time: 9
 keyword: "consórcio de 200 mil"
 cover: "/img/blog/consorcio-de-200-mil-capa.webp"
 cover_alt: "Casal sentado à mesa da sala analisando a planta de uma casa, com o título Consórcio de 200 mil"
-draft: true
+draft: false
 faq:
   - q: "Quanto preciso ganhar para ter uma carta de 200 mil?"
     a: "Uma regra prática é a parcela não passar de 30% da sua renda líquida. Com parcela de R$ 1.200, isso indica renda a partir de cerca de R$ 4.000. A administradora também faz a própria análise de crédito, principalmente na hora da contemplação."
