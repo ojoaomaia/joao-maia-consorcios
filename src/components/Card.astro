@@ -1,0 +1,13 @@
+---
+import { CATS, ICONS, fmtData } from '../consts';
+const { post } = Astro.props;
+const d = post.data;
+---
+<a class="card" href={`/blog/${post.slug}/`} data-cat={d.category}>
+  <div class="cv"><Fragment set:html={ICONS[d.category] || ICONS.imovel} /><span>{CATS[d.category]}</span></div>
+  <div class="bd">
+    <strong>{d.title}</strong>
+    <p>{d.summary}</p>
+    <span class="meta">{fmtData(d.date)} · {d.reading_time} min de leitura</span>
+  </div>
+</a>

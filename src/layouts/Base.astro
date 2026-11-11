@@ -1,0 +1,96 @@
+---
+import { SITE_NOME, ENDERECO } from '../consts';
+interface Props {
+  title: string;              /* título da aba e do Google */
+  description: string;        /* até 150 caracteres */
+  ctx?: string;               /* contexto que vai na origem da mensagem do WhatsApp */
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  jsonld?: object[];          /* dados estruturados extras da página */
+}
+const { title, description, ctx = '', ogType = 'website', noindex = false, jsonld = [] } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL('/img/og-joao-maia-consorcios.png', Astro.site).href;
+const path = Astro.url.pathname;
+const on = (p: string) => (p === '/' ? path === '/' : path.startsWith(p)) ? 'on' : undefined;
+const org = {
+  '@context': 'https://schema.org', '@type': 'FinancialService', name: SITE_NOME,
+  alternateName: 'João Maia, consultor de consórcios Ademicon', url: new URL('/', Astro.site).href,
+  description: 'Consórcio explicado sem enrolação para quem vai conquistar o primeiro imóvel ou o primeiro carro, em Ribeirão Preto.',
+  areaServed: { '@type': 'City', name: 'Ribeirão Preto' },
+  address: { '@type': 'PostalAddress', streetAddress: 'Rua Adolfo Serra, 1145, Alto da Boa Vista', postalCode: '14025-520', addressLocality: 'Ribeirão Preto', addressRegion: 'SP', addressCountry: 'BR' },
+  founder: { '@type': 'Person', name: 'João Maia', jobTitle: 'Consultor de consórcios' }
+};
+/* Política de segurança da página: só scripts do próprio site, da biblioteca 3D e do Google Analytics. */
+const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'";
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content={CSP}>
+<meta name="referrer" content="no-referrer">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="canonical" href={canonical}>
+{noindex && <meta name="robots" content="noindex">}
+<meta property="og:type" content={ogType}>
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content={SITE_NOME}>
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={canonical}>
+<meta property="og:image" content={ogImage}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111113">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="sitemap" href="/sitemap-index.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json" set:html={JSON.stringify(org)}></script>
+{jsonld.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)}></script>)}
+</head>
+<body data-ctx={ctx}>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="strip"><div class="wrap"><span><b>Consultor Ademicon</b> · Ribeirão Preto</span><span>Unidade <b>Alto da Boa Vista</b></span><span>Administradora autorizada pelo <b>Banco Central</b></span><span>Atendimento pessoal, sem robô</span></div></div>
+<header class="top">
+  <div class="wrap">
+    <a class="sig" href="/" aria-label="João Maia Consórcios, início"><b>João Maia</b><span>Consórcios</span></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="/" class={on('/')}>Início</a>
+      <a href="/#simulador">Teste de 1 minuto</a>
+      <a href="/blog/" class={on('/blog/')}>Blog</a>
+      <a href="/sobre/" class={on('/sobre/')}>Sobre</a>
+      <a href="/contato/" class={on('/contato/')}>Contato</a>
+    </nav>
+    <a class="btn btn-orange" id="wa-top" data-wa="Olá João! Vim pelo site e quero saber mais sobre consórcio." href="#"><span class="lbl-long">Falar com o João</span><span class="lbl-short">WhatsApp</span></a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main id="conteudo">
+  <slot />
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><b style="color:var(--gray-50);font-family:var(--f-display);font-size:18px">{SITE_NOME}</b><br>Consultor Ademicon · Unidade Alto da Boa Vista<br>{ENDERECO}</div>
+      <nav aria-label="Rodapé"><a href="/">Início</a><a href="/#simulador">Teste de 1 minuto</a><a href="/blog/">Blog</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Política de privacidade</a><a href="/termos/">Termos de uso</a></nav>
+    </div>
+    <p class="legal">Este site é o canal pessoal de divulgação do trabalho de João Maia, consultor da Ademicon, e não é o site oficial da administradora. Consórcio é regulado e fiscalizado pelo Banco Central do Brasil. A contemplação ocorre por sorteio ou lance, sem data garantida. Condições, prazos e valores variam conforme o grupo e são apresentados na simulação.</p>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn btn-orange" id="wa-bar" data-wa="Olá João! Vim pelo site e quero falar sobre consórcio." href="#">Falar com o João no WhatsApp</a></div>
+
+<script src="/assets/site.js" defer></script>
+<script src="/assets/reveal.js" defer></script>
+<slot name="scripts" />
+</body>
+</html>

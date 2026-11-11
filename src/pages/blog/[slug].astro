@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import { getCollection } from 'astro:content';
+import { CATS, ICONS, CTA_TXT, fmtData } from '../../consts';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+const { post } = Astro.props;
+const d = post.data;
+const { Content } = await post.render();
+const todos = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const rel = [...todos.filter((p) => p.slug !== post.slug && p.data.category === d.category), ...todos.filter((p) => p.slug !== post.slug && p.data.category !== d.category)].slice(0, 2);
+const cta = CTA_TXT[post.slug] || CTA_TXT['cat-' + d.category] || CTA_TXT.padrao;
+const ctaMsg = cta[2].replace('{t}', d.title);
+const url = new URL(`/blog/${post.slug}/`, Astro.site).href;
+const jsonld: object[] = [
+  { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: d.title, description: d.summary, datePublished: d.date.toISOString(), dateModified: d.date.toISOString(), inLanguage: 'pt-BR', mainEntityOfPage: url,
+    image: new URL('/img/og-joao-maia-consorcios.png', Astro.site).href,
+    author: { '@type': 'Person', name: 'João Maia', jobTitle: 'Consultor de consórcios' }, publisher: { '@type': 'Organization', name: 'João Maia Consórcios' } },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: new URL('/', Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: new URL('/blog/', Astro.site).href },
+    { '@type': 'ListItem', position: 3, name: d.title, item: url }] }
+];
+if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+---
+<Base title={d.seo_title || `${d.title} | João Maia Consórcios`} description={d.summary} ctx={`blog: ${post.slug}`} ogType="article" jsonld={jsonld}>
+  <div class="wrap" style="padding-top:24px"><div class="ad h90">Anúncio topo · 728x90 desktop / 320x100 celular</div></div>
+  <div class="wrap post">
+    <article>
+      <nav class="crumb" aria-label="Você está em"><a href="/">Início</a> / <a href="/blog/">Blog</a> / <a href={`/blog/?categoria=${d.category}`}>{CATS[d.category]}</a></nav>
+      <h1>{d.title}</h1>
+      <div class="byline"><span class="av" aria-hidden="true">JM</span><span><b style="color:var(--ink)">João Maia</b>, consultor de consórcios</span><span>·</span><time datetime={d.date.toISOString()}>{fmtData(d.date)}</time><span>·</span><span>{d.reading_time} min de leitura</span></div>
+      <div class="cv" style="aspect-ratio:1200/630;border-radius:16px"><Fragment set:html={ICONS[d.category] || ICONS.imovel} /><span>{CATS[d.category]}</span></div>
+      <div class="post-body"><Content /></div>
+
+      <div class="ad h250" id="ad-meio" hidden>Anúncio · após o 2º parágrafo</div>
+      <div class="inline-cta" id="cta-meio" hidden><div><b style="font-size:19px;font-family:var(--f-display)">{cta[0]}</b><span>{cta[1]}</span></div><a class="btn btn-orange" data-cta={`artigo-${post.slug}`} data-wa={ctaMsg} href="#">Falar com o João</a></div>
+
+      {d.faq.length > 0 && (
+        <>
+          <h2>Perguntas frequentes</h2>
+          <div>{d.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
+        </>
+      )}
+      <div class="author"><span class="av" aria-hidden="true">JM</span><div><b>Escrito por João Maia</b><p style="color:var(--ink-soft);font-size:15px">Consultor Ademicon em Ribeirão Preto. Explica consórcio sem enrolação para quem vai conquistar o primeiro imóvel ou o primeiro carro.</p></div><a class="btn btn-night" href="/#simulador">Fazer o teste</a></div>
+      <div class="ad h250">Anúncio final · fim do artigo</div>
+      {rel.length > 0 && (<><h2 style="font-size:24px">Leia também</h2><div class="cards">{rel.map((p) => <Card post={p} />)}</div></>)}
+    </article>
+    <aside>
+      <div class="side"><span class="kicker">Teste de 1 minuto</span><b style="font-family:var(--f-display);font-size:22px;line-height:1.15">O consórcio é para você?</b><p>Quatro perguntas e você descobre o caminho que combina com o seu momento.</p><a class="btn btn-orange" href="/#simulador">Fazer o teste</a></div>
+      <div class="ad h600">Anúncio lateral · 300x600<br>só desktop</div>
+      <div class="catbox"><span class="mono" style="color:var(--ink-soft)">Categorias</span>{Object.entries(CATS).map(([k, c]) => <a href={`/blog/?categoria=${k}`}>{c}</a>)}</div>
+    </aside>
+  </div>
+</Base>

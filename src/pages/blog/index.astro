@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import Card from '../../components/Card.astro';
+import { getCollection } from 'astro:content';
+import { CATS } from '../../consts';
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const usadas = Object.entries(CATS).filter(([k]) => posts.some((p) => p.data.category === k));
+---
+<Base title="Blog | João Maia Consórcios" description="Consórcio explicado sem enrolação: guias sobre lance, FGTS, imóvel, veículo e consórcio x financiamento." ctx="blog">
+  <section class="darker blogtop">
+    <div class="wrap"><div class="head" style="margin:0"><span class="kicker">Blog</span><h1 class="h2like">Consórcio explicado <em>sem enrolação.</em></h1><p class="lead">Guias para quem quer comprar imóvel, carro ou investir em um bem sem pagar juros.</p></div></div>
+  </section>
+  <div class="wrap" style="padding-block:24px 0"><div class="ad h90">Anúncio topo · 728x90 desktop / 320x100 celular</div></div>
+  <div class="wrap light" style="padding-block:32px 88px">
+    <div class="chips filters" id="filters" role="group" aria-label="Filtrar por categoria">
+      <button type="button" data-f="todos" aria-pressed="true">Todos</button>
+      {usadas.map(([k, v]) => <button type="button" data-f={k} aria-pressed="false">{v}</button>)}
+    </div>
+    <div class="cards" id="blog-cards">{posts.map((p) => <Card post={p} />)}</div>
+    <p id="blog-vazio" hidden style="color:var(--ink-soft)">Nenhum artigo nesta categoria ainda.</p>
+  </div>
+</Base>

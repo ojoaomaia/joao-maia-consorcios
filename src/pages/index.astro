@@ -1,0 +1,236 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const ultimos = posts.slice(0, 3);
+---
+<Base title="João Maia Consórcios | Consórcio explicado sem enrolação em Ribeirão Preto" description="Consórcio de imóvel e veículo sem juros, explicado sem enrolação. Faça o teste de 1 minuto e fale com o João no WhatsApp.">
+  <section class="hero darker" id="inicio">
+    <div id="animacao-3d" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="txt">
+        <p class="q">Cansado de ver o aluguel <em>ir embora</em> todo mês?</p>
+        <h1>Pare de pagar juros pelo que pode ser <em>seu.</em></h1>
+        <p class="lead">Consórcio explicado sem enrolação, para quem vai conquistar o primeiro imóvel ou o primeiro carro. Eu mostro cada taxa e acompanho você até a chave na mão.</p>
+        <div class="row">
+          <a class="btn btn-orange" id="wa-hero" data-wa="Olá João! Vim pelo site e quero montar um plano de consórcio." href="#">Falar com o João</a>
+          <a class="btn btn-line" href="#simulador">Fazer o teste de 1 minuto</a>
+        </div>
+        <p class="micro">Sem compromisso. Quem responde sou eu, pessoalmente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="white">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Faz a conta comigo</span><h2>Se você já simulou um financiamento, sabe o susto.</h2></div>
+      <div class="pains">
+        <div class="pain"><h3>O juro que vira uma segunda casa</h3><p>Em prazos longos, o total pago em juros pode chegar perto do valor do próprio imóvel.</p></div>
+        <div class="pain"><h3>O aluguel que não vira patrimônio</h3><p>Todo mês sai dinheiro da conta e nada fica no seu nome no fim.</p></div>
+        <div class="pain"><h3>A entrada que nunca fecha</h3><p>O banco pede uma entrada alta que você ainda não conseguiu juntar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Seu objetivo</span><h2>O que você quer <em>conquistar?</em></h2><p class="lead">Escolha um e comece o teste por ele.</p></div>
+      <div class="objs">
+        <button class="obj" type="button" data-pick="imovel"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg><h3>Imóvel</h3><p>Casa, apartamento, terreno, construção ou reforma.</p><span class="go">Começar por imóvel →</span></button>
+        <button class="obj" type="button" data-pick="veiculo"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16l1.5-5h11L19 16"/><path d="M4 16h16v3H4z"/><path d="M7 19v1M17 19v1"/></svg><h3>Veículo</h3><p>Carro novo ou seminovo, moto, utilitário.</p><span class="go">Começar por veículo →</span></button>
+        <button class="obj" type="button" data-pick="pesados"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17h13V8H2z"/><path d="M15 11h4l3 3v3h-7"/><circle cx="6" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg><h3>Pesados e agro</h3><p>Caminhões, máquinas e implementos.</p><span class="go">Começar por pesados →</span></button>
+        <button class="obj" type="button" data-pick="servicos"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="8"/></svg><h3>Serviços</h3><p>Viagem, festa, estudos, procedimentos.</p><span class="go">Começar por serviços →</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teste "O consórcio é para você?": 4 perguntas, resultado sincero e mensagem pronta no WhatsApp -->
+  <section class="dark" id="simulador">
+    <div class="wrap tq">
+      <div class="tq-intro">
+        <span class="kicker">Teste de 1 minuto</span>
+        <h2>O consórcio é <em>para você?</em></h2>
+        <p class="lead">Quatro perguntas rápidas. No fim, você vê o caminho que mais combina com o seu momento, mesmo que não seja o consórcio.</p>
+        <ol class="tq-steps" aria-hidden="true"><li>Objetivo</li><li>Valor</li><li>Prazo</li><li>Reserva</li></ol>
+        <p class="micro">Cartas de crédito a partir de R$ 100 mil. Este site não guarda as suas respostas.</p>
+      </div>
+      <div class="tq-card" id="tq" aria-live="polite">
+        <div class="tq-bar"><i id="tq-prog"></i></div>
+        <div id="tq-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona: a jornada da carta, com a moeda descendo conforme a rolagem -->
+  <section class="light" id="jornada">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Como funciona</span><h2>A jornada da sua <em>carta de crédito.</em></h2><p class="lead">Do primeiro mês até a chave na mão, em cinco paradas. Role a página e acompanhe a moeda.</p></div>
+      <div class="jr" id="jr">
+        <div class="jr-track" aria-hidden="true"><i class="jr-fill" id="jr-fill"></i><span class="jr-coin" id="jr-coin">R$</span></div>
+        <ol class="jr-list">
+          <li class="jstep"><span class="jn">01</span><div><h3>Você escolhe a carta</h3><p>Valor do bem e prazo. A parcela é definida aqui, e não tem juros.</p></div></li>
+          <li class="jstep"><span class="jn">02</span><div><h3>A parcela entra no grupo</h3><p>Todo mês ela vai para o fundo do grupo. O custo do consórcio é a taxa de administração, diluída no prazo.</p></div></li>
+          <li class="jstep"><span class="jn">03</span><div><h3>Assembleia todo mês</h3><p>Tem sorteio e disputa por lance. O lance é opcional e só é cobrado de quem vence.</p></div></li>
+          <li class="jstep"><span class="jn">04</span><div><h3>Contemplação</h3><p>Sua carta é liberada. Não existe data garantida, mas todo participante é contemplado até o fim do grupo.</p></div></li>
+          <li class="jstep jlast"><span class="jn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></span><div><h3>Compra à vista</h3><p>Você usa a carta para comprar o bem e negocia como quem paga à vista. Chave na mão.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="white edu">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Para quem está começando</span><h2>Antes de decidir, <em>entenda.</em></h2><p class="lead">Conteúdo curto e direto, escrito para quem nunca fez consórcio.</p></div>
+      <div class="guia">
+        <div class="g-doc" aria-hidden="true"><span class="mono">Guia rápido</span><b>Lance no consórcio em 1 página</b><i></i><i></i><i style="width:70%"></i><i></i><i style="width:55%"></i><span class="stamp" style="position:static;align-self:flex-start;margin-top:8px">Grátis</span></div>
+        <div class="g-txt">
+          <h3 style="font-size:clamp(24px,3vw,32px);line-height:1.1">Receba o <em>guia do lance</em> em 1 página.</h3>
+          <p class="lead">Os três tipos de lance, como escolher o valor e os erros mais comuns, resumidos para você ler em 3 minutos. Eu te mando pelo WhatsApp.</p>
+          <div class="row"><a class="btn btn-orange" data-cta="guia" data-wa="Olá João! Quero receber o guia do lance em 1 página." href="#">Quero o guia</a></div>
+          <p class="micro">Sem cadastro e sem compromisso.</p>
+        </div>
+      </div>
+      <div class="row" style="justify-content:space-between;margin:48px 0 24px"><h3 style="font-size:22px">Do blog</h3><a href="/blog/" style="font-weight:700">Ver todos os artigos →</a></div>
+      <div class="cards" id="home-cards">{ultimos.map((p) => <Card post={p} />)}</div>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Comparativo</span><h2>Consórcio ou financiamento?</h2><p class="lead">Os dois têm o seu lugar. A diferença é se você precisa do bem agora ou consegue planejar.</p></div>
+      <div class="tbl"><table>
+        <thead><tr><th></th><th class="us">Consórcio</th><th>Financiamento</th></tr></thead>
+        <tbody>
+          <tr><th>Juros</th><td class="us">Não tem</td><td>Tem, durante todo o contrato</td></tr>
+          <tr><th>Entrada</th><td class="us">Não é obrigatória</td><td>Geralmente exigida</td></tr>
+          <tr><th>Quando recebe</th><td class="us">Na contemplação, por sorteio ou lance</td><td>Logo após a aprovação</td></tr>
+          <tr><th>Melhor para</th><td class="us">Quem consegue planejar</td><td>Quem precisa do bem agora</td></tr>
+          <tr><th>Poder de compra</th><td class="us">Paga à vista com a carta</td><td>Compra financiada</td></tr>
+        </tbody>
+      </table></div>
+      <div class="cmp">
+        <div><h3>Juros</h3><div class="ln us"><span>Consórcio</span><b>Não tem</b></div><div class="ln"><span>Financiamento</span><b>Tem, durante todo o contrato</b></div></div>
+        <div><h3>Entrada</h3><div class="ln us"><span>Consórcio</span><b>Não é obrigatória</b></div><div class="ln"><span>Financiamento</span><b>Geralmente exigida</b></div></div>
+        <div><h3>Quando recebe</h3><div class="ln us"><span>Consórcio</span><b>Na contemplação, por sorteio ou lance</b></div><div class="ln"><span>Financiamento</span><b>Logo após a aprovação</b></div></div>
+        <div><h3>Melhor para</h3><div class="ln us"><span>Consórcio</span><b>Quem consegue planejar</b></div><div class="ln"><span>Financiamento</span><b>Quem precisa do bem agora</b></div></div>
+        <div><h3>Poder de compra</h3><div class="ln us"><span>Consórcio</span><b>Paga à vista com a carta</b></div><div class="ln"><span>Financiamento</span><b>Compra financiada</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="darker">
+    <div class="wrap sec">
+      <div>
+        <span class="kicker">Segurança</span>
+        <h2>Consórcio sério tem regra. E eu te mostro todas.</h2>
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#E3262F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Administradora autorizada e fiscalizada pelo Banco Central do Brasil.</span></div>
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#E3262F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Contrato com todas as condições por escrito antes de você assinar.</span></div>
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#E3262F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Pagamentos sempre em boleto ou canal oficial da administradora.</span></div>
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#E3262F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Acompanhamento de assembleias e lances pelo app oficial.</span></div>
+      </div>
+      <div>
+        <div class="warn">
+          <span class="mono">Atenção a golpes</span>
+          <p>Desconfie de quem promete “carta contemplada garantida” ou data certa para receber.</p>
+          <p>Nunca transfira dinheiro para conta de pessoa física.</p>
+          <p>Na dúvida, confirme qualquer proposta direto com a unidade.</p>
+          <a class="btn btn-line" id="wa-sec" data-wa="Olá João! Tenho uma dúvida sobre a segurança do consórcio." href="#" style="align-self:flex-start">Tirar uma dúvida com o João</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="mono" style="color:var(--mist);padding-top:56px">A administradora</p>
+      <div class="stats">
+        <div class="stat"><b>30+ anos</b><span>de mercado</span></div>
+        <div class="stat"><b>R$ 64,2 bi</b><span>em créditos comercializados</span></div>
+        <div class="stat"><b>238 mil</b><span>clientes ativos</span></div>
+        <div class="stat"><b>Banco Central</b><span>autorizada e fiscalizada</span></div>
+      </div>
+      <p class="micro" style="margin-top:18px">Fonte: números institucionais divulgados pela Ademicon, 2026.</p>
+    </div>
+  </section>
+
+  <!-- Prova social: troque cada cartão por um print real de avaliação do Google ou de conversa (com autorização do cliente). Não publique depoimento inventado. -->
+  <section class="light" id="avaliacoes">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Quem já conversou comigo</span><h2>O que os clientes <em>dizem.</em></h2><p class="lead">Avaliações reais de quem planejou o consórcio comigo.</p></div>
+      <div class="provas">
+        <figure class="prova" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><p>[PRINT OU TEXTO DE AVALIAÇÃO REAL DO GOOGLE 1]</p><figcaption class="who">[Nome do cliente] · Consórcio de imóvel</figcaption></figure>
+        <figure class="prova" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><p>[PRINT OU TEXTO DE AVALIAÇÃO REAL DO GOOGLE 2]</p><figcaption class="who">[Nome do cliente] · Consórcio de veículo</figcaption></figure>
+        <figure class="prova" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><p>[PRINT DE CONVERSA OU CARTA CONTEMPLADA, COM AUTORIZAÇÃO]</p><figcaption class="who">[Nome do cliente] · Primeira conquista</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="white">
+    <div class="wrap about">
+      <div class="ph">[Sua foto real]</div>
+      <div class="t">
+        <span class="kicker">Quem cuida do seu plano</span>
+        <h2>Um consultor que explica <em>antes</em> de vender.</h2>
+        <p>[SUA HISTÓRIA EM 2 OU 3 FRASES: por que você entrou no mundo do consórcio, o que te motiva, quem você gosta de atender.]</p>
+        <p>Sou de Ribeirão Preto e gosto de traduzir o que parece complicado. Atendo principalmente quem está indo atrás da primeira grande conquista: sair do aluguel, trocar de carro ou começar a investir.</p>
+        <div class="tl"><span>Ribeirão Preto, SP</span><span>Consultor Ademicon</span><span>Unidade Alto da Boa Vista</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="atendimento">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Atendimento</span><h2>Do jeito que for <em>melhor para você.</em></h2><p class="lead">A maior parte das dúvidas se resolve em uma conversa rápida pelo celular. Se preferir, a gente se encontra.</p></div>
+      <div class="canais">
+        <div class="canal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/></svg>
+          <h3>WhatsApp</h3><p>Manda a dúvida do jeito que ela vier. Respondo pessoalmente, no mesmo dia útil.</p>
+          <a class="btn btn-orange" data-cta="canal-whatsapp" data-wa="Olá João! Vim pelo site e tenho uma dúvida sobre consórcio." href="#">Chamar no WhatsApp</a>
+        </div>
+        <div class="canal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
+          <h3>Chamada de vídeo</h3><p>Vinte minutos, de onde você estiver, com a simulação na tela para a gente ver junto.</p>
+          <a class="btn btn-line" data-cta="canal-video" data-wa="Olá João! Quero agendar uma chamada de vídeo para entender o consórcio." href="#">Agendar chamada</a>
+        </div>
+        <div class="canal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <h3>Na unidade</h3><p>Ademicon Alto da Boa Vista. Rua Adolfo Serra, 1145, Ribeirão Preto.</p>
+          <div class="row" style="gap:8px"><a class="btn btn-line" data-cta="canal-unidade" data-wa="Olá João! Quero marcar um horário na unidade Alto da Boa Vista." href="#">Marcar horário</a><a class="lnk" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Adolfo+Serra%2C+1145%2C+Alto+da+Boa+Vista%2C+Ribeir%C3%A3o+Preto+SP">Como chegar →</a></div>
+        </div>
+      </div>
+      <p class="micro" style="margin-top:20px">Horário de atendimento: [DIAS E HORÁRIO DE ATENDIMENTO]</p>
+    </div>
+  </section>
+
+  <section class="white">
+    <div class="wrap narrow">
+      <div class="head"><span class="kicker">Dúvidas de quem está começando</span><h2>Perguntas frequentes</h2></div>
+      <details><summary>Consórcio tem juros?</summary><p>Não. O custo é a taxa de administração, diluída nas parcelas, além do fundo de reserva e do seguro quando houver.</p></details>
+      <details><summary>Preciso dar entrada?</summary><p>Não é obrigatório. Você começa pela primeira parcela.</p></details>
+      <details><summary>Quando vou ser contemplado?</summary><p>Não existe data garantida. A contemplação acontece por sorteio ou lance, e todo participante é contemplado até o encerramento do grupo.</p></details>
+      <details><summary>Posso usar o FGTS?</summary><p>No consórcio de imóvel, sim, seguindo as regras do FGTS.</p></details>
+      <details><summary>E se eu precisar sair do grupo?</summary><p>Existem regras de cancelamento e devolução previstas em contrato. Eu explico tudo antes de você assinar.</p></details>
+      <details><summary>A Ademicon é confiável?</summary><p>A Ademicon é uma administradora autorizada e fiscalizada pelo Banco Central, com mais de 30 anos de mercado. Antes de assinar, você recebe o contrato com todas as condições por escrito e pode conferir tudo com calma.</p></details>
+      <details><summary>Quanto custa a taxa de administração?</summary><p>Ela varia conforme o grupo, o tipo de bem e o prazo, e já vem diluída nas parcelas. Eu te mostro o valor exato do grupo indicado para você antes de qualquer decisão.</p></details>
+      <details><summary>O que são fundo de reserva e seguro?</summary><p>O fundo de reserva é um percentual pequeno que protege o grupo contra imprevistos, e o seguro cobre o saldo em caso de morte ou invalidez quando o plano prevê. Os dois aparecem separados na simulação.</p></details>
+      <details><summary>Qual é o valor mínimo da carta?</summary><p>Na minha unidade, as cartas de crédito começam em R$ 100 mil. Me chama com o que você tem em mente que eu te mostro as opções a partir desse valor.</p></details>
+      <details><summary>Quanto tempo dura um consórcio?</summary><p>O prazo depende do grupo. Existem planos mais curtos para veículo e mais longos para imóvel. O prazo escolhido muda o valor da parcela.</p></details>
+      <details><summary>O que é lance embutido?</summary><p>É quando parte do lance sai da própria carta de crédito. Você aumenta a oferta sem tirar tudo do bolso, mas recebe um crédito menor. Eu comparo com você o lance livre e o embutido.</p></details>
+      <details><summary>Posso usar a carta em outra cidade?</summary><p>Em geral, sim. A carta pode ser usada para comprar o bem em outra cidade, seguindo as regras do contrato e a análise da administradora.</p></details>
+      <details><summary>Posso quitar antes do fim do prazo?</summary><p>Sim. Você pode adiantar parcelas ou quitar o saldo, conforme as regras do grupo.</p></details>
+      <details><summary>O que é carta contemplada? Vale a pena comprar?</summary><p>É uma cota que já foi contemplada e é vendida para outra pessoa. Esse é o caminho mais usado em golpes. Desconfie de quem vende carta contemplada com pagamento em conta de pessoa física e confirme tudo com a administradora.</p></details>
+      <details><summary>Você cobra alguma coisa pelo atendimento?</summary><p>Não. A conversa, a simulação e a explicação das regras são sem custo e sem compromisso.</p></details>
+    </div>
+  </section>
+
+  <section class="dark final">
+    <div class="wrap">
+      <span class="kicker">Ainda com dúvida?</span>
+      <h2>Pergunta para mim. <em>Sem compromisso.</em></h2>
+      <p class="lead">Manda a sua dúvida no WhatsApp, do jeito que ela vier. Eu respondo pessoalmente, no mesmo dia.</p>
+      <a class="btn btn-orange" id="wa-final" data-wa="Olá João! Vim pelo site e tenho uma dúvida sobre consórcio." href="#">Falar com o João no WhatsApp</a>
+      <span class="num" id="wa-num">[SEU WHATSAPP]</span>
+    </div>
+  </section>
+
+  <script src="/assets/jornada.js" defer slot="scripts"></script>
+  <script src="/assets/hero3d.js" defer slot="scripts"></script>
+</Base>

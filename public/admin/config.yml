@@ -1,0 +1,54 @@
+# Painel do blog. Só entra quem tem acesso de escrita ao repositório no GitHub.
+backend:
+  name: github
+  repo: ojoaomaia/joao-maia-consorcios
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  commit_messages:
+    create: "Novo artigo: {{slug}}"
+    update: "Atualiza artigo: {{slug}}"
+    delete: "Remove artigo: {{slug}}"
+    uploadMedia: "Envia imagem: {{path}}"
+    deleteMedia: "Remove imagem: {{path}}"
+
+locale: pt
+media_folder: public/img/blog
+public_folder: /img/blog
+
+collections:
+  - name: blog
+    label: Artigos
+    label_singular: Artigo
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    sortable_fields: [date, title]
+    summary: "{{title}} ({{category}})"
+    preview_path: "blog/{{slug}}/"
+    fields:
+      - { label: "Título", name: title, widget: string, pattern: ['^.{10,110}$', "Entre 10 e 110 caracteres"] }
+      - { label: "Título para o Google (opcional, até 70)", name: seo_title, widget: string, required: false, pattern: ['^.{0,70}$', "Até 70 caracteres"] }
+      - { label: "Resumo / meta description (40 a 160)", name: summary, widget: text, pattern: ['^[\s\S]{40,160}$', "Entre 40 e 160 caracteres"] }
+      - { label: "Data", name: date, widget: datetime, date_format: "DD/MM/YYYY", time_format: false, format: "YYYY-MM-DD" }
+      - label: "Categoria"
+        name: category
+        widget: select
+        options:
+          - { label: "Imóvel", value: imovel }
+          - { label: "Veículo", value: veiculo }
+          - { label: "Lance", value: lance }
+          - { label: "Comparativo", value: comparativo }
+      - { label: "Minutos de leitura", name: reading_time, widget: number, value_type: int, min: 1, max: 30, default: 5 }
+      - { label: "Palavra-chave principal", name: keyword, widget: string, required: false }
+      - { label: "Rascunho (não aparece no site)", name: draft, widget: boolean, default: true }
+      - label: "Perguntas frequentes"
+        name: faq
+        widget: list
+        required: false
+        fields:
+          - { label: "Pergunta", name: q, widget: string }
+          - { label: "Resposta", name: a, widget: text }
+      - { label: "Texto do artigo", name: body, widget: markdown }
