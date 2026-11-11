@@ -34,3 +34,7 @@ export const CTA_TXT: Record<string, [string, string, string]> = {
 };
 
 export const fmtData = (d: Date) => d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
+
+/* Anúncios do Google AdSense. Deixe false até o Google aprovar o site.
+   Quando aprovar, troque para true e os espaços de anúncio voltam a aparecer no blog. */
+export const ANUNCIOS = false;
