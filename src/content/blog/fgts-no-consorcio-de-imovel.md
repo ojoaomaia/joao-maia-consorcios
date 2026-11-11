@@ -3,7 +3,6 @@ title: "Posso usar o FGTS no consórcio de imóvel?"
 summary: "Veja em quais momentos o FGTS pode entrar no consórcio e quais regras precisam ser cumpridas."
 date: 2026-11-05
 category: imovel
-reading_time: 4
 draft: false
 ---
 

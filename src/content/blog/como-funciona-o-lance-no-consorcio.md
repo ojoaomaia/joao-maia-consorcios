@@ -3,7 +3,6 @@ title: "Como funciona o lance no consórcio: guia completo"
 summary: "Lance livre, fixo e embutido: entenda cada tipo e como montar uma estratégia que cabe no bolso."
 date: 2026-11-09
 category: lance
-reading_time: 7
 draft: false
 faq:
   - q: "Posso usar o FGTS para dar lance?"

@@ -91,7 +91,6 @@
       var itens = checklist(d, e.get('slug'));
       var feitos = itens.filter(function (i) { return i[1]; }).length;
       var palavras = (textoPuro(d.body).match(/[A-Za-zÀ-ÿ0-9]+/g) || []).length;
-      var minutos = Math.max(1, Math.round(palavras / 200));
       var capa = d.cover ? this.props.getAsset(d.cover) : null;
       var dt = d.date ? new Date(d.date) : new Date();
 
@@ -108,7 +107,7 @@
       var artigo = h('article', { className: 'jm-art' },
         h('div', { className: 'crumb' }, 'Início / Blog / ' + (CATS[d.category] || 'Categoria')),
         h('h1', null, d.title || 'Título do artigo'),
-        h('div', { className: 'byline' }, h('span', null, h('b', null, 'João Maia'), ', consultor de consórcios'), h('span', null, dt.toLocaleDateString('pt-BR', { timeZone: 'UTC' }) + ' · ' + minutos + ' min de leitura')),
+        h('div', { className: 'byline' }, h('span', null, h('b', null, 'João Maia'), ', consultor de consórcios'), h('span', null, dt.toLocaleDateString('pt-BR', { timeZone: 'UTC' }))),
         capa ? h('img', { className: 'jm-capa', src: capa.toString(), alt: d.cover_alt || '' }) : h('div', { className: 'jm-capa jm-capa-auto' }, CATS[d.category] || 'Capa automática da categoria'),
         h('div', { className: 'post-body' }, this.props.widgetFor('body')),
         (d.faq || []).length ? h('div', null, h('h2', null, 'Perguntas frequentes'), (d.faq || []).map(function (f, k) { return h('details', { key: k, open: true }, h('summary', null, f.q), h('p', null, f.a)); })) : null,

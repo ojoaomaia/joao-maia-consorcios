@@ -3,7 +3,6 @@ import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
 import { CATS, ICONS, CTA_TXT, fmtData, ANUNCIOS } from '../../consts';
-import { minutosLeitura } from '../../lib/leitura';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -34,7 +33,7 @@ if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQP
     <article>
       <nav class="crumb" aria-label="Você está em"><a href="/">Início</a> / <a href="/blog/">Blog</a> / <a href={`/blog/?categoria=${d.category}`}>{CATS[d.category]}</a></nav>
       <h1>{d.title}</h1>
-      <div class="byline"><span class="av" aria-hidden="true">JM</span><span><b style="color:var(--ink)">João Maia</b>, consultor de consórcios</span><span>·</span><time datetime={d.date.toISOString()}>{fmtData(d.date)}</time><span>·</span><span>{minutosLeitura(post)} min de leitura</span></div>
+      <div class="byline"><span class="av" aria-hidden="true">JM</span><span><b style="color:var(--ink)">João Maia</b>, consultor de consórcios</span><span>·</span><time datetime={d.date.toISOString()}>{fmtData(d.date)}</time></div>
       {d.cover
         ? <img src={d.cover} alt={d.cover_alt || d.title} width="1200" height="630" style="width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:16px" />
         : <div class="cv" style="aspect-ratio:1200/630;border-radius:16px"><Fragment set:html={ICONS[d.category] || ICONS.imovel} /><span>{CATS[d.category]}</span></div>}

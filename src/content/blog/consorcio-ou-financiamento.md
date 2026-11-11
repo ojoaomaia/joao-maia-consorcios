@@ -3,7 +3,6 @@ title: "Consórcio ou financiamento: qual vale mais a pena em 2026?"
 summary: "Compare custo total, prazo e flexibilidade para decidir qual caminho combina com o seu momento."
 date: 2026-11-07
 category: comparativo
-reading_time: 5
 draft: false
 ---
 

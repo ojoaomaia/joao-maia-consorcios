@@ -3,7 +3,6 @@ title: "O que acontece se eu atrasar a parcela do consórcio?"
 summary: "Multa, juros de mora e o risco de ficar fora das assembleias: entenda o que muda quando a parcela atrasa."
 date: 2026-11-09
 category: lance
-reading_time: 5
 draft: true
 ---
 

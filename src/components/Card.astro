@@ -1,6 +1,5 @@
 ---
 import { CATS, ICONS, fmtData } from '../consts';
-import { minutosLeitura } from '../lib/leitura';
 const { post } = Astro.props;
 const d = post.data;
 ---
@@ -11,6 +10,6 @@ const d = post.data;
   <div class="bd">
     <strong>{d.title}</strong>
     <p>{d.summary}</p>
-    <span class="meta">{fmtData(d.date)} · {minutosLeitura(post)} min de leitura</span>
+    <span class="meta">{fmtData(d.date)}</span>
   </div>
 </a>
