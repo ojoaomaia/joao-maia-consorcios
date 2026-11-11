@@ -105,6 +105,17 @@ if (nav && mb) {
   if (q && $('[data-f="' + q.replace(/[^\w-]/g, '') + '"]', f)) apply(q.replace(/[^\w-]/g, ''));
 })();
 
+/* artigos: no celular cada linha da tabela vira um cartão (o nome da coluna vai junto de cada valor) */
+(function(){
+  $$('.post-body table').forEach(function(t){
+    var heads = $$('thead th', t).map(function(th){ return th.textContent.trim(); });
+    if (!heads.length) { var first = t.querySelector('tr'); if (first) heads = $$('th,td', first).map(function(c){ return c.textContent.trim(); }); }
+    $$('tbody tr', t).forEach(function(tr){ $$('td', tr).forEach(function(td, i){ if (heads[i]) td.setAttribute('data-label', heads[i]); }); });
+    t.classList.add('tb-cards');
+    var w = document.createElement('div'); w.className = 'tb-wrap'; t.parentNode.insertBefore(w, t); w.appendChild(t);
+  });
+})();
+
 /* artigos: anúncio depois do 2º parágrafo e chamada no meio do texto */
 (function(){
   var body = $('.post-body'); if (!body) return;
