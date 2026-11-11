@@ -1,5 +1,6 @@
 ---
 import { SITE_NOME, ENDERECO } from '../consts';
+import { asset } from '../lib/versao';
 interface Props {
   title: string;              /* título da aba e do Google */
   description: string;        /* até 150 caracteres */
@@ -52,7 +53,7 @@ const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href={asset("site.css")}>
 <script type="application/ld+json" set:html={JSON.stringify(org)}></script>
 {jsonld.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)}></script>)}
 </head>
@@ -90,8 +91,8 @@ const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 
 
 <div class="mbar" id="mbar"><a class="btn btn-orange" id="wa-bar" data-wa="Olá João! Vim pelo site e quero falar sobre consórcio." href="#">Falar com o João no WhatsApp</a></div>
 
-<script src="/assets/site.js" defer></script>
-<script src="/assets/reveal.js" defer></script>
+<script src={asset("site.js")} defer></script>
+<script src={asset("reveal.js")} defer></script>
 <slot name="scripts" />
 </body>
 </html>

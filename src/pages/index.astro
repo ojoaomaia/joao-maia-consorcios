@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
+import { asset } from '../lib/versao';
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const ultimos = posts.slice(0, 3);
@@ -234,6 +235,6 @@ const ultimos = posts.slice(0, 3);
     </div>
   </section>
 
-  <script src="/assets/jornada.js" defer slot="scripts"></script>
-  <script src="/assets/hero3d.js" defer slot="scripts"></script>
+  <script src={asset("jornada.js")} defer slot="scripts"></script>
+  <script src={asset("hero3d.js")} defer slot="scripts"></script>
 </Base>

@@ -516,3 +516,8 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 }
 /* itálico dentro dos artigos fica na cor do texto (o vermelho é só para destaques de título) */
 .post-body em{color:inherit;font-style:italic}
+/* trava geral: nada pode deixar a página mais larga que a tela do celular */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{max-width:100%;overflow-x:clip}
+.post-body{overflow-wrap:anywhere}
+.post article,.post aside,.post-body>*{max-width:100%}
