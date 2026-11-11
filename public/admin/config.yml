@@ -13,45 +13,134 @@ backend:
     deleteMedia: "Remove imagem: {{path}}"
 
 locale: pt
+logo_url: /favicon.svg
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
 media_folder: public/img/blog
 public_folder: /img/blog
 
 collections:
   - name: blog
-    label: Artigos
+    label: Artigos do blog
     label_singular: Artigo
+    description: >-
+      Para criar uma matéria: clique em "+ Artigo", preencha de cima para baixo e acompanhe
+      o "Checklist do Google" ao lado do texto. Quando tudo estiver verde, desligue
+      "Guardar como rascunho" e clique em Publicar. O site atualiza sozinho em cerca de 1 minuto.
     folder: src/content/blog
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.keyword}}"
     extension: md
     format: frontmatter
+    summary: "{{title}}"
     sortable_fields: [date, title]
-    summary: "{{title}} ({{category}})"
-    preview_path: "blog/{{slug}}/"
     view_filters:
-      - { label: "Rascunhos", field: draft, pattern: true }
-      - { label: "Publicados", field: draft, pattern: false }
+      - { label: "Só rascunhos", field: draft, pattern: true }
+      - { label: "Só publicados", field: draft, pattern: false }
+    view_groups:
+      - { label: "Categoria", field: category }
+    preview_path: "blog/{{slug}}/"
     fields:
-      - { label: "Título", name: title, widget: string, pattern: ['^.{10,110}$', "Entre 10 e 110 caracteres"] }
-      - { label: "Título para o Google (opcional, até 70)", name: seo_title, widget: string, required: false, pattern: ['^.{0,70}$', "Até 70 caracteres"] }
-      - { label: "Resumo / meta description (40 a 160)", name: summary, widget: text, pattern: ['^[\s\S]{40,160}$', "Entre 40 e 160 caracteres"] }
-      - { label: "Data", name: date, widget: datetime, date_format: "DD/MM/YYYY", time_format: false, format: "YYYY-MM-DD" }
-      - label: "Categoria"
+      - label: "1. Título do artigo"
+        name: title
+        widget: contador
+        min: 10
+        max: 110
+        hint: "Como o leitor vê no topo do artigo. Use a palavra-chave. Ex.: Consórcio de caminhão: como funciona para autônomos"
+
+      - label: "2. Palavra-chave principal"
+        name: keyword
+        widget: string
+        hint: "O que a pessoa digita no Google. Ex.: consórcio de caminhão. Ela também vira o endereço do artigo (/blog/consorcio-de-caminhao/) e não muda depois de salvar."
+
+      - label: "3. Categoria"
         name: category
         widget: select
         options:
-          - { label: "Imóvel", value: imovel }
-          - { label: "Veículo", value: veiculo }
-          - { label: "Lance", value: lance }
-          - { label: "Comparativo", value: comparativo }
-      - { label: "Minutos de leitura", name: reading_time, widget: number, value_type: int, min: 1, max: 30, default: 5 }
-      - { label: "Palavra-chave principal", name: keyword, widget: string, required: false }
-      - { label: "Rascunho (não aparece no site)", name: draft, widget: boolean, default: true }
-      - label: "Perguntas frequentes"
+          - { label: "Consórcio de imóvel", value: imovel }
+          - { label: "Consórcio de veículo", value: veiculo }
+          - { label: "Lance e contemplação", value: lance }
+          - { label: "Consórcio x financiamento", value: comparativo }
+
+      - label: "4. Resumo (aparece no Google e no card do blog)"
+        name: summary
+        widget: contador
+        multiline: true
+        min: 40
+        max: 150
+        hint: "Uma ou duas frases que fazem a pessoa clicar. Use a palavra-chave. Até 150 caracteres."
+
+      - label: "5. Texto do artigo"
+        name: body
+        widget: markdown
+        modes: [rich_text, raw]
+        buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote]
+        editor_components: [image]
+        hint: "Use Subtítulo 2 (H2) para as partes principais e Subtítulo 3 (H3) para os detalhes. Parágrafos curtos. Nunca use travessão."
+        default: |-
+          Escreva aqui a introdução. Use a palavra-chave já na primeira frase e diga em poucas linhas o que a pessoa vai aprender.
+
+          ## Primeiro subtítulo com a palavra-chave
+
+          Explique a primeira parte. Parágrafos curtos, de 2 a 4 linhas.
+
+          ## Segundo subtítulo
+
+          - Use listas para passos e vantagens
+          - Cada item com uma ideia só
+
+          ## Terceiro subtítulo
+
+          Traga um exemplo prático com números ilustrativos.
+
+          ## Resumo
+
+          Feche com os pontos principais e convide para o [teste de 1 minuto](/#simulador).
+
+      - label: "6. Imagem de capa (opcional)"
+        name: cover
+        widget: image
+        required: false
+        choose_url: false
+        hint: "Se ficar vazio, o site usa a capa automática da categoria. De preferência 1200x630 px, com nome de arquivo descritivo (ex.: consorcio-caminhao-autonomo.jpg)."
+
+      - label: "Descrição da imagem (opcional)"
+        name: cover_alt
+        widget: string
+        required: false
+        hint: "Descreva a imagem em poucas palavras. Ajuda no Google e na acessibilidade."
+
+      - label: "7. Perguntas frequentes"
         name: faq
         widget: list
         required: false
+        collapsed: true
+        summary: "{{fields.q}}"
+        label_singular: "pergunta"
+        hint: "De 3 a 5 perguntas que as pessoas fazem sobre o tema. Elas podem aparecer direto no Google."
         fields:
           - { label: "Pergunta", name: q, widget: string }
           - { label: "Resposta", name: a, widget: text }
-      - { label: "Texto do artigo", name: body, widget: markdown }
+
+      - label: "8. Título para o Google (opcional)"
+        name: seo_title
+        widget: contador
+        required: false
+        max: 70
+        hint: "Só preencha se o título do artigo for longo. Até 70 caracteres, com a palavra-chave no começo."
+
+      - label: "9. Data de publicação"
+        name: date
+        widget: datetime
+        default: "{{now}}"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        format: "YYYY-MM-DD"
+
+      - label: "10. Guardar como rascunho (não aparece no site)"
+        name: draft
+        widget: boolean
+        default: true
+        hint: "Ligado: só você vê. Desligue quando quiser que o artigo apareça no site."

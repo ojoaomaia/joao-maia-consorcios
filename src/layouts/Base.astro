@@ -7,10 +7,11 @@ interface Props {
   ogType?: 'website' | 'article';
   noindex?: boolean;
   jsonld?: object[];          /* dados estruturados extras da página */
+  image?: string;             /* imagem de compartilhamento (opcional) */
 }
-const { title, description, ctx = '', ogType = 'website', noindex = false, jsonld = [] } = Astro.props;
+const { title, description, ctx = '', ogType = 'website', noindex = false, jsonld = [], image } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const ogImage = new URL('/img/og-joao-maia-consorcios.png', Astro.site).href;
+const ogImage = new URL(image || '/img/og-joao-maia-consorcios.png', Astro.site).href;
 const path = Astro.url.pathname;
 const on = (p: string) => (p === '/' ? path === '/' : path.startsWith(p)) ? 'on' : undefined;
 const org = {

@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
 import { CATS, ICONS, CTA_TXT, fmtData } from '../../consts';
+import { minutosLeitura } from '../../lib/leitura';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -18,7 +19,7 @@ const ctaMsg = cta[2].replace('{t}', d.title);
 const url = new URL(`/blog/${post.slug}/`, Astro.site).href;
 const jsonld: object[] = [
   { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: d.title, description: d.summary, datePublished: d.date.toISOString(), dateModified: d.date.toISOString(), inLanguage: 'pt-BR', mainEntityOfPage: url,
-    image: new URL('/img/og-joao-maia-consorcios.png', Astro.site).href,
+    image: new URL(d.cover || '/img/og-joao-maia-consorcios.png', Astro.site).href,
     author: { '@type': 'Person', name: 'João Maia', jobTitle: 'Consultor de consórcios' }, publisher: { '@type': 'Organization', name: 'João Maia Consórcios' } },
   { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Início', item: new URL('/', Astro.site).href },
@@ -27,14 +28,16 @@ const jsonld: object[] = [
 ];
 if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
 ---
-<Base title={d.seo_title || `${d.title} | João Maia Consórcios`} description={d.summary} ctx={`blog: ${post.slug}`} ogType="article" jsonld={jsonld}>
+<Base title={d.seo_title || `${d.title} | João Maia Consórcios`} description={d.summary} ctx={`blog: ${post.slug}`} ogType="article" image={d.cover} jsonld={jsonld}>
   <div class="wrap" style="padding-top:24px"><div class="ad h90">Anúncio topo · 728x90 desktop / 320x100 celular</div></div>
   <div class="wrap post">
     <article>
       <nav class="crumb" aria-label="Você está em"><a href="/">Início</a> / <a href="/blog/">Blog</a> / <a href={`/blog/?categoria=${d.category}`}>{CATS[d.category]}</a></nav>
       <h1>{d.title}</h1>
-      <div class="byline"><span class="av" aria-hidden="true">JM</span><span><b style="color:var(--ink)">João Maia</b>, consultor de consórcios</span><span>·</span><time datetime={d.date.toISOString()}>{fmtData(d.date)}</time><span>·</span><span>{d.reading_time} min de leitura</span></div>
-      <div class="cv" style="aspect-ratio:1200/630;border-radius:16px"><Fragment set:html={ICONS[d.category] || ICONS.imovel} /><span>{CATS[d.category]}</span></div>
+      <div class="byline"><span class="av" aria-hidden="true">JM</span><span><b style="color:var(--ink)">João Maia</b>, consultor de consórcios</span><span>·</span><time datetime={d.date.toISOString()}>{fmtData(d.date)}</time><span>·</span><span>{minutosLeitura(post)} min de leitura</span></div>
+      {d.cover
+        ? <img src={d.cover} alt={d.cover_alt || d.title} width="1200" height="630" style="width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:16px" />
+        : <div class="cv" style="aspect-ratio:1200/630;border-radius:16px"><Fragment set:html={ICONS[d.category] || ICONS.imovel} /><span>{CATS[d.category]}</span></div>}
       <div class="post-body"><Content /></div>
 
       <div class="ad h250" id="ad-meio" hidden>Anúncio · após o 2º parágrafo</div>

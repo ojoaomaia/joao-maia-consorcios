@@ -10,9 +10,11 @@ const blog = defineCollection({
     summary: z.string().min(40).max(160),
     date: z.coerce.date(),
     category: z.enum(['imovel', 'veiculo', 'lance', 'comparativo']),
-    reading_time: z.number().int().min(1).max(30).default(5),
+    reading_time: z.number().int().min(1).max(30).optional(),   /* se ficar vazio, o site calcula pelo tamanho do texto */
     keyword: z.string().optional(),
     draft: z.boolean().default(false),
+    cover: z.string().optional(),            /* imagem de capa (opcional) */
+    cover_alt: z.string().optional(),
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([])
   })
 });

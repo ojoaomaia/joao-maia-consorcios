@@ -1,0 +1,32 @@
+/* Pré-visualização do painel: mesmo visual dos artigos do site */
+body{background:#f4f4f5;margin:0;font-family:Inter,system-ui,sans-serif;color:#18181B}
+.jm-prev{max-width:760px;margin:0 auto;padding:20px 64px 60px 18px;display:flex;flex-direction:column;gap:22px}
+.jm-check{background:#18181B;color:#e9e9ec;border-radius:14px;padding:16px 18px}
+.jm-check-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.jm-check-top b{font-size:16px;color:#fff}
+.jm-check-top span{font:700 12px/1 system-ui,sans-serif;padding:6px 10px;border-radius:99px}
+.jm-ok{background:#1f7a3a;color:#fff}.jm-falta{background:#E3262F;color:#fff}
+.jm-check ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.jm-check li{display:flex;gap:8px;align-items:baseline;font-size:13.5px;line-height:1.35}
+.jm-check li .ic{width:16px;flex:none;font-weight:800;text-align:center}
+.jm-check li.ok .ic{color:#4ade80}.jm-check li.no .ic{color:#ff6b72}
+.jm-check li.no span:nth-child(2){color:#fff}
+.jm-check li.ok span:nth-child(2){color:#b9b9c2}
+.jm-check li small{margin-left:auto;color:#9a9aa3;font-size:12px;text-align:right}
+.jm-dica{margin:12px 0 0;font-size:12.5px;color:#b9b9c2}
+.jm-art{background:#fff;border-radius:14px;padding:26px 26px 30px;display:flex;flex-direction:column;gap:16px}
+.jm-art h1{font-size:34px;line-height:1.05;font-weight:850;margin:0}
+.jm-art h2{font-size:24px;margin:14px 0 0}
+.jm-art h3{font-size:19px;margin:6px 0 0}
+.jm-art p,.jm-art li{font-size:17px;line-height:1.7}
+.jm-art .crumb{font:12px/1.4 ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:#6b6b74}
+.jm-art .byline{font-size:14px;color:#6b6b74}
+.jm-capa{width:100%;aspect-ratio:1200/630;object-fit:cover;border-radius:12px}
+.jm-capa-auto{background:radial-gradient(circle at 70% 60%,#5a1418,#18181B 60%);color:#ff8a8f;display:flex;align-items:flex-end;padding:14px;font:600 13px/1 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em}
+.jm-art details{border-bottom:1px solid #e4e4e8;padding:10px 0}
+.jm-art summary{font-weight:700;cursor:pointer}
+.jm-google{border:1px solid #e4e4e8;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:3px;font-family:Arial,sans-serif}
+.jm-google small{font:600 11px/1 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.06em;color:#6b6b74;margin-bottom:6px}
+.jm-google .u{font-size:13px;color:#202124}
+.jm-google .t{font-size:19px;color:#1a0dab}
+.jm-google .d{font-size:14px;color:#4d5156;line-height:1.5}
