@@ -28,6 +28,9 @@ collections:
     sortable_fields: [date, title]
     summary: "{{title}} ({{category}})"
     preview_path: "blog/{{slug}}/"
+    view_filters:
+      - { label: "Rascunhos", field: draft, pattern: true }
+      - { label: "Publicados", field: draft, pattern: false }
     fields:
       - { label: "Título", name: title, widget: string, pattern: ['^.{10,110}$', "Entre 10 e 110 caracteres"] }
       - { label: "Título para o Google (opcional, até 70)", name: seo_title, widget: string, required: false, pattern: ['^.{0,70}$', "Até 70 caracteres"] }
