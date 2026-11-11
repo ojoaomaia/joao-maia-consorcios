@@ -5,16 +5,19 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const ultimos = posts.slice(0, 3);
 ---
-<Base title="João Maia Consórcios | Consórcio explicado sem enrolação em Ribeirão Preto" description="Consórcio de imóvel e veículo sem juros, explicado sem enrolação. Faça o teste de 1 minuto e fale com o João no WhatsApp.">
+<Base title="Consórcio de imóvel e veículo sem juros em Ribeirão Preto | João Maia Consórcios" description="Consórcio de imóvel e veículo sem juros, explicado sem enrolação. Faça o teste de 1 minuto e fale com o João no WhatsApp.">
   <section class="hero darker" id="inicio">
     <div id="animacao-3d" aria-hidden="true"></div>
     <div class="wrap">
       <div class="txt">
-        <p class="q">Cansado de ver o aluguel <em>ir embora</em> todo mês?</p>
-        <h1>Pare de pagar juros pelo que pode ser <em>seu.</em></h1>
-        <p class="lead">Consórcio explicado sem enrolação, para quem vai conquistar o primeiro imóvel ou o primeiro carro. Eu mostro cada taxa e acompanho você até a chave na mão.</p>
+        <p class="q">Consórcio Ademicon em Ribeirão Preto</p>
+        <h1>Compre seu imóvel ou carro <em>sem pagar juros.</em></h1>
+        <p class="lead">Consórcio de imóvel, veículo e agro, com cartas a partir de R$ 100 mil. Eu faço a sua simulação pelo WhatsApp, explico cada taxa e acompanho você até a contemplação.</p>
+        <ul class="hero-pts" aria-label="Vantagens">
+          <li>Sem juros</li><li>Sem entrada obrigatória</li><li>FGTS no imóvel</li>
+        </ul>
         <div class="row">
-          <a class="btn btn-orange" id="wa-hero" data-wa="Olá João! Vim pelo site e quero montar um plano de consórcio." href="#">Falar com o João</a>
+          <a class="btn btn-orange" id="wa-hero" data-wa="Olá João! Vim pelo site e quero simular um consórcio." href="#">Simular meu consórcio</a>
           <a class="btn btn-line" href="#simulador">Fazer o teste de 1 minuto</a>
         </div>
         <p class="micro">Sem compromisso. Quem responde sou eu, pessoalmente.</p>

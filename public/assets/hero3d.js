@@ -908,6 +908,8 @@ kick();
     s.onerror = function(){ var r = document.getElementById('animacao-3d'); if (r) r.classList.add('cx-no-webgl'); };
     document.head.appendChild(s);
   }
+  /* no celular a animação não aparece: nem baixa a biblioteca 3D (página mais leve e rápida) */
+  if (window.matchMedia('(max-width: 760px)').matches) return;
   function later(){ if ('requestIdleCallback' in window) requestIdleCallback(go, { timeout: 1200 }); else setTimeout(go, 250); }
   if (document.readyState === 'complete') later(); else window.addEventListener('load', later);
 })();
