@@ -6,6 +6,8 @@ date: 2026-11-11
 category: imovel
 reading_time: 9
 keyword: "consórcio de 200 mil"
+cover: "/img/blog/consorcio-de-200-mil-capa.webp"
+cover_alt: "Casal sentado à mesa da sala analisando a planta de uma casa, com o título Consórcio de 200 mil"
 draft: true
 faq:
   - q: "Quanto preciso ganhar para ter uma carta de 200 mil?"
