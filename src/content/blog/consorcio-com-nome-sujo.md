@@ -44,7 +44,7 @@ O CPF costuma ser analisado no momento da contemplação, quando você pede a li
 Em geral, a análise olha três pontos:
 
 - Se existe restrição no CPF, como dívidas registradas no Serasa ou no SPC.
-- Se a sua renda comporta a parcela. Muitas administradoras usam o limite de 30% da renda.
+- Se a sua renda comporta a parcela. Cada administradora tem o próprio critério de análise.
 - Se o bem comprado serve como garantia ou se é preciso apresentar outra garantia.
 
 ---

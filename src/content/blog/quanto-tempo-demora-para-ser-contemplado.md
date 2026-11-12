@@ -68,7 +68,7 @@ Nesse cenário, todo mundo tem a mesma chance, e ela cresce mês a mês:
 | 50 meses | 50% |
 | 100 meses | 100% |
 
-*Exemplo ilustrativo, calculado em 12/11/2026. Considera um grupo simplificado, com 100 participantes, 1 contemplação por sorteio ao mês e nenhum lance. Na vida real, os lances também contemplam pessoas todo mês, o que aumenta a chance de quem fica para o sorteio.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Exemplo ilustrativo, calculado em 12/11/2026. Considera um grupo simplificado, com 100 participantes, 1 contemplação por sorteio ao mês e nenhum lance. Na vida real, os lances também contemplam pessoas todo mês, o que aumenta a chance de quem fica para o sorteio.*
 
 Em outras palavras, só pelo sorteio, metade do grupo espera mais da metade do prazo. Por isso, quem precisa do bem mais cedo costuma planejar um lance.
 

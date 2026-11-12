@@ -10,7 +10,7 @@ cover_alt: "Mulher à mesa da cozinha olhando o celular com calma, com o título
 draft: false
 faq:
   - q: "Com quantas parcelas atrasadas sou excluído do consórcio?"
-    a: "Depende do contrato. Muitos regulamentos preveem a exclusão do participante não contemplado que deixa de pagar 2 ou mais parcelas seguidas, mas o número exato está nas regras do seu grupo. Confira o contrato e fale com a administradora assim que atrasar."
+    a: "Depende do contrato. Não existe um número único: o limite de parcelas em atraso que leva à exclusão está nas regras do seu grupo. Confira o contrato e fale com a administradora assim que atrasar."
   - q: "Com a parcela atrasada, posso participar do sorteio?"
     a: "Não. Enquanto houver parcela em aberto, você fica de fora dos sorteios e não pode dar lance. Ao regularizar, volta a participar normalmente das próximas assembleias."
   - q: "Se eu for excluído, perco o dinheiro que paguei?"
@@ -59,7 +59,7 @@ Para ter uma ideia, veja um exemplo hipotético. Imagine uma parcela de R$ 1.475
 | Juros de 15 dias (1% ao mês) | cerca de R$ 7,38 |
 | Total a pagar | cerca de R$ 1.511,88 |
 
-*Exemplo ilustrativo. Os percentuais reais estão no seu contrato e podem ser diferentes.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Exemplo ilustrativo. Os percentuais reais estão no seu contrato e podem ser diferentes.*
 
 Ou seja, um atraso curto custa pouco. O problema maior não é a multa, e sim perder as assembleias e correr o risco de exclusão.
 
@@ -67,7 +67,7 @@ Ou seja, um atraso curto custa pouco. O problema maior não é a multa, e sim pe
 
 ## Quando a cota é excluída do grupo?
 
-A cota de quem ainda não foi contemplado pode ser excluída quando o atraso passa do limite previsto no contrato. Muitos regulamentos preveem a exclusão do participante não contemplado que deixa de pagar 2 ou mais parcelas seguidas. No entanto, o número exato muda de grupo para grupo.
+A cota de quem ainda não foi contemplado pode ser excluída quando o atraso passa do limite previsto no contrato. Não existe um número único definido em lei para todos. Ou seja, o limite muda de grupo para grupo e está escrito no contrato.
 
 As regras de exclusão e de readmissão precisam estar descritas no contrato, conforme as normas do Banco Central para consórcios. Portanto, leia essa parte com atenção.
 
@@ -103,7 +103,7 @@ Se você estava se preparando para dar lance, a regularização é urgente. Afin
 
 ## Como evitar a parcela atrasada
 
-A melhor forma de evitar o problema é escolher uma parcela que cabe com folga no orçamento desde o início. Uma regra prática é não passar de 30% da renda líquida com todas as parcelas somadas.
+A melhor forma de evitar o problema é escolher uma parcela que cabe com folga no orçamento desde o início. Uma referência comum de educação financeira, que não é regra oficial, é não passar de 30% da renda líquida com todas as parcelas somadas.
 
 Além disso, algumas atitudes ajudam bastante:
 

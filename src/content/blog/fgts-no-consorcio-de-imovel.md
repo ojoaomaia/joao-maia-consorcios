@@ -69,9 +69,9 @@ O imóvel também precisa se encaixar nas regras. Em resumo, ele deve ser reside
 | Imóvel para morar | Imóvel rural ou de veraneio |
 | Dentro do limite de valor do SFH | Reforma |
 
-O valor do imóvel precisa respeitar o teto do SFH, que muda de tempos em tempos. Por isso, confira o limite atualizado no [site do FGTS](https://www.fgts.gov.br) ou com a Caixa antes de escolher o imóvel.
+O valor do imóvel precisa respeitar o teto do SFH, que muda de tempos em tempos. Por isso, confira o limite atualizado no [site do FGTS](https://www.fgts.gov.br) ou no [Manual da Moradia Própria da Caixa](https://www.caixa.gov.br/Downloads/fgts-moradia/MANUAL_DA_MORADIA_PROPRIA_02_12_2025_V_035.pdf) antes de escolher o imóvel.
 
-Para ter uma ideia do movimento, a ABAC informou que o uso do fundo no consórcio de imóveis avançou nos sete primeiros meses de 2026. Ou seja, cada vez mais gente combina as duas ferramentas.
+Para ter uma ideia do movimento, a [ABAC](https://abac.org.br/sistema-downloads/materia-de-agosto-de-2026-dados-de-julho-de-2026/) informou, com dados da Caixa, que 2.795 trabalhadores usaram o saldo do fundo em grupos de imóveis de janeiro a julho de 2026, somando R$ 257,68 milhões. Ou seja, cada vez mais gente combina as duas ferramentas.
 
 ---
 
@@ -92,7 +92,7 @@ Agora imagine que você foi contemplado no 24º mês. Faltam 176 parcelas, o que
 | A. Reduzir a parcela | O prazo continua em 176 meses | A parcela cai para cerca de R$ 973 |
 | B. Reduzir o prazo | A parcela continua em R$ 1.200 | Faltam cerca de 143 parcelas |
 
-*Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. As regras de amortização seguem o contrato e as normas do FGTS.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. As regras de amortização seguem o contrato e as normas do FGTS.*
 
 Quer ver quanto o seu FGTS ajuda no seu caso? [Faça o teste de 1 minuto](/#simulador) e eu monto a simulação com você. Se quiser entender os outros tipos de lance, leia o guia [Como funciona o lance no consórcio](/blog/como-funciona-o-lance-no-consorcio/).
 

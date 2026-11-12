@@ -33,7 +33,7 @@ Neste guia, você vê os mitos mais comuns, os custos reais com números, a comp
 
 O consórcio vale a pena quando ele combina com o seu momento. Na prática, a pergunta certa não é se ele é bom ou ruim, e sim se ele resolve o seu problema no prazo que você tem.
 
-Hoje, milhões de brasileiros usam esse caminho. Segundo a ABAC, o Sistema de Consórcios chegou a 13,41 milhões de participantes ativos em julho de 2026, um recorde ([fonte](https://www.letsmoney.com.br/?p=332142)). Ou seja, não é uma modalidade marginal: ela é regulada pela [Lei 11.795/2008](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11795.htm) e fiscalizada pelo Banco Central.
+Hoje, milhões de brasileiros usam esse caminho. Segundo a ABAC, o Sistema de Consórcios chegou a 13,41 milhões de participantes ativos em julho de 2026, um recorde ([fonte](https://abac.org.br/sistema-downloads/materia-de-agosto-de-2026-dados-de-julho-de-2026/)). Ou seja, não é uma modalidade marginal: ela é regulada pela [Lei 11.795/2008](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11795.htm) e fiscalizada pelo Banco Central.
 
 Mesmo assim, ser popular não quer dizer servir para você. Por isso, vale entender de onde vem a fama ruim.
 
@@ -63,14 +63,14 @@ Separar mito de verdade ajuda a decidir com calma. Veja os mais comuns:
 
 O custo real do consórcio é a taxa de administração mais o fundo de reserva, diluídos nas parcelas, além do seguro quando houver. Veja dois exemplos ilustrativos:
 
-| Carta | Prazo | Taxa de adm. + fundo | Parcela base | Total pago | Custo além da carta |
+| Carta | Prazo | Taxa de adm. + fundo | Parcela aproximada | Total pago | Custo além da carta |
 |---|---|---|---|---|---|
 | R$ 100 mil | 80 meses | 16% + 2% | R$ 1.475 | R$ 118.000 | R$ 18.000 |
 | R$ 200 mil | 200 meses | 18% + 2% | R$ 1.200 | R$ 240.000 | R$ 40.000 |
 
-*Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. Taxas variam por administradora, grupo e prazo.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. Taxas variam por administradora, grupo e prazo.*
 
-Para ter uma referência, a ABAC estima a taxa média de administração do consórcio de imóveis em 0,073% ao mês. Portanto, compare sempre a taxa total do seu grupo antes de assinar. Quer ver o custo da sua carta? [Faça o teste de 1 minuto](/#simulador).
+Vale lembrar que a taxa de administração não é tabelada: segundo a [ABAC](https://blog.abac.org.br/consorcio-de-a-a-z/sistema-de-consorcios-o-que-e-taxa-de-administracao), cada administradora define a sua no contrato. Portanto, compare sempre a taxa total do seu grupo antes de assinar. Quer ver o custo da sua carta? [Faça o teste de 1 minuto](/#simulador).
 
 ---
 

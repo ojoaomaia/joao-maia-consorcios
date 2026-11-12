@@ -87,6 +87,8 @@ function revisar(slug) {
   for (const l of internos) { const m = l.match(/^\/blog\/([^/]+)\/?$/); if (m && !slugsExistentes.includes(m[1])) erros.push('Link interno quebrado: ' + l); }
   if (internos.length < 3) avisos.push(`${internos.length} links internos (meta 5 a 10)`); else ok.push(`${internos.length} links internos`);
   const oficiais = externos.filter((l) => /(bcb\.gov\.br|planalto\.gov\.br|gov\.br|abac\.org\.br|caixa\.gov\.br|fgts\.gov\.br)/.test(l));
+  const naoOficiais = externos.filter((l) => { try { const h = new URL(l).hostname.replace(/^www\./, ''); return !/(^|\.)(gov\.br|abac\.org\.br|ebc\.com\.br)$/.test(h); } catch { return true; } });
+  if (naoOficiais.length) erros.push(`links externos não oficiais (use só gov.br, BCB, ABAC): ${naoOficiais.join(', ')}`);
   if (oficiais.length < 2) avisos.push(`${oficiais.length} links para fontes oficiais (meta 2 a 4)`); else ok.push(`${oficiais.length} links oficiais`);
 
   // Conformidade (seção 8 do manual)

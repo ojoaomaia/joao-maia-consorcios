@@ -67,7 +67,7 @@ No lance embutido, parte da oferta sai da própria carta de crédito. Dessa form
 
 Para ficar concreto, imagine uma carta de R$ 100 mil em 80 meses, com taxa de administração de 16% e fundo de reserva de 2%. A parcela base fica em R$ 1.475 e o total pago chega a R$ 118 mil.
 
-*Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. Taxas e regras variam conforme a administradora e o grupo.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. Taxas e regras variam conforme a administradora e o grupo.*
 
 ### Exemplo 1: lance embutido de 30%
 
@@ -82,7 +82,7 @@ Depois de pagar 6 parcelas, faltam 74. O saldo é de R$ 109.150. Um lance de 30%
 | A. Reduzir o prazo | A parcela continua em R$ 1.475 | Faltam cerca de 52 parcelas, em vez de 74 |
 | B. Reduzir a parcela | O prazo continua em 74 meses | A parcela cai para cerca de R$ 1.032 |
 
-*Cálculo ilustrativo. As regras de abatimento do lance seguem o contrato do grupo.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Cálculo ilustrativo. As regras de abatimento do lance seguem o contrato do grupo.*
 
 Quer ver esse cálculo com a sua carta e o seu prazo? [Faça o teste de 1 minuto](/#simulador) e eu monto a simulação com você.
 

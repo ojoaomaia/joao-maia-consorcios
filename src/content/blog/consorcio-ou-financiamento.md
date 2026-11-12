@@ -43,14 +43,14 @@ Imagine a compra de um imóvel de R$ 300 mil. Veja como ficam os dois caminhos e
 
 **Financiamento:** entrada de R$ 60 mil (20%) e R$ 240 mil financiados em 360 meses, pela tabela Price, a 11,5% ao ano. A prestação fica em cerca de R$ 2.274 e o total pago, somando a entrada, passa de R$ 878 mil.
 
-| Cenário (imóvel de R$ 300 mil) | Entrada | Parcela | Total pago |
+| Cenário (imóvel de R$ 300 mil) | Entrada | Parcela aproximada | Total pago |
 |---|---|---|---|
 | Consórcio, 200 meses | Não precisa | R$ 1.830 | R$ 366.000 |
-| Financiamento, 360 meses | R$ 60.000 | R$ 2.274 | R$ 878.564 |
+| Financiamento, 360 meses | R$ 60.000 | cerca de R$ 2.270 | cerca de R$ 879 mil |
 
-*Simulação ilustrativa feita em 11/11/2026. O consórcio está sem seguro e sem reajuste anual. O financiamento real tem TR, seguros obrigatórios e tarifas, então consulte sempre o Custo Efetivo Total (CET) do banco.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Simulação ilustrativa feita em 11/11/2026. O consórcio está sem seguro e sem reajuste anual. O financiamento real tem TR, seguros obrigatórios e tarifas, então consulte sempre o Custo Efetivo Total (CET) do banco.*
 
-A taxa de 11,5% ao ano não foi escolhida por acaso. Em 2026, levantamentos apontam taxas de financiamento imobiliário na faixa de 11% a 12% ao ano mais TR nos grandes bancos ([fonte](https://larya.com.br/blog/qual-banco-tem-a-menor-taxa-para-financiamento-imobiliario-em-2026/)). Além disso, a taxa básica de juros segue alta: no dia 4 de novembro de 2026, o Copom manteve a Selic em 13,75% ao ano e interrompeu a sequência de cortes.
+A taxa de 11,5% ao ano é aproximada e serve só como referência, porque os juros mudam de banco para banco. Para ver as taxas reais, consulte a página de [taxas de juros por instituição](https://www.bcb.gov.br/estatisticas/txjuros) do Banco Central. Além disso, a taxa básica de juros segue alta: no dia 4 de novembro de 2026, o Copom manteve a Selic em 13,75% ao ano e interrompeu a sequência de cortes.
 
 Quer comparar com o valor do imóvel que você procura? [Faça o teste de 1 minuto](/#simulador) e eu monto os dois cenários lado a lado.
 

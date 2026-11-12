@@ -35,7 +35,7 @@ Neste guia, você vê quanto fica a parcela por prazo, a comparação com o fina
 
 Ou seja, você não paga juros, porque ninguém está emprestando dinheiro para você. Em troca, você paga a taxa de administração da empresa que organiza o grupo e aceita esperar a sua vez.
 
-Hoje, esse caminho é bem comum. De acordo com a ABAC, o consórcio de veículos leves comercializou R$ 101,85 bilhões em créditos de janeiro a agosto de 2026 e chegou a 5,63 milhões de participantes ativos ([fonte](https://www.chavesnamao.com.br/blog/noticias-automotivas/consorcio-veiculos-leves/)).
+Hoje, esse caminho é bem comum. De acordo com a ABAC, o consórcio de veículos leves comercializou R$ 115,81 bilhões em créditos de janeiro a setembro de 2026 e chegou a 5,72 milhões de participantes ativos ([fonte](https://blog.abac.org.br/drops-de-mercado/sistema-de-consorcios-em-setembro-2026-dados-economicos)).
 
 ---
 
@@ -43,13 +43,13 @@ Hoje, esse caminho é bem comum. De acordo com a ABAC, o consórcio de veículos
 
 A parcela depende do valor da carta, do prazo e das taxas do grupo. Veja uma simulação com carta de R$ 100 mil, taxa de administração de 16% e fundo de reserva de 2%:
 
-| Prazo | Parcela base | Total pago | Custo além da carta |
+| Prazo | Parcela aproximada | Total pago | Custo além da carta |
 |---|---|---|---|
 | 60 meses | R$ 1.966,67 | R$ 118.000 | R$ 18.000 |
 | 80 meses | R$ 1.475,00 | R$ 118.000 | R$ 18.000 |
 | 100 meses | R$ 1.180,00 | R$ 118.000 | R$ 18.000 |
 
-*Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 12/11/2026. Para facilitar a comparação, a tabela usa a mesma taxa em todos os prazos. Na vida real, a taxa varia conforme a administradora, o grupo e o prazo.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 12/11/2026. Para facilitar a comparação, a tabela usa a mesma taxa em todos os prazos. Na vida real, a taxa varia conforme a administradora, o grupo e o prazo.*
 
 Além disso, a carta e a parcela são reajustadas uma vez por ano, em geral pela variação do preço dos carros ou por um índice previsto no contrato. Assim, a parcela sobe, mas o valor da carta acompanha o preço do veículo.
 
@@ -59,19 +59,19 @@ Quer ver a parcela com o carro que você quer? [Faça o teste de 1 minuto](/#sim
 
 ## **Consórcio de carro ou financiamento? ⚖️**
 
-Em custo, o consórcio costuma sair bem mais barato. Por outro lado, o financiamento entrega o carro logo. Para comparar, a taxa média de juros para compra de veículos por pessoa física estava em 26,42% ao ano em agosto de 2026, segundo o Banco Central ([fonte](https://www.guardardinheiro.com.br/blog/menores-taxas-financiamento-de-veiculos)).
+Em custo, o consórcio costuma sair bem mais barato. Por outro lado, o financiamento entrega o carro logo. Para comparar, o Banco Central publica todo mês a [taxa média de juros](https://dadosabertos.bcb.gov.br/dataset/20749-taxa-media-de-juros-das-operacoes-de-credito-com-recursos-livres---pessoas-fisicas---aquisica) do financiamento de veículos para pessoa física. Na simulação abaixo, usamos uma taxa aproximada de 26% ao ano, só como referência.
 
 Veja o mesmo carro de R$ 100 mil nos dois caminhos:
 
 | Ponto | Consórcio (80 meses) | Financiamento (48 meses) |
 |---|---|---|
 | Entrada | Não exige | R$ 20.000 (20%) |
-| Parcela | R$ 1.475,00 | R$ 2.593,77 |
-| Total pago | R$ 118.000 | R$ 144.500,96, somando a entrada |
-| Custo além do carro | R$ 18.000 | R$ 44.500,96 de juros |
+| Parcela aproximada | R$ 1.475 | cerca de R$ 2.590 |
+| Total pago | R$ 118.000 | cerca de R$ 144,5 mil, somando a entrada |
+| Custo além do carro | R$ 18.000 | cerca de R$ 44,5 mil de juros |
 | Quando você pega o carro | Na contemplação, por sorteio ou lance | Logo após a aprovação do crédito |
 
-*Comparação ilustrativa calculada em 12/11/2026. Financiamento pela tabela Price, com a taxa média do Banco Central de 26,42% ao ano, sem IOF, tarifas e seguros. Os prazos são diferentes porque cada modalidade costuma usar prazos típicos diferentes, por isso compare sempre o total pago. A sua taxa depende do banco, do score e da entrada. Consulte sempre o Custo Efetivo Total (CET).*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Comparação ilustrativa calculada em 12/11/2026. Financiamento pela tabela Price, com taxa aproximada de 26% ao ano, sem IOF, tarifas e seguros. Os prazos são diferentes porque cada modalidade costuma usar prazos típicos diferentes, por isso compare sempre o total pago. A sua taxa depende do banco, do score e da entrada. Consulte sempre o Custo Efetivo Total (CET).*
 
 Em resumo, no exemplo, o financiamento custa cerca de R$ 26.500 a mais. Em troca, você dirige o carro desde o primeiro mês. Para entender essa comparação em outros bens, leia [Consórcio ou financiamento: qual vale mais a pena em 2026?](/blog/consorcio-ou-financiamento/).
 

@@ -31,7 +31,7 @@ Neste guia, você vê quando o 13º cai em 2026, quanto ele pesa no lance, como 
 
 ## **Quando cai o 13º salário em 2026? 📅**
 
-Em 2026, a primeira parcela do 13º precisa ser paga até 30 de novembro, e a segunda até 18 de dezembro. A data da segunda parcela muda neste ano porque o prazo legal, 20 de dezembro, cai num domingo.
+Em 2026, a primeira parcela do 13º precisa ser paga até 30 de novembro, e a segunda até 18 de dezembro. A data da segunda parcela muda neste ano porque o prazo legal, 20 de dezembro, cai num domingo, como explica o [Ministério do Trabalho](https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/novembro/decimo-terceiro-salario-entenda-o-direito-regras-e-prazos-de-pagamento). Mesmo assim, confirme a data exata com o RH da sua empresa.
 
 Além disso, vale lembrar que a primeira parcela corresponde a 50% do valor bruto, sem descontos. Já a segunda vem com os descontos de INSS e Imposto de Renda, quando houver. Ou seja, a segunda parcela costuma ser menor que a primeira.
 
@@ -59,7 +59,7 @@ Sozinho, o 13º costuma ser pequeno diante de uma carta de crédito. Por isso, �
 | R$ 5.000 | R$ 2.500 | 2,5% |
 | R$ 8.000 | R$ 4.000 | 4% |
 
-*Cálculo ilustrativo feito em 11/11/2026, considerando apenas a primeira parcela, que não tem descontos.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Cálculo ilustrativo feito em 11/11/2026, considerando apenas a primeira parcela, que não tem descontos.*
 
 Como você pode ver, o 13º ajuda, mas raramente decide a disputa sozinho. Por outro lado, quando somado ao 13º de outra pessoa da família, a uma reserva ou a um lance embutido, ele pode fazer diferença.
 
@@ -78,7 +78,7 @@ Agora veja duas ofertas possíveis nesse cenário:
 
 No segundo caso, se você vencer, recebe uma carta menor, de R$ 75 mil. Em contrapartida, a sua oferta fica muito mais competitiva.
 
-*Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. A base de cálculo do lance (carta ou saldo) e o limite do embutido variam conforme o contrato.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. A base de cálculo do lance (carta ou saldo) e o limite do embutido variam conforme o contrato.*
 
 ---
 

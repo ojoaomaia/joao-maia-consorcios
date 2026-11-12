@@ -10,7 +10,7 @@ cover_alt: "Casal sentado à mesa da sala analisando a planta de uma casa, com o
 draft: false
 faq:
   - q: "Quanto preciso ganhar para ter uma carta de 200 mil?"
-    a: "Uma regra prática é a parcela não passar de 30% da sua renda líquida. Com parcela de R$ 1.200, isso indica renda a partir de cerca de R$ 4.000. A administradora também faz a própria análise de crédito, principalmente na hora da contemplação."
+    a: "Uma referência comum de educação financeira, que não é regra oficial, é a parcela não passar de 30% da sua renda líquida. Com parcela de R$ 1.200, isso indica renda a partir de cerca de R$ 4.000. A administradora também faz a própria análise de crédito, principalmente na hora da contemplação."
   - q: "Posso ser contemplado no primeiro mês?"
     a: "Sim, é possível ser contemplado já na primeira assembleia, por sorteio ou por lance. No entanto, ninguém pode garantir a data. Por isso, o ideal é planejar como se a carta viesse só no fim do plano."
   - q: "Se eu desistir do consórcio, recebo o dinheiro de volta?"
@@ -35,14 +35,14 @@ A parcela de uma carta de R$ 200 mil fica entre cerca de R$ 1.200 e R$ 4.000 por
 
 Veja a simulação com taxa de administração de 18% e fundo de reserva de 2%, somados e divididos pelo número de meses:
 
-| Prazo | Parcela base | Total pago | Custo além da carta |
+| Prazo | Parcela aproximada | Total pago | Custo além da carta |
 |---|---|---|---|
 | 60 meses | R$ 4.000 | R$ 240.000 | R$ 40.000 |
 | 100 meses | R$ 2.400 | R$ 240.000 | R$ 40.000 |
 | 150 meses | R$ 1.600 | R$ 240.000 | R$ 40.000 |
 | 200 meses | R$ 1.200 | R$ 240.000 | R$ 40.000 |
 
-*Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. Para facilitar a comparação, a tabela usa a mesma taxa em todos os prazos. Na vida real, a taxa costuma variar conforme o prazo do grupo.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Simulação ilustrativa, sem seguro e sem reajuste anual, calculada em 11/11/2026. Para facilitar a comparação, a tabela usa a mesma taxa em todos os prazos. Na vida real, a taxa costuma variar conforme o prazo do grupo.*
 
 A conta é simples. Você pega o valor da carta, soma a taxa de administração e o fundo de reserva e divide pelo prazo. Ou seja: R$ 200.000 mais 20% dá R$ 240.000. Dividido por 200 meses, chega a R$ 1.200.
 
@@ -67,7 +67,7 @@ Veja o que forma esse valor:
 - **Seguro, se houver:** muda de acordo com a administradora e a sua idade.
 - **Reajuste anual:** não é custo extra no sentido de juros, mas aumenta o valor das parcelas ao longo do plano.
 
-Para ter uma referência de mercado, a [ABAC](https://www.abac.org.br) estima a taxa média de administração do consórcio de imóveis em 0,073% ao mês. Portanto, o exemplo deste artigo está um pouco acima da média, o que deixa a simulação conservadora.
+Vale lembrar que a taxa de administração não é tabelada. Segundo a [ABAC](https://blog.abac.org.br/consorcio-de-a-a-z/sistema-de-consorcios-o-que-e-taxa-de-administracao), cada administradora define a sua no contrato, e ela varia entre as empresas. Por isso, a taxa usada neste artigo é apenas aproximada, e você deve comparar a taxa total do seu grupo antes de assinar.
 
 ---
 
@@ -92,7 +92,7 @@ Imagine que você já pagou 12 parcelas de R$ 1.200. Faltam 188 parcelas, o que 
 | A. Reduzir o prazo | A parcela continua em R$ 1.200 | Faltam cerca de 132 parcelas, em vez de 188 |
 | B. Reduzir a parcela | O prazo continua em 188 meses | A parcela cai para R$ 840 |
 
-*Cálculo ilustrativo, sem reajuste e sem seguro. As regras de abatimento variam conforme o contrato.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Cálculo ilustrativo, sem reajuste e sem seguro. As regras de abatimento variam conforme o contrato.*
 
 Vale destacar: o lance só é cobrado de quem é contemplado. Ou seja, se você ofertar e não vencer, não perde nada e pode tentar de novo na próxima assembleia, desde que esteja com as parcelas em dia.
 
@@ -106,15 +106,15 @@ No consórcio de imóvel, o FGTS pode ser usado para dar lance, completar a cart
 
 Em custo, o consórcio costuma sair bem mais barato. Por outro lado, o financiamento entrega o imóvel agora, enquanto o consórcio depende de sorteio ou lance. Portanto, a escolha não é só sobre preço, mas também sobre quando você precisa do imóvel.
 
-Para comparar, levantamentos de agosto de 2026 apontam taxas de financiamento imobiliário na faixa de 11% a 12% ao ano mais TR nos grandes bancos ([fonte](https://larya.com.br/blog/qual-banco-tem-a-menor-taxa-para-financiamento-imobiliario-em-2026/)). Por isso, a simulação abaixo usa 11,5% ao ano:
+Para comparar, os juros do financiamento imobiliário mudam de banco para banco. O Banco Central publica as [taxas médias de cada instituição](https://www.bcb.gov.br/estatisticas/txjuros), e vale consultar antes de decidir. Por isso, a simulação abaixo usa uma taxa aproximada de 11,5% ao ano, apenas como referência:
 
-| Cenário (valor de R$ 200 mil) | Parcela | Total pago | Custo além do valor |
+| Cenário (valor de R$ 200 mil) | Parcela aproximada | Total pago | Custo além do valor |
 |---|---|---|---|
-| Consórcio, 200 meses | R$ 1.200,00 | R$ 240.000 | R$ 40.000 |
-| Financiamento Price, 200 meses | R$ 2.177,31 | R$ 435.462 | R$ 235.462 |
-| Financiamento Price, 360 meses | R$ 1.894,82 | R$ 682.137 | R$ 482.137 |
+| Consórcio, 200 meses | R$ 1.200 | R$ 240.000 | R$ 40.000 |
+| Financiamento Price, 200 meses | cerca de R$ 2.180 | cerca de R$ 435 mil | cerca de R$ 235 mil |
+| Financiamento Price, 360 meses | cerca de R$ 1.890 | cerca de R$ 682 mil | cerca de R$ 482 mil |
 
-*Comparação ilustrativa feita em 11/11/2026. O financiamento real tem TR, seguros obrigatórios, tarifas e exige entrada, em geral de 20% ou mais. O consórcio tem reajuste anual. Consulte sempre o Custo Efetivo Total (CET) do banco.*
+*Valores aproximados, que não são condições oficiais de nenhuma administradora. Comparação ilustrativa feita em 11/11/2026. O financiamento real tem TR, seguros obrigatórios, tarifas e exige entrada, em geral de 20% ou mais. O consórcio tem reajuste anual. Consulte sempre o Custo Efetivo Total (CET) do banco.*
 
 Em resumo: quem pode esperar economiza muito com o consórcio. Já quem precisa sair do aluguel neste ano pode achar no financiamento o caminho mais rápido, mesmo pagando mais. Se quiser ver essa comparação em detalhes, leia [Consórcio ou financiamento: qual vale mais a pena em 2026?](/blog/consorcio-ou-financiamento/).
 
