@@ -42,7 +42,7 @@ export const fmtData = (d: Date) => d.toLocaleDateString('pt-BR', { day: '2-digi
 export const ANUNCIOS = false;
 
 /* Códigos de verificação dos buscadores (Google Search Console e Bing Webmaster Tools). */
-export const VERIFICACAO_GOOGLE = '';
+export const VERIFICACAO_GOOGLE = 'H7vUXMtqsp4WKw0JyHaYBpAfqLsPRKsk3mrheP2SrjI';
 export const VERIFICACAO_BING = '';
 /* Chave do IndexNow: avisa Bing e outros buscadores sempre que o site é publicado. */
 export const INDEXNOW_KEY = 'ee037d59377a2c14fc5dda96bf675d1e';
