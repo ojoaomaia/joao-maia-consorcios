@@ -6,7 +6,7 @@ date: 2026-11-11
 category: lance
 keyword: "13º salário para dar lance"
 cover: "/img/blog/13-salario-para-dar-lance-no-consorcio-capa.webp"
-cover_alt: "Jovem sentada no sofá com notebook no colo e árvore de Natal ao fundo, planejando o lance do consórcio"
+cover_alt: "Jovem sentada no sofá com notebook no colo e árvore de Natal ao fundo, com o título Décimo terceiro no lance"
 draft: true
 faq:
   - q: "Posso usar o 13º salário para dar lance no consórcio?"
