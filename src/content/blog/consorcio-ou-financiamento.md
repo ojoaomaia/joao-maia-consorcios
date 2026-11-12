@@ -21,13 +21,15 @@ faq:
     a: "Pode mudar. Com juros mais baixos, o financiamento fica mais barato e a diferença para o consórcio diminui. Em novembro de 2026, porém, a Selic segue em 13,75% ao ano, o que mantém o crédito imobiliário caro."
 ---
 
-Consórcio ou financiamento é a dúvida número um de quem quer comprar imóvel ou carro. A resposta depende de uma pergunta simples: você precisa do bem agora ou consegue se planejar? Neste guia, você compara custo total, entrada, prazo e acesso ao bem com números reais e vê qual caminho combina com o seu momento.
+**A resposta curta:** na dúvida entre consórcio ou financiamento, o consórcio costuma sair bem mais barato, porque não cobra juros nem exige entrada. Em troca, você espera a contemplação por sorteio ou lance. Já o financiamento entrega o bem logo, mas os juros podem fazer o imóvel custar quase três vezes o preço ao longo de 30 anos.
 
-**Neste artigo:** a diferença em uma frase · comparação com números · tabela lado a lado · quando cada um vale a pena · o custo da espera · perguntas frequentes
+Ou seja, tudo depende de uma pergunta simples: você precisa do bem agora ou consegue se planejar?
+
+Neste guia, você compara custo total, entrada, prazo e acesso ao bem com números aproximados e vê qual caminho combina com o seu momento.
 
 ---
 
-## Qual a diferença entre consórcio e financiamento?
+## **Qual a diferença entre consórcio e financiamento? 🤔**
 
 A diferença principal está nos juros e no tempo. O financiamento entrega o bem logo, mas cobra juros por todo o contrato. Já o consórcio não cobra juros, porém a contemplação acontece por sorteio ou lance, sem data garantida.
 
@@ -35,13 +37,13 @@ Em outras palavras, no financiamento você paga mais para ter o bem agora. No co
 
 ---
 
-## Consórcio ou financiamento: comparação com números
+## **Quanto custa cada um na prática? 💰**
 
 Imagine a compra de um imóvel de R$ 300 mil. Veja como ficam os dois caminhos em uma simulação ilustrativa.
 
-**Consórcio:** carta de R$ 300 mil em 200 meses, com taxa de administração de 20% e fundo de reserva de 2%. A parcela base fica em R$ 1.830 e o total pago chega a R$ 366 mil.
+**Consórcio:** carta de R$ 300 mil em 200 meses, com taxa de administração de 20% e fundo de reserva de 2%. A parcela aproximada fica em R$ 1.830 e o total pago chega a cerca de R$ 366 mil.
 
-**Financiamento:** entrada de R$ 60 mil (20%) e R$ 240 mil financiados em 360 meses, pela tabela Price, a 11,5% ao ano. A prestação fica em cerca de R$ 2.274 e o total pago, somando a entrada, passa de R$ 878 mil.
+**Financiamento:** entrada de R$ 60 mil (20%) e R$ 240 mil financiados em 360 meses, pela tabela Price, a 11,5% ao ano. A prestação fica em cerca de R$ 2.270 e o total pago, somando a entrada, chega a cerca de R$ 879 mil.
 
 | Cenário (imóvel de R$ 300 mil) | Entrada | Parcela aproximada | Total pago |
 |---|---|---|---|
@@ -56,7 +58,7 @@ Quer comparar com o valor do imóvel que você procura? [Faça o teste de 1 minu
 
 ---
 
-## Consórcio ou financiamento: tabela lado a lado
+## **Consórcio ou financiamento: o que muda além do preço? ⚖️**
 
 Além do custo, outros pontos pesam na decisão. Veja a comparação completa:
 
@@ -74,7 +76,7 @@ O ponto da análise de crédito merece atenção. No consórcio, a administrador
 
 ---
 
-## Quando o consórcio vale mais a pena
+## **Quando o consórcio vale mais a pena? ✅**
 
 O consórcio faz mais sentido para quem consegue esperar e quer pagar menos no total. Veja os perfis que mais se beneficiam:
 
@@ -88,7 +90,7 @@ Se você se identificou, vale entender como antecipar a carta. Leia o guia [Como
 
 ---
 
-## Quando o financiamento vale mais a pena
+## **Quando o financiamento vale mais a pena? 🏃**
 
 O financiamento faz mais sentido quando a necessidade é imediata e você já tem a entrada. Por exemplo:
 
@@ -100,7 +102,7 @@ Mesmo assim, o ponto de atenção é o custo total. No exemplo acima, os juros f
 
 ---
 
-## O custo da espera: a conta que quase ninguém faz
+## **Quanto custa esperar a contemplação? ⏳**
 
 A comparação exige olhar também o que você gasta enquanto espera. Se você paga aluguel, esse valor entra na conta do consórcio até a contemplação.
 
@@ -110,7 +112,27 @@ Por isso, a melhor decisão é feita com os seus números: valor do imóvel, alu
 
 ---
 
-## Cuidados antes de decidir
+## **E no carro, a lógica é a mesma? 🚗**
+
+Sim, a lógica é a mesma, mas os números mudam. No financiamento de veículos, os juros costumam ser bem mais altos que no crédito imobiliário, e o prazo é mais curto. Por isso, a diferença de custo para o consórcio tende a aparecer rápido.
+
+Por outro lado, quem precisa do carro para trabalhar amanhã não pode esperar um sorteio. Então, vale fazer a mesma pergunta: o bem é urgente ou dá para planejar? Veja a simulação completa em [Consórcio de carro vale a pena?](/blog/consorcio-de-carro/).
+
+---
+
+## **Como decidir em 3 passos? 🧭**
+
+Para não decidir no impulso, siga esta ordem:
+
+1. **Urgência:** defina em quanto tempo você realmente precisa do bem.
+2. **Orçamento:** veja quanto cabe por mês com folga e se você tem entrada guardada.
+3. **Custo total:** compare o total pago nos dois caminhos, somando o aluguel do período de espera.
+
+Se o seu nome tem alguma restrição, isso também pesa na escolha. Entenda o motivo em [Consórcio com nome sujo: pode fazer?](/blog/consorcio-com-nome-sujo/).
+
+---
+
+## **Cuidados antes de decidir ⚠️**
 
 Primeiro, confira no [site do Banco Central](https://www.bcb.gov.br/estabilidadefinanceira/encontreinstituicao) se a administradora ou o banco é autorizado. Em seguida, leia o contrato com calma: taxas, seguros, índice de reajuste e regras de desistência precisam estar claros.
 
@@ -118,7 +140,7 @@ Além disso, desconfie de qualquer promessa de contemplação em data certa. No 
 
 ---
 
-## Resumo
+## **Conclusão 📌**
 
 - Consórcio ou financiamento: a escolha depende da sua urgência e do seu orçamento.
 - O consórcio não cobra juros nem exige entrada, mas não tem data garantida para a carta.

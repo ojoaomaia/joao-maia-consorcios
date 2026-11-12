@@ -120,7 +120,7 @@ Se você se encaixa aqui, o próximo passo é entender como antecipar a carta. V
 
 ## **E se eu desistir ou a administradora quebrar? 💸**
 
-Se você desistir, não perde tudo, mas também não recebe na hora. Pela lei e pelo entendimento do STJ, quem desiste recebe o que pagou ao fundo comum, com os descontos previstos no contrato. A devolução acontece quando a cota desistente é sorteada nas assembleias ou em até 30 dias após o encerramento do grupo. Além disso, a taxa de administração já paga não volta integralmente.
+Se você desistir, não perde tudo, mas também não recebe na hora. Pela lei e pelo [entendimento do STJ](https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias-antigas/2017/2017-08-08_07-59_Segunda-Secao-reafirma-veto-a-devolucao-antecipada-de-valores-para-consorciado-desistente.aspx), quem desiste recebe o que pagou ao fundo comum, com os descontos previstos no contrato. A devolução acontece quando a cota desistente é sorteada nas assembleias ou em até 30 dias após o encerramento do grupo. Além disso, a taxa de administração já paga não volta integralmente.
 
 Já sobre a administradora: ela precisa de autorização do Banco Central e é fiscalizada por ele. Além disso, a lei separa os bens do grupo do patrimônio da própria administradora.
 
