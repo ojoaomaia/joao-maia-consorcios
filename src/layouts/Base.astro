@@ -1,5 +1,5 @@
 ---
-import { SITE_NOME, ENDERECO } from '../consts';
+import { SITE_NOME, ENDERECO, VERIFICACAO_GOOGLE, VERIFICACAO_BING } from '../consts';
 import { asset } from '../lib/versao';
 interface Props {
   title: string;              /* título da aba e do Google */
@@ -37,6 +37,8 @@ const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 
 <meta name="description" content={description}>
 <link rel="canonical" href={canonical}>
 {noindex && <meta name="robots" content="noindex">}
+{VERIFICACAO_GOOGLE && <meta name="google-site-verification" content={VERIFICACAO_GOOGLE}>}
+{VERIFICACAO_BING && <meta name="msvalidate.01" content={VERIFICACAO_BING}>}
 <meta property="og:type" content={ogType}>
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content={SITE_NOME}>
