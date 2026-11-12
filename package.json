@@ -5,7 +5,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node dev/revisar-artigo.cjs && astro build",
+    "revisar": "node dev/revisar-artigo.cjs",
     "preview": "astro preview"
   },
   "dependencies": {

@@ -7,7 +7,7 @@ category: lance
 keyword: "13º salário para dar lance"
 cover: "/img/blog/13-salario-para-dar-lance-no-consorcio-capa.webp"
 cover_alt: "Jovem sentada no sofá com notebook no colo e árvore de Natal ao fundo, com o título Décimo terceiro no lance"
-draft: true
+draft: false
 faq:
   - q: "Posso usar o 13º salário para dar lance no consórcio?"
     a: "Sim. O 13º é dinheiro seu e pode entrar no lance como qualquer outra reserva. Você pode ofertar só com ele, somar com outras economias ou combinar com um lance embutido, conforme as regras do seu grupo. O lance só é cobrado se você vencer."

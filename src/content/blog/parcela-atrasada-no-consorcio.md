@@ -1,13 +1,13 @@
 ---
 title: "O que acontece se eu atrasar a parcela do consórcio?"
-seo_title: "Parcela atrasada no consórcio: o que acontece e como resolver"
+seo_title: "Parcela atrasada no consórcio: o que acontece e o que fazer"
 summary: "Entenda o que acontece com a parcela atrasada no consórcio: multa, assembleias, exclusão do grupo e como regularizar."
 date: 2026-11-09
 category: lance
 keyword: "parcela atrasada no consórcio"
 cover: "/img/blog/parcela-atrasada-no-consorcio-capa.webp"
 cover_alt: "Mulher à mesa da cozinha olhando o celular com calma, com o título Parcela atrasada no consórcio"
-draft: true
+draft: false
 faq:
   - q: "Com quantas parcelas atrasadas sou excluído do consórcio?"
     a: "Depende do contrato. Muitos regulamentos preveem a exclusão do participante não contemplado que deixa de pagar 2 ou mais parcelas seguidas, mas o número exato está nas regras do seu grupo. Confira o contrato e fale com a administradora assim que atrasar."
@@ -21,7 +21,7 @@ faq:
     a: "Pode sujar. A administradora pode registrar a dívida nos órgãos de proteção ao crédito, como em qualquer outra conta em atraso. Além disso, o nome sujo pode atrapalhar a análise de crédito na hora da contemplação."
 ---
 
-A parcela atrasada no consórcio gera multa e juros de mora e, enquanto ela estiver em aberto, você não participa dos sorteios nem pode dar lance. Se o atraso se prolongar, a cota pode ser excluída do grupo. Neste guia, você entende o que acontece em cada fase do atraso e como regularizar a situação.
+**A resposta curta:** a parcela atrasada no consórcio gera multa e juros de mora e, enquanto ela estiver em aberto, você não participa dos sorteios nem pode dar lance. Se o atraso se prolongar, a cota pode ser excluída do grupo. Neste guia, você entende o que acontece em cada fase do atraso e como regularizar a situação.
 
 A boa notícia é que quase sempre dá para resolver. Quanto antes você agir, menor é o impacto no seu plano.
 
@@ -52,9 +52,12 @@ A multa e os juros de mora seguem o que está no seu contrato. Por isso, a prime
 
 Para ter uma ideia, veja um exemplo hipotético. Imagine uma parcela de R$ 1.475, paga com 15 dias de atraso, em um contrato com multa de 2% e juros de mora de 1% ao mês:
 
-- Multa de 2%: R$ 29,50.
-- Juros de 15 dias: cerca de R$ 7,38.
-- Total a pagar: cerca de R$ 1.511,88.
+| Item | Valor |
+|---|---|
+| Parcela original | R$ 1.475,00 |
+| Multa de 2% | R$ 29,50 |
+| Juros de 15 dias (1% ao mês) | cerca de R$ 7,38 |
+| Total a pagar | cerca de R$ 1.511,88 |
 
 *Exemplo ilustrativo. Os percentuais reais estão no seu contrato e podem ser diferentes.*
 
@@ -68,7 +71,7 @@ A cota de quem ainda não foi contemplado pode ser excluída quando o atraso pas
 
 As regras de exclusão e de readmissão precisam estar descritas no contrato, conforme as normas do Banco Central para consórcios. Portanto, leia essa parte com atenção.
 
-### O que acontece com o dinheiro de quem é excluído?
+## O que acontece com o dinheiro de quem é excluído?
 
 Você não perde tudo. Pela [Lei 11.795/2008](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11795.htm), o participante excluído recebe o que pagou ao fundo comum, com os descontos previstos no contrato. Mas a devolução não é imediata.
 
@@ -88,13 +91,13 @@ Assim, se as parcelas ficarem em aberto, a administradora pode cobrar o saldo na
 
 Regularizar costuma ser simples quando você age rápido. Siga estes passos:
 
-1. **Veja quantas parcelas estão em aberto.** Consulte o extrato no aplicativo ou na área do cliente.
-2. **Fale com o seu consultor ou com a administradora.** Peça o valor atualizado e as opções de pagamento.
-3. **Pague as parcelas em atraso.** Com tudo em dia, você volta a participar das próximas assembleias.
-4. **Pergunte sobre readmissão, se já foi excluído.** Alguns contratos permitem voltar ao grupo, conforme as regras previstas.
-5. **Ajuste o plano.** Se a parcela pesou, converse sobre alternativas previstas no contrato antes de atrasar de novo.
+1. Veja quantas parcelas estão **em aberto**. Consulte o extrato no aplicativo ou na área do cliente.
+2. Fale com o seu **consultor** ou com a administradora. Peça o valor atualizado e as opções de pagamento.
+3. Pague as **parcelas atrasadas**. Com tudo em dia, você volta a participar das próximas assembleias.
+4. Se já foi excluído, pergunte sobre **readmissão**. Alguns contratos permitem voltar ao grupo, conforme as regras previstas.
+5. Ajuste o **plano**. Se a parcela pesou, converse sobre alternativas previstas no contrato antes de atrasar de novo.
 
-Se você estava se preparando para dar lance, a regularização é urgente. Afinal, só quem está em dia pode ofertar. Veja como planejar a oferta no guia [Como funciona o lance no consórcio](/blog/como-funciona-o-lance-no-consorcio/).
+Se você estava se preparando para dar lance, a regularização é urgente. Afinal, só quem está em dia pode ofertar, inclusive quem pretende [usar o 13º salário para dar lance](/blog/13-salario-para-dar-lance-no-consorcio/). Veja como planejar a oferta no guia [Como funciona o lance no consórcio](/blog/como-funciona-o-lance-no-consorcio/).
 
 ---
 
@@ -109,7 +112,7 @@ Além disso, algumas atitudes ajudam bastante:
 - Mantenha uma reserva de emergência de alguns meses de despesas.
 - Prefira um prazo maior se a parcela do prazo menor apertar o orçamento.
 
-Se você está escolhendo o valor da carta agora, veja como a parcela muda conforme o prazo no artigo [Consórcio de 200 mil: valor da parcela, prazo e quanto dar de lance](/blog/consorcio-de-200-mil-parcela/).
+Se você ainda está decidindo se o consórcio combina com o seu orçamento, leia [Consórcio é furada? Quando vale a pena e quando não vale](/blog/consorcio-e-furada/). E se você está escolhendo o valor da carta agora, veja como a parcela muda conforme o prazo no artigo [Consórcio de 200 mil: valor da parcela, prazo e quanto dar de lance](/blog/consorcio-de-200-mil-parcela/).
 
 ---
 

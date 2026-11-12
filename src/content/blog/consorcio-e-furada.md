@@ -7,7 +7,7 @@ category: comparativo
 keyword: "consórcio é furada"
 cover: "/img/blog/consorcio-e-furada-capa.webp"
 cover_alt: "Homem lendo um contrato com atenção à mesa da sala, com o título Consórcio é furada"
-draft: true
+draft: false
 faq:
   - q: "Consórcio é furada ou vale a pena?"
     a: "Consórcio não é furada, mas não serve para todo mundo. Ele vale a pena para quem pode esperar, quer evitar juros e consegue manter a parcela por anos. Por outro lado, não é indicado para quem precisa do bem agora ou não tem folga no orçamento."
