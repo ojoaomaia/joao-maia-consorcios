@@ -4,7 +4,7 @@
 
 /* ===================== CONFIGURAÇÃO ===================== */
 var WA_NUMBER = '5516900000000';   /* [TROCAR PELO SEU WHATSAPP]: 55 + DDD + número, só dígitos */
-var GA_ID = '';                     /* ID do Google Analytics 4 (G-XXXXXXX). Vazio = desligado */
+var GA_ID = 'GTM-PMTLQ6TH';         /* tag do Google (GA4). Aceita GTM-XXXX (tag nova) ou G-XXXX. Vazio = desligado */
 var IG_URL = '';                    /* link do seu Instagram, ex.: https://instagram.com/seuperfil */
 /* ======================================================== */
 
@@ -49,8 +49,11 @@ waIcons();
 window.dataLayer = window.dataLayer || [];
 function gtag(){ window.dataLayer.push(arguments); }
 function loadGA(){
-  var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
-  document.head.appendChild(s); gtag('js', new Date()); gtag('config', GA_ID, { anonymize_ip: true });
+  var tagNova = GA_ID.indexOf('GTM-') === 0;
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'https://www.googletagmanager.com/' + (tagNova ? 'gtm.js' : 'gtag/js') + '?id=' + encodeURIComponent(GA_ID);
+  document.head.appendChild(s); gtag('js', new Date());
+  if (!tagNova) gtag('config', GA_ID, { anonymize_ip: true });
 }
 if (GA_ID) {
   var c = null; try { c = localStorage.getItem('jm_cookies'); } catch (e) {}

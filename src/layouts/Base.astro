@@ -24,7 +24,7 @@ const org = {
   founder: { '@type': 'Person', name: 'João Maia', jobTitle: 'Consultor de consórcios' }
 };
 /* Política de segurança da página: só scripts do próprio site, da biblioteca 3D e do Google Analytics. */
-const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'";
+const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.google.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'";
 ---
 <!doctype html>
 <html lang="pt-BR">
