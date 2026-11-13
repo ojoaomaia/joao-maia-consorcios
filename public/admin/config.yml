@@ -153,6 +153,13 @@ collections:
         widget: hidden
         required: false
 
+      - label: "Destacar no topo do blog"
+        name: fixada
+        widget: boolean
+        default: false
+        required: false
+        hint: "Ligado: a matéria aparece em \"Comece por aqui\", no topo do blog. Marque até 4 (as que mais ajudam a pessoa a decidir). Se marcar mais, entram as 4 mais novas. Se não marcar nenhuma, o topo mostra as 4 mais recentes."
+
       - label: "10. Guardar como rascunho (não aparece no site)"
         name: draft
         widget: boolean

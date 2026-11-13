@@ -8,6 +8,7 @@ keyword: "consórcio de carro"
 cover: "/img/blog/consorcio-de-carro-capa.webp"
 cover_alt: "Rapaz sorrindo encostado em um carro vermelho estacionado na rua, com o título Consórcio de carro vale a pena"
 draft: false
+fixada: true
 faq:
   - q: "Consórcio de carro vale a pena?"
     a: "Vale a pena para quem pode esperar pela contemplação e quer pagar bem menos do que no financiamento. Num exemplo com carro de R$ 100 mil, o consórcio custa cerca de R$ 18 mil além do valor do carro, contra mais de R$ 44 mil de juros no financiamento. Para quem precisa do carro agora, o financiamento pode fazer mais sentido."

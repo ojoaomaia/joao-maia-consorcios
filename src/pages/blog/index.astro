@@ -5,6 +5,10 @@ import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
 import { CATS, ANUNCIOS } from '../../consts';
 const posts = (await getCollection('blog', ({ data }) => publicado(data))).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+/* "Comece por aqui": até 4 matérias marcadas em "Destacar no topo do blog"; completa com as mais recentes */
+const marcadas = posts.filter((p) => p.data.fixada).slice(0, 4);
+const topo = [...marcadas, ...posts.filter((p) => !p.data.fixada)].slice(0, 4);
+const noTopo = new Set(topo.map((p) => p.slug));
 const usadas = Object.entries(CATS).filter(([k]) => posts.some((p) => p.data.category === k));
 ---
 <Base title="Blog | João Maia Consórcios" description="Consórcio explicado sem enrolação: guias sobre lance, FGTS, imóvel, veículo e consórcio x financiamento." ctx="blog">
@@ -13,11 +17,17 @@ const usadas = Object.entries(CATS).filter(([k]) => posts.some((p) => p.data.cat
   </section>
   {ANUNCIOS && <div class="wrap" style="padding-block:24px 0"><div class="ad h90">Anúncio topo · 728x90 desktop / 320x100 celular</div></div>}
   <div class="wrap light" style="padding-block:32px 88px">
+    <section class="blog-sec" id="blog-topo" aria-labelledby="t-topo">
+      <span class="kicker">Comece por aqui</span>
+      <h2 class="blog-sec-t" id="t-topo">O essencial para decidir</h2>
+      <div class="cards cards-blog cards-topo">{topo.map((p) => <Card post={p} />)}</div>
+    </section>
+    <h2 class="blog-sec-t" id="t-recentes">Mais recentes</h2>
     <div class="chips filters" id="filters" role="group" aria-label="Filtrar por categoria">
       <button type="button" data-f="todos" aria-pressed="true">Todos</button>
       {usadas.map(([k, v]) => <button type="button" data-f={k} aria-pressed="false">{v}</button>)}
     </div>
-    <div class="cards cards-blog" id="blog-cards">{posts.map((p, i) => <Card post={p} destaque={i === 0} />)}</div>
+    <div class="cards cards-blog" id="blog-cards">{posts.filter((p) => !noTopo.has(p.slug)).map((p, i) => <Card post={p} destaque={i === 0} />)}{posts.filter((p) => noTopo.has(p.slug)).map((p) => <Card post={p} noTopo={true} />)}</div>
     <p id="blog-vazio" hidden style="color:var(--ink-soft)">Nenhum artigo nesta categoria ainda.</p>
   </div>
 </Base>

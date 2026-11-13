@@ -14,6 +14,7 @@ const blog = defineCollection({
     reading_time: z.number().int().min(1).max(30).optional(),   /* se ficar vazio, o site calcula pelo tamanho do texto */
     keyword: z.string().optional(),
     draft: z.boolean().default(false),
+    fixada: z.boolean().optional(),   /* "Destacar no topo do blog": até 4 matérias na seção "Comece por aqui" */
     agendada: z.boolean().optional(),   /* marcado sozinho pelo painel quando a data e o horário são futuros; a rotina de agendamento tira ao publicar */
     cover: z.string().optional(),            /* imagem de capa (opcional) */
     cover_alt: z.string().optional(),

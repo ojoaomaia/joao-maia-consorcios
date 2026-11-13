@@ -104,7 +104,9 @@ if (nav && mb) {
   var f = $('#filters'); if (!f) return;
   function apply(cat){
     $$('[data-f]', f).forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-f') === cat)); });
-    var n = 0; $$('#blog-cards .card').forEach(function(c){ var ok = cat === 'todos' || c.getAttribute('data-cat') === cat; c.hidden = !ok; c.classList.toggle('destaque', ok && n === 0); if (ok) n++; });
+    /* "Comece por aqui" só aparece em "Todos"; nas categorias, as matérias do topo voltam para a lista */
+    var topo = $('#blog-topo'); if (topo) topo.hidden = cat !== 'todos';
+    var n = 0; $$('#blog-cards .card').forEach(function(c){ var ok = cat === 'todos' ? !c.hasAttribute('data-topo') : c.getAttribute('data-cat') === cat; c.hidden = !ok; c.classList.toggle('destaque', ok && n === 0); if (ok) n++; });
     var vazio = $('#blog-vazio'); if (vazio) vazio.hidden = n > 0;
   }
   f.addEventListener('click', function(e){ var b = e.target.closest('[data-f]'); if (!b) return; apply(b.getAttribute('data-f')); try { history.replaceState(null, '', b.getAttribute('data-f') === 'todos' ? location.pathname : '?categoria=' + b.getAttribute('data-f')); } catch (x) {} });

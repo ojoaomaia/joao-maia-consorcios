@@ -86,6 +86,10 @@ Se o horário ficar vazio, a matéria é publicada assim que for salva (se a dat
 
 Para ver o que está agendado: na lista de artigos do painel, clique em **Filtrar por > Só agendadas**. As agendadas também aparecem com "AGENDADA ·" antes do título. Quando a matéria entra no ar, a marca sai sozinha.
 
+### Matérias em destaque no topo do blog
+
+A página do blog abre com a seção **"Comece por aqui"**, com 4 matérias. Para escolher quais, ligue **"Destacar no topo do blog"** na matéria, no painel. Marque até 4, de preferência as que mais ajudam a pessoa a decidir e a chamar no WhatsApp. Se marcar menos de 4, o resto é completado com as mais recentes. Abaixo vem **"Mais recentes"**, com as outras matérias e o filtro por categoria.
+
 ### Links entre matérias (para aumentar as páginas vistas)
 
 O site coloca sozinho, em toda matéria:
@@ -116,6 +120,7 @@ hora: "14:30"           # opcional: horário de publicação (Brasília), de 15 
 category: imovel        # imovel, veiculo, lance ou comparativo
 keyword: "palavra-chave principal"
 draft: false
+fixada: true            # opcional: aparece em "Comece por aqui" no topo do blog
 faq:
   - q: "Pergunta?"
     a: "Resposta."

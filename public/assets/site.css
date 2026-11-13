@@ -637,3 +637,11 @@ a.ant-mat strong{font-family:var(--f-display);font-size:16px;line-height:1.25}
 .about .ph.ph-av b{font-family:var(--f-display);font-size:96px;line-height:1;letter-spacing:-.02em;color:#fff}
 .about .ph.ph-av span{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-light)}
 @media (max-width:760px){ .about .ph.ph-av{min-height:200px} .about .ph.ph-av b{font-size:72px} }
+
+/* blog: seção "Comece por aqui" */
+.blog-sec{margin-bottom:44px}
+.blog-sec .kicker{margin-bottom:8px}
+.blog-sec-t{font-family:var(--f-display);font-size:28px;line-height:1.1;letter-spacing:-.02em;margin:0 0 18px}
+.cards-topo{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1100px){ .cards-topo{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:760px){ .blog-sec{margin-bottom:32px} .blog-sec-t{font-size:22px;margin-bottom:14px} .cards-topo{grid-template-columns:1fr 1fr} }

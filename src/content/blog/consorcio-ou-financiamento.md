@@ -8,6 +8,7 @@ keyword: "consórcio ou financiamento"
 cover: "/img/blog/consorcio-ou-financiamento-capa.webp"
 cover_alt: "Casal na cozinha comparando duas folhas de papel, com o título Consórcio ou financiamento"
 draft: false
+fixada: true
 faq:
   - q: "O consórcio é sempre mais barato que o financiamento?"
     a: "Em custo total, quase sempre, porque o consórcio não cobra juros. No entanto, você pode passar anos esperando a contemplação e pagando aluguel nesse período. Por isso, compare o custo total e também o tempo até ter o bem."

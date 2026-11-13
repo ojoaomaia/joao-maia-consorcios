@@ -8,6 +8,7 @@ keyword: "lance no consórcio"
 cover: "/img/blog/como-funciona-o-lance-capa.webp"
 cover_alt: "Mulher em um escritório em casa fazendo anotações ao lado do notebook, com o título Como funciona o lance"
 draft: false
+fixada: true
 faq:
   - q: "Se eu der lance e não for contemplado, perco o dinheiro?"
     a: "Não. O valor do lance só é cobrado de quem vence a disputa naquela assembleia. Se você não for contemplado, não paga nada além da parcela normal e pode ofertar de novo no mês seguinte."

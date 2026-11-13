@@ -8,6 +8,7 @@ keyword: "quanto tempo demora para ser contemplado"
 cover: "/img/blog/quanto-tempo-demora-para-ser-contemplado-capa.webp"
 cover_alt: "Mulher de óculos sorrindo à mesa da cozinha, olhando pela janela, com o título Quanto tempo para ser contemplado"
 draft: false
+fixada: true
 faq:
   - q: "Quanto tempo demora para ser contemplado no consórcio?"
     a: "Não existe um prazo fixo. A contemplação acontece por sorteio ou lance, em todas as assembleias, e pode vir no primeiro mês ou só perto do fim do grupo. O que muda as suas chances é o tamanho do grupo, quantas pessoas são contempladas por mês e se você dá lance."

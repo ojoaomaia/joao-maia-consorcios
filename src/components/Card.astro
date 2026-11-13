@@ -1,9 +1,9 @@
 ---
 import { CATS, ICONS, fmtData } from '../consts';
-const { post, destaque = false } = Astro.props;
+const { post, destaque = false, noTopo = false } = Astro.props;
 const d = post.data;
 ---
-<a class:list={["card", { destaque }]} href={`/blog/${post.slug}/`} data-cat={d.category}>
+<a class:list={["card", { destaque }]} href={`/blog/${post.slug}/`} data-cat={d.category} data-topo={noTopo ? "1" : undefined} hidden={noTopo}>
   {d.cover
     ? <div class="cv"><img src={d.cover} alt={d.cover_alt || ""} loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" /><span style="position:relative">{CATS[d.category]}</span></div>
     : <div class="cv"><Fragment set:html={ICONS[d.category] || ICONS.imovel} /><span>{CATS[d.category]}</span></div>}
