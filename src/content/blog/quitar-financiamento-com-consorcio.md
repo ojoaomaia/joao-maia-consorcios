@@ -2,8 +2,8 @@
 title: "Quitar financiamento com consórcio: como funciona e quando compensa"
 seo_title: "Quitar financiamento com consórcio: vale a pena? [2026]"
 summary: "Veja como quitar financiamento com consórcio, quando a troca de juros por taxa compensa, um exemplo com números e os cuidados com o FGTS."
-date: 2026-11-16
-hora: "15:00"
+date: 2026-11-30
+hora: "07:30"
 agendada: true
 category: imovel
 keyword: "quitar financiamento com consórcio"

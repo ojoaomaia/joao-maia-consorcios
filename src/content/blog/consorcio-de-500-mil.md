@@ -2,8 +2,8 @@
 title: "Consórcio de 500 mil: parcela, prazo e estratégia de lance em 2026"
 seo_title: "Consórcio de 500 mil: parcela, prazo e lance [2026]"
 summary: "Veja a parcela aproximada de um consórcio de 500 mil por prazo, o custo total, exemplos de lance e o que conferir antes de assinar."
-date: 2026-11-13
-hora: "18:00"
+date: 2026-12-03
+hora: "07:30"
 agendada: true
 category: imovel
 keyword: "consórcio de 500 mil"

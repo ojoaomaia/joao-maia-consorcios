@@ -2,8 +2,8 @@
 title: "Fundo de reserva do consórcio: o que é, quanto custa e se volta no fim"
 seo_title: "Fundo de reserva do consórcio: o que é e se volta [2026]"
 summary: "Entenda o fundo de reserva do consórcio: para que serve, quanto pesa na parcela e o que acontece com o saldo no fim do grupo."
-date: 2026-11-14
-hora: "11:00"
+date: 2026-12-01
+hora: "07:30"
 agendada: true
 category: comparativo
 keyword: "fundo de reserva do consórcio"

@@ -2,8 +2,8 @@
 title: "Desistir do consórcio: recebo o dinheiro de volta? Quando e quanto"
 seo_title: "Desistir do consórcio: quando recebo o dinheiro [2026]"
 summary: "Vai desistir do consórcio? Veja quando o dinheiro volta, o que é descontado, o direito de arrependimento e as alternativas à desistência."
-date: 2026-11-15
-hora: "15:00"
+date: 2026-12-07
+hora: "07:30"
 agendada: true
 category: comparativo
 keyword: "desistir do consórcio"

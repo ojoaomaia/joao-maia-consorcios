@@ -2,8 +2,8 @@
 title: "Consórcio é investimento? O que ele é, o que não é e quando ajuda a investir"
 seo_title: "Consórcio é investimento? Entenda antes de entrar [2026]"
 summary: "Consórcio é investimento? Veja por que ele não rende juros, quando ajuda a investir em imóvel e como comparar com guardar dinheiro."
-date: 2026-11-15
-hora: "09:30"
+date: 2026-12-10
+hora: "07:30"
 agendada: true
 category: comparativo
 keyword: "consórcio é investimento"

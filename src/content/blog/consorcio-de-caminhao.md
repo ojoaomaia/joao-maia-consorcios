@@ -2,8 +2,8 @@
 title: "Consórcio de caminhão: parcela, prazo e como renovar a frota sem juros"
 seo_title: "Consórcio de caminhão: parcela e como funciona [2026]"
 summary: "Veja como funciona o consórcio de caminhão, a parcela aproximada, os números oficiais do setor de pesados e dicas para renovar a frota."
-date: 2026-11-16
-hora: "19:30"
+date: 2026-12-08
+hora: "07:30"
 agendada: true
 category: veiculo
 keyword: "consórcio de caminhão"

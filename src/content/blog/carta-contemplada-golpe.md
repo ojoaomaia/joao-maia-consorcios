@@ -2,8 +2,8 @@
 title: "Carta contemplada: como comprar com segurança e não cair em golpe"
 seo_title: "Carta contemplada: como não cair em golpe [2026]"
 summary: "Carta contemplada é legal, mas atrai golpistas. Veja os sinais de golpe, os documentos que a ABAC recomenda e o passo a passo seguro."
-date: 2026-11-14
-hora: "14:00"
+date: 2026-11-26
+hora: "07:30"
 agendada: true
 category: lance
 keyword: "carta contemplada"

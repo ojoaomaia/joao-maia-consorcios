@@ -2,8 +2,8 @@
 title: "Seguro prestamista no consórcio: o que cobre, quanto custa e se é obrigatório"
 seo_title: "Seguro prestamista no consórcio: o que cobre [2026]"
 summary: "Entenda o seguro prestamista no consórcio: o que ele cobre, como entra na parcela, se é obrigatório e o que perguntar antes de assinar."
-date: 2026-11-16
-hora: "12:00"
+date: 2026-12-15
+hora: "07:30"
 agendada: true
 category: comparativo
 keyword: "seguro prestamista no consórcio"

@@ -2,8 +2,8 @@
 title: "Consórcio para construção: como usar a carta para construir sua casa"
 seo_title: "Consórcio para construção: como funciona [2026]"
 summary: "Veja como funciona o consórcio para construção: terreno, projeto, liberação do crédito por etapas, exemplo de parcela e cuidados."
-date: 2026-11-14
-hora: "17:00"
+date: 2026-12-02
+hora: "07:30"
 agendada: true
 category: imovel
 keyword: "consórcio para construção"

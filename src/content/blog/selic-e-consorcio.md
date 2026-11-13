@@ -2,8 +2,8 @@
 title: "Selic e consórcio: o que os juros de 13,75% mudam na sua decisão"
 seo_title: "Selic e consórcio: o que muda com os juros [2026]"
 summary: "Selic e consórcio: a taxa está em 13,75% e o Copom volta a se reunir em dezembro. Veja o que os juros mudam na sua decisão."
-date: 2026-11-16
-hora: "09:30"
+date: 2026-11-19
+hora: "07:30"
 agendada: true
 category: comparativo
 keyword: "Selic e consórcio"

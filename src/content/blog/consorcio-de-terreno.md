@@ -2,8 +2,8 @@
 title: "Consórcio de terreno: como funciona, parcela e cuidados na compra do lote"
 seo_title: "Consórcio de terreno: como funciona e cuidados [2026]"
 summary: "Veja como funciona o consórcio de terreno, a parcela aproximada, os documentos do lote, se dá para usar FGTS e como planejar a construção."
-date: 2026-11-15
-hora: "18:30"
+date: 2026-12-14
+hora: "07:30"
 agendada: true
 category: imovel
 keyword: "consórcio de terreno"

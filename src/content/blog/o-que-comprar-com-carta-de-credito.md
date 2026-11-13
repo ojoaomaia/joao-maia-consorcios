@@ -2,8 +2,8 @@
 title: "O que dá para comprar com a carta de crédito do consórcio? 9 usos e limites"
 seo_title: "O que comprar com a carta de crédito do consórcio [2026]"
 summary: "Veja o que dá para comprar com a carta de crédito do consórcio de imóvel e de veículo, o que costuma ser proibido e como usar a sobra."
-date: 2026-11-15
-hora: "11:30"
+date: 2026-12-09
+hora: "07:30"
 agendada: true
 category: lance
 keyword: "carta de crédito do consórcio"

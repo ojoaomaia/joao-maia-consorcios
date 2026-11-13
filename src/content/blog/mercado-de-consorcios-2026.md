@@ -2,8 +2,8 @@
 title: "Mercado de consórcios em 2026: 10 números e curiosidades do setor"
 seo_title: "Mercado de consórcios em 2026: números e curiosidades"
 summary: "Veja 10 números oficiais do mercado de consórcios em 2026: participantes, imóveis em alta, ticket médio, lances e o que eles mostram."
-date: 2026-11-14
-hora: "20:00"
+date: 2026-12-16
+hora: "07:30"
 agendada: true
 category: comparativo
 keyword: "mercado de consórcios"
