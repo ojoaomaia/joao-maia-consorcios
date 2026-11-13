@@ -76,6 +76,24 @@ Depois que o GitHub estiver ligado ao Claude, basta pedir, por exemplo: "escreva
 
 Se preferir revisar antes, peça "deixe como rascunho". O artigo vai com `draft: true` e só aparece no site quando você desmarcar Rascunho no painel.
 
+### Links entre matérias (para aumentar as páginas vistas)
+
+O site coloca sozinho, em toda matéria:
+
+- **2 blocos "Leia também"** no meio do texto, com capa e botão "Ler agora". Eles mostram matérias da mesma categoria primeiro e nunca repetem uma matéria que já está linkada no texto.
+- **Botão vermelho "Próxima matéria"** no fim, antes do autor.
+- **Grade "Leia também"** com mais 4 matérias no final.
+
+Para colocar um link de destaque num ponto específico do texto, escreva o link **sozinho num parágrafo**, assim:
+
+```markdown
+[Consórcio de carro vale a pena? Parcela, custo e quando compensa](/blog/consorcio-de-carro/)
+```
+
+Ele vira um botão com borda vermelha e o rótulo "Leia também". Links dentro de uma frase continuam como link normal.
+
+**Regra para o Claude ao escrever matérias:** inclua de 2 a 3 links para outras matérias do blog. Pelo menos 1 deve ser um link sozinho num parágrafo, logo depois do trecho que fala do mesmo assunto. Os cliques aparecem no Google Analytics como o evento `link_interno`.
+
 ### Formato do arquivo de artigo
 
 ```markdown
@@ -85,7 +103,6 @@ seo_title: "Título para o Google, até 70 caracteres (opcional)"
 summary: "Resumo que aparece no Google, de 40 a 160 caracteres."
 date: 2026-11-11
 category: imovel        # imovel, veiculo, lance ou comparativo
-reading_time: 7
 keyword: "palavra-chave principal"
 draft: false
 faq:
