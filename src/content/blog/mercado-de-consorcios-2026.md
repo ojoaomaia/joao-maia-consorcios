@@ -43,7 +43,7 @@ Para ter ideia do ritmo, em julho de 2026 eram 13,41 milhões, segundo o [relat�
 
 De janeiro a setembro de 2026, o consórcio de imóveis vendeu 1,33 milhão de cotas, alta de 37,1%. Os créditos comercializados no segmento somaram R$ 275,06 bilhões, 35% a mais que no mesmo período do ano anterior.
 
-Uma explicação provável é o custo alto do crédito. Com a Selic em 13,75% ao ano, mantida pelo Copom em 4 de novembro de 2026, o financiamento ficou mais caro, e o consórcio, que não cobra juros, ganhou espaço.
+O boletim da ABAC não explica as causas. Uma leitura possível, minha e não da associação, é o custo alto do crédito: com a Selic em 13,75% ao ano, mantida pelo Copom em 4 de novembro de 2026, o financiamento ficou mais caro, e o consórcio, que não cobra juros, ganhou espaço.
 
 ---
 
