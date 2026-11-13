@@ -4,7 +4,6 @@ seo_title: "Como funciona o consórcio: guia passo a passo [2026]"
 summary: "Entenda como funciona o consórcio: grupo, parcela, assembleia, sorteio, lance e carta de crédito, com exemplo em números."
 date: 2026-11-13
 hora: "08:00"
-agendada: true
 category: comparativo
 keyword: "como funciona o consórcio"
 cover: "/img/blog/como-funciona-o-consorcio-capa.webp"
