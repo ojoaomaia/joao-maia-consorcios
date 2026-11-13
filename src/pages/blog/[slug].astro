@@ -1,4 +1,5 @@
 ---
+import { publicado } from '../../lib/publicados';
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import LeiaTambem from '../../components/LeiaTambem.astro';
@@ -6,13 +7,13 @@ import { getCollection } from 'astro:content';
 import { CATS, ICONS, CTA_TXT, fmtData, ANUNCIOS } from '../../consts';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const posts = await getCollection('blog', ({ data }) => publicado(data));
   return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
 }
 const { post } = Astro.props;
 const d = post.data;
 const { Content } = await post.render();
-const todos = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const todos = (await getCollection('blog', ({ data }) => publicado(data))).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 /* links internos: matérias da mesma categoria primeiro, depois as mais recentes; sem repetir a mesma matéria */
 const jaLinkadas = new Set([...(post.body || '').matchAll(/\]\(\/blog\/([^/)#?]+)/g)].map((m) => m[1]));
 const outras = todos.filter((p) => p.slug !== post.slug);

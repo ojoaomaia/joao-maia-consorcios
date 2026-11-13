@@ -135,6 +135,7 @@ collections:
         name: date
         widget: datetime
         default: "{{now}}"
+        hint: "Para agendar, escolha uma data futura e publique normalmente. A matéria fica escondida e entra no site sozinha nesse dia, por volta das 6h da manhã."
         date_format: "DD/MM/YYYY"
         time_format: false
         format: "YYYY-MM-DD"

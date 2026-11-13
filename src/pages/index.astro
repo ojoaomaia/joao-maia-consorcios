@@ -1,11 +1,12 @@
 ---
+import { publicado } from '../lib/publicados';
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import { asset } from '../lib/versao';
 /* Avaliações de clientes: deixe false até ter depoimentos reais (com autorização). Não publique depoimento inventado. */
 const MOSTRAR_AVALIACOES = false;
 import { getCollection } from 'astro:content';
-const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const posts = (await getCollection('blog', ({ data }) => publicado(data))).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const ultimos = posts.slice(0, 3);
 ---
 <Base title="Consórcio de imóvel e veículo sem juros em Ribeirão Preto | João Maia Consórcios" description="Consórcio de imóvel e veículo sem juros, explicado sem enrolação. Faça o teste de 1 minuto e fale com o João no WhatsApp.">

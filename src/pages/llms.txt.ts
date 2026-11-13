@@ -1,3 +1,4 @@
+import { publicado } from '../lib/publicados';
 /* llms.txt: resumo do site para assistentes de IA (ChatGPT, Claude, Perplexity, Gemini).
    É gerado sozinho a cada publicação, já com os artigos novos. */
 import type { APIRoute } from 'astro';
@@ -6,7 +7,7 @@ import { CATS, ENDERECO } from '../consts';
 
 export const GET: APIRoute = async ({ site }) => {
   const u = (p: string) => new URL(p, site).href;
-  const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const posts = (await getCollection('blog', ({ data }) => publicado(data))).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   const porCat = Object.entries(CATS).map(([k, nome]) => {
     const lista = posts.filter((p) => p.data.category === k);
     if (!lista.length) return '';

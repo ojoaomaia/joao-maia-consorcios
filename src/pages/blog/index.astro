@@ -1,9 +1,10 @@
 ---
+import { publicado } from '../../lib/publicados';
 import Base from '../../layouts/Base.astro';
 import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
 import { CATS, ANUNCIOS } from '../../consts';
-const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const posts = (await getCollection('blog', ({ data }) => publicado(data))).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const usadas = Object.entries(CATS).filter(([k]) => posts.some((p) => p.data.category === k));
 ---
 <Base title="Blog | João Maia Consórcios" description="Consórcio explicado sem enrolação: guias sobre lance, FGTS, imóvel, veículo e consórcio x financiamento." ctx="blog">

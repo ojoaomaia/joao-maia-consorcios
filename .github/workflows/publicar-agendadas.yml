@@ -1,0 +1,33 @@
+# Publica matérias agendadas: todo dia às 6h (horário de Brasília) confere se alguma
+# matéria tem a data de hoje. Se tiver, faz um commit vazio para a Netlify atualizar
+# o site, e a matéria passa a aparecer (veja src/lib/publicados.ts).
+name: Publicar matérias agendadas
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Procura matérias com a data de hoje
+        id: busca
+        run: |
+          HOJE=$(TZ=America/Sao_Paulo date +%F)
+          ACHOU=""
+          for f in src/content/blog/*.md; do
+            if grep -Eq "^date: *[\"']?${HOJE}" "$f" && ! grep -Eq '^draft: *true' "$f"; then ACHOU="$ACHOU $(basename "$f" .md)"; fi
+          done
+          echo "hoje=$HOJE" >> "$GITHUB_OUTPUT"
+          echo "materias=$ACHOU" >> "$GITHUB_OUTPUT"
+          echo "Data: $HOJE | Matérias do dia:${ACHOU:- nenhuma}"
+      - name: Atualiza o site
+        if: steps.busca.outputs.materias != ''
+        run: |
+          git config user.name "João Maia"
+          git config user.email "ojoaomaia@users.noreply.github.com"
+          git commit --allow-empty -m "Publica matérias agendadas para ${{ steps.busca.outputs.hoje }}:${{ steps.busca.outputs.materias }}"
+          git push
