@@ -69,12 +69,12 @@ const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 
     <a class="sig" href="/" aria-label="João Maia Consórcios, início"><b>João Maia</b><span>Consórcios</span></a>
     <nav class="nav" id="nav" aria-label="Principal">
       <a href="/" class={on('/')}>Início</a>
-      <a href="/#simulador">Teste de 1 minuto</a>
+      <a href="/#simulador" data-cta="menu-teste">Teste de 1 minuto</a>
       <a href="/blog/" class={on('/blog/')}>Blog</a>
       <a href="/sobre/" class={on('/sobre/')}>Sobre</a>
       <a href="/contato/" class={on('/contato/')}>Contato</a>
     </nav>
-    <a class="btn btn-orange" id="wa-top" data-wa="Olá João! Vim pelo site e quero saber mais sobre consórcio." href="#"><span class="lbl-long">Falar com o João</span><span class="lbl-short">WhatsApp</span></a>
+    <a class="btn btn-orange" id="wa-top" data-cta="topo-menu-whatsapp" data-wa="Olá João! Vim pelo site e quero saber mais sobre consórcio." href="#"><span class="lbl-long">Falar com o João</span><span class="lbl-short">WhatsApp</span></a>
     <button class="menu-btn" id="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
@@ -87,13 +87,13 @@ const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 
   <div class="wrap">
     <div class="cols">
       <div><b style="color:var(--gray-50);font-family:var(--f-display);font-size:18px">{SITE_NOME}</b><br>Consultor Ademicon · Unidade Alto da Boa Vista<br>{ENDERECO}</div>
-      <nav aria-label="Rodapé"><a href="/">Início</a><a href="/#simulador">Teste de 1 minuto</a><a href="/blog/">Blog</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Política de privacidade</a><a href="/termos/">Termos de uso</a><a href="https://www.instagram.com/ojoaomaiia/" target="_blank" rel="noopener">Instagram @ojoaomaiia</a></nav>
+      <nav aria-label="Rodapé"><a href="/">Início</a><a href="/#simulador" data-cta="rodape-teste">Teste de 1 minuto</a><a href="/blog/">Blog</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Política de privacidade</a><a href="/termos/">Termos de uso</a><a href="https://www.instagram.com/ojoaomaiia/" target="_blank" rel="noopener">Instagram @ojoaomaiia</a></nav>
     </div>
     <p class="legal">Este site é o canal pessoal de divulgação do trabalho de João Maia, consultor da Ademicon, e não é o site oficial da administradora. Consórcio é regulado e fiscalizado pelo Banco Central do Brasil. A contemplação ocorre por sorteio ou lance, sem data garantida. Condições, prazos e valores variam conforme o grupo e são apresentados na simulação.</p>
   </div>
 </footer>
 
-<div class="mbar" id="mbar"><a class="btn btn-orange" id="wa-bar" data-wa="Olá João! Vim pelo site e quero uma simulação de consórcio." href="#">Simular grátis no WhatsApp</a></div>
+<div class="mbar" id="mbar"><a class="btn btn-orange" id="wa-bar" data-cta="barra-fixa" data-wa="Olá João! Vim pelo site e quero uma simulação de consórcio." href="#">Simular grátis no WhatsApp</a></div>
 
 <script src={asset("site.js")} defer></script>
 <script src={asset("reveal.js")} defer></script>

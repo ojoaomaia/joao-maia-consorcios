@@ -69,10 +69,14 @@ if (GA_ID) {
     });
   }
 }
+/* medição de cliques: cada botão tem um nome em data-cta (ex.: topo-simulacao, materia-fim). Aparece no GA4 no parâmetro "botao". */
+function nomeBotao(a){ return a.getAttribute('data-cta') || a.id || 'link'; }
+function secaoDe(a){ var sec = a.closest('section,main,.mbar,header,footer'); return (sec && (sec.id || sec.className.split(' ').join('-'))) || ''; }
 document.addEventListener('click', function(e){
-  var a = e.target.closest('a[href^="https://wa.me/"]'); if (!a) return;
-  var sec = a.closest('section,main,.mbar,header');
-  gtag('event', 'whatsapp_click', { botao: a.id || a.getAttribute('data-cta') || 'link', secao: (sec && (sec.id || sec.className.split(' ')[0])) || '', pagina: location.pathname, origem: ORIGEM || 'site' });
+  var a = e.target.closest('a[href^="https://wa.me/"]');
+  if (a) { gtag('event', 'whatsapp_click', { botao: nomeBotao(a), secao: secaoDe(a), pagina: location.pathname, origem: ORIGEM || 'site' }); return; }
+  var t = e.target.closest('a[href$="#simulador"],[data-pick]');
+  if (t) gtag('event', 'teste_click', { botao: t.hasAttribute('data-pick') ? 'objetivo-' + t.getAttribute('data-pick') : nomeBotao(t), secao: secaoDe(t), pagina: location.pathname, origem: ORIGEM || 'site' });
 });
 
 /* menu do celular */
@@ -184,11 +188,12 @@ document.addEventListener('click', function(e){
         (s > 0 ? '<button type="button" class="tq-back" data-back>← Voltar</button>' : '') + '</div>';
     } else {
       var id = result(), r = RES[id];
+      gtag('event', 'teste_resultado', { resultado: id, objetivo: S.a.obj || '', pagina: location.pathname, origem: ORIGEM || 'site' });
       tqBody.innerHTML = '<div class="tq-anim"><span class="mono tq-n">Seu resultado</span><h3 class="tq-q tq-r' + (id === 'fin' ? ' tq-alt' : '') + '">' + esc(r[0]) + '</h3><p class="tq-txt">' + esc(r[1]) + '</p>' +
         '<ul class="tq-sum"><li><span>Objetivo</span>' + esc(label('obj')) + '</li><li><span>Valor</span>' + esc(label('valor')) + '</li><li><span>Prazo</span>' + esc(label('prazo')) + '</li><li><span>Reserva</span>' + esc(label('reserva')) + '</li></ul>' +
         '<div class="two"><div class="field"><label for="tq-nome">Seu nome</label><input id="tq-nome" autocomplete="given-name" maxlength="60" placeholder="Como posso te chamar?"></div><div class="field"><label for="tq-cid">Cidade</label><input id="tq-cid" autocomplete="address-level2" maxlength="60" value="Ribeirão Preto"></div></div>' +
         '<label class="tq-ok"><input type="checkbox" id="tq-ok"> <span>Concordo em enviar estas respostas pelo WhatsApp, conforme a <a href="/privacidade/">política de privacidade</a>.</span></label><p class="tq-ok-err" id="tq-ok-err" hidden>Marque a caixa acima para continuar.</p>' +
-        '<a class="btn btn-orange" id="wa-teste" data-cta="teste-' + id + '" href="#" target="_blank" rel="noopener">Quero minha análise grátis</a>' +
+        '<a class="btn btn-orange" id="wa-teste" data-cta="teste-resultado-' + id + '" href="#" target="_blank" rel="noopener">Quero minha análise grátis</a>' +
         '<button type="button" class="tq-back" data-reset>Refazer o teste</button></div>';
       var up = function(){ $('#wa-teste').href = wa(msg($('#tq-nome').value.trim(), $('#tq-cid').value.trim())); waIcons($('#tq')); };
       $('#tq-nome').addEventListener('input', up); $('#tq-cid').addEventListener('input', up); up();
