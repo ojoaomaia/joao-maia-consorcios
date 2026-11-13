@@ -3,7 +3,7 @@
 'use strict';
 
 /* ===================== CONFIGURAÇÃO ===================== */
-var WA_NUMBER = '5516900000000';   /* [TROCAR PELO SEU WHATSAPP]: 55 + DDD + número, só dígitos */
+var WA_NUMBER = '5516981100028';   /* WhatsApp do João: 55 + DDD + número, só dígitos */
 var GA_ID = 'GTM-PMTLQ6TH';         /* tag do Google (GA4). Aceita GTM-XXXX (tag nova) ou G-XXXX. Vazio = desligado */
 var IG_URL = '';                    /* link do seu Instagram, ex.: https://instagram.com/seuperfil */
 /* ======================================================== */
