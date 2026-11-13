@@ -127,7 +127,26 @@ if (nav && mb) {
   var hs = $$(':scope > h2', body);
   if (cta && hs.length >= 2) hs[Math.floor(hs.length / 2)].before(cta); else if (cta && ps.length > 3) ps[ps.length - 2].after(cta);
   if (ad) ad.hidden = false; if (cta) cta.hidden = false;
+
+  /* blocos "Leia também": em subtítulos diferentes da chamada do WhatsApp, um no começo e outro perto do fim */
+  var l1 = $('#leia-1'), l2 = $('#leia-2'), n = hs.length, c = Math.floor(n / 2), i1 = -1, i2 = -1, k;
+  for (k = 1; k < n; k++) if (k !== c && k !== c + 1) { i1 = k; break; }
+  for (k = n - 1; k > i1 + 1; k--) if (k !== c && k !== c + 1) { i2 = k; break; }
+  if (l1) { if (i1 > 0) hs[i1].before(l1); else if (ps.length > 4) ps[3].after(l1); l1.hidden = !l1.parentNode || l1.parentNode !== body; }
+  if (l2) { if (i2 > 0) hs[i2].before(l2); else if (ps.length > 8) ps[ps.length - 3].after(l2); l2.hidden = !l2.parentNode || l2.parentNode !== body; }
+
+  /* link para outra matéria sozinho num parágrafo vira um botão de destaque */
+  $$(':scope > p', body).forEach(function(p){
+    var a = p.querySelector('a[href^="/blog/"]');
+    if (a && p.children.length === 1 && p.textContent.trim() === a.textContent.trim()) { p.classList.add('leia-link'); a.setAttribute('data-link-interno', 'no-texto'); }
+  });
 })();
+
+/* medição dos cliques entre matérias (só se o visitante aceitou os cookies) */
+document.addEventListener('click', function(e){
+  var a = e.target.closest('[data-link-interno]'); if (!a || typeof gtag !== 'function') return;
+  gtag('event', 'link_interno', { posicao: a.getAttribute('data-link-interno'), destino: a.getAttribute('href'), pagina: location.pathname });
+});
 
 /* teste "O consórcio é para você?" (só na página inicial) */
 (function(){

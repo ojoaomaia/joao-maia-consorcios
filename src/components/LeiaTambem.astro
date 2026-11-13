@@ -1,0 +1,14 @@
+---
+/* Bloco chamativo "Leia também" que vai no meio do texto do artigo. */
+import { CATS } from '../consts';
+const { post, id, pos } = Astro.props;
+const d = post.data;
+---
+<a class="leia" id={id} hidden href={`/blog/${post.slug}/`} data-link-interno={pos}>
+  {d.cover ? <img src={d.cover} alt="" loading="lazy" width="1200" height="630" /> : <span class="leia-ic" aria-hidden="true"></span>}
+  <span class="leia-tx">
+    <span class="leia-k">Leia também · {CATS[d.category]}</span>
+    <strong>{d.title}</strong>
+    <span class="leia-go">Ler agora <span aria-hidden="true">→</span></span>
+  </span>
+</a>
