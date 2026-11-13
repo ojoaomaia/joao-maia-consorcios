@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import { asset } from '../lib/versao';
+/* Avaliações de clientes: deixe false até ter depoimentos reais (com autorização). Não publique depoimento inventado. */
+const MOSTRAR_AVALIACOES = false;
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const ultimos = posts.slice(0, 3);
@@ -155,7 +157,8 @@ const ultimos = posts.slice(0, 3);
     </div>
   </section>
 
-  <!-- Prova social: troque cada cartão por um print real de avaliação do Google ou de conversa (com autorização do cliente). Não publique depoimento inventado. -->
+  {MOSTRAR_AVALIACOES && (
+  
   <section class="light" id="avaliacoes">
     <div class="wrap">
       <div class="head"><span class="kicker">Quem já conversou comigo</span><h2>O que os clientes <em>dizem.</em></h2><p class="lead">Avaliações reais de quem planejou o consórcio comigo.</p></div>
@@ -166,14 +169,14 @@ const ultimos = posts.slice(0, 3);
       </div>
     </div>
   </section>
+  )}
 
   <section class="white">
     <div class="wrap about">
-      <div class="ph">[Sua foto real]</div>
+      <div class="ph ph-av" aria-hidden="true"><b>JM</b><span>Consultor Ademicon</span></div>
       <div class="t">
         <span class="kicker">Quem cuida do seu plano</span>
         <h2>Um consultor que explica <em>antes</em> de vender.</h2>
-        <p>[SUA HISTÓRIA EM 2 OU 3 FRASES: por que você entrou no mundo do consórcio, o que te motiva, quem você gosta de atender.]</p>
         <p>Sou de Ribeirão Preto e gosto de traduzir o que parece complicado. Atendo principalmente quem está indo atrás da primeira grande conquista: sair do aluguel, trocar de carro ou começar a investir.</p>
         <div class="tl"><span>Ribeirão Preto, SP</span><span>Consultor Ademicon</span><span>Unidade Alto da Boa Vista</span></div>
       </div>
@@ -200,7 +203,6 @@ const ultimos = posts.slice(0, 3);
           <div class="row" style="gap:8px"><a class="btn btn-line" data-cta="canal-unidade" data-wa="Olá João! Quero marcar um horário na unidade Alto da Boa Vista." href="#">Marcar horário</a><a class="lnk" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Adolfo+Serra%2C+1145%2C+Alto+da+Boa+Vista%2C+Ribeir%C3%A3o+Preto+SP">Como chegar →</a></div>
         </div>
       </div>
-      <p class="micro" style="margin-top:20px">Horário de atendimento: [DIAS E HORÁRIO DE ATENDIMENTO]</p>
     </div>
   </section>
 
@@ -229,9 +231,9 @@ const ultimos = posts.slice(0, 3);
     <div class="wrap">
       <span class="kicker">Ainda com dúvida?</span>
       <h2>Pergunta para mim. <em>Sem compromisso.</em></h2>
-      <p class="lead">Manda a sua dúvida no WhatsApp, do jeito que ela vier. Eu respondo pessoalmente, no mesmo dia.</p>
+      <p class="lead">Manda a sua dúvida no WhatsApp, do jeito que ela vier. Eu respondo pessoalmente, no mesmo dia útil.</p>
       <a class="btn btn-orange" id="wa-final" data-wa="Olá João! Vim pelo site e tenho uma dúvida sobre consórcio." href="#">Falar com o João no WhatsApp</a>
-      <span class="num" id="wa-num">[SEU WHATSAPP]</span>
+      <span class="num" id="wa-num">+55 (16) 98110-0028</span>
     </div>
   </section>
 

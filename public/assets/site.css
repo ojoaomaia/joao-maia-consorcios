@@ -632,3 +632,8 @@ a.ant-mat strong{font-family:var(--f-display);font-size:16px;line-height:1.25}
   a.ant-mat strong{font-size:15px}
 }
 .recentes img,a.leia img{height:auto}
+/* bloco no lugar da foto (até ter a foto real) */
+.about .ph.ph-av{flex-direction:column;gap:10px;border:0;background:radial-gradient(120% 90% at 70% 20%,rgba(227,38,47,.35),transparent 60%),var(--night);color:#fff;min-height:320px}
+.about .ph.ph-av b{font-family:var(--f-display);font-size:96px;line-height:1;letter-spacing:-.02em;color:#fff}
+.about .ph.ph-av span{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-light)}
+@media (max-width:760px){ .about .ph.ph-av{min-height:200px} .about .ph.ph-av b{font-size:72px} }
