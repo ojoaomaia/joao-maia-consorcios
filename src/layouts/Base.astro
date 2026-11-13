@@ -21,7 +21,9 @@ const org = {
   description: 'Consórcio explicado sem enrolação para quem vai conquistar o primeiro imóvel ou o primeiro carro, em Ribeirão Preto.',
   areaServed: { '@type': 'City', name: 'Ribeirão Preto' },
   address: { '@type': 'PostalAddress', streetAddress: 'Rua Adolfo Serra, 1145, Alto da Boa Vista', postalCode: '14025-520', addressLocality: 'Ribeirão Preto', addressRegion: 'SP', addressCountry: 'BR' },
-  founder: { '@type': 'Person', name: 'João Maia', jobTitle: 'Consultor de consórcios' }
+  founder: { '@type': 'Person', name: 'João Maia', jobTitle: 'Consultor de consórcios', sameAs: ['https://www.instagram.com/ojoaomaiia/'] },
+  sameAs: ['https://www.instagram.com/ojoaomaiia/'],
+  telephone: '+55-16-98110-0028'
 };
 /* Política de segurança da página: só scripts do próprio site, da biblioteca 3D e do Google Analytics. */
 const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.google.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'";
@@ -85,7 +87,7 @@ const CSP = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 
   <div class="wrap">
     <div class="cols">
       <div><b style="color:var(--gray-50);font-family:var(--f-display);font-size:18px">{SITE_NOME}</b><br>Consultor Ademicon · Unidade Alto da Boa Vista<br>{ENDERECO}</div>
-      <nav aria-label="Rodapé"><a href="/">Início</a><a href="/#simulador">Teste de 1 minuto</a><a href="/blog/">Blog</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Política de privacidade</a><a href="/termos/">Termos de uso</a></nav>
+      <nav aria-label="Rodapé"><a href="/">Início</a><a href="/#simulador">Teste de 1 minuto</a><a href="/blog/">Blog</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Política de privacidade</a><a href="/termos/">Termos de uso</a><a href="https://www.instagram.com/ojoaomaiia/" target="_blank" rel="noopener">Instagram @ojoaomaiia</a></nav>
     </div>
     <p class="legal">Este site é o canal pessoal de divulgação do trabalho de João Maia, consultor da Ademicon, e não é o site oficial da administradora. Consórcio é regulado e fiscalizado pelo Banco Central do Brasil. A contemplação ocorre por sorteio ou lance, sem data garantida. Condições, prazos e valores variam conforme o grupo e são apresentados na simulação.</p>
   </div>

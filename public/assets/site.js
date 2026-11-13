@@ -5,7 +5,7 @@
 /* ===================== CONFIGURAÇÃO ===================== */
 var WA_NUMBER = '5516981100028';   /* WhatsApp do João: 55 + DDD + número, só dígitos */
 var GA_ID = 'GTM-PMTLQ6TH';         /* tag do Google (GA4). Aceita GTM-XXXX (tag nova) ou G-XXXX. Vazio = desligado */
-var IG_URL = '';                    /* link do seu Instagram, ex.: https://instagram.com/seuperfil */
+var IG_URL = 'https://www.instagram.com/ojoaomaiia/';  /* Instagram do João */
 /* ======================================================== */
 
 var $ = function(s, r){ return (r || document).querySelector(s); };
