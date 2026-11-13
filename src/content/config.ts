@@ -9,6 +9,7 @@ const blog = defineCollection({
     seo_title: z.string().max(70).optional(),
     summary: z.string().min(40).max(160),
     date: z.coerce.date(),
+    hora: z.string().regex(/^(([01]\d|2[0-3]):(00|15|30|45))?$/, 'Use um horário de 15 em 15 minutos, ex.: 14:30').optional(),   /* horário de publicação (Brasília), para agendar */
     category: z.enum(['imovel', 'veiculo', 'lance', 'comparativo']),
     reading_time: z.number().int().min(1).max(30).optional(),   /* se ficar vazio, o site calcula pelo tamanho do texto */
     keyword: z.string().optional(),

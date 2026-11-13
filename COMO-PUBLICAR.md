@@ -76,6 +76,14 @@ Depois que o GitHub estiver ligado ao Claude, basta pedir, por exemplo: "escreva
 
 Se preferir revisar antes, peça "deixe como rascunho". O artigo vai com `draft: true` e só aparece no site quando você desmarcar Rascunho no painel.
 
+### Agendar uma matéria
+
+No painel, escolha a **data** (campo 9) e o **horário** (campo 9b, de 15 em 15 minutos, horário de Brasília), desmarque Rascunho e clique em **Publicar**. A matéria fica escondida do site, do blog, do sitemap e do Google até o dia e a hora escolhidos.
+
+Uma rotina do GitHub (`.github/workflows/publicar-agendadas.yml`) confere a cada 15 minutos se alguma matéria agendada já chegou na hora e ainda não está no ar. Se tiver, ela atualiza o site sozinha. A matéria entra no ar em até uns 15 a 30 minutos depois do horário, porque o GitHub às vezes atrasa um pouco.
+
+Se o horário ficar vazio, a matéria é publicada assim que for salva (se a data for hoje ou passada).
+
 ### Links entre matérias (para aumentar as páginas vistas)
 
 O site coloca sozinho, em toda matéria:
@@ -102,6 +110,7 @@ title: "Título do artigo (10 a 110 caracteres)"
 seo_title: "Título para o Google, até 70 caracteres (opcional)"
 summary: "Resumo que aparece no Google, de 40 a 160 caracteres."
 date: 2026-11-11
+hora: "14:30"           # opcional: horário de publicação (Brasília), de 15 em 15 minutos
 category: imovel        # imovel, veiculo, lance ou comparativo
 keyword: "palavra-chave principal"
 draft: false
