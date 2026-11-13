@@ -22,7 +22,10 @@ const leia1 = semRepetir[0];
 const leia2 = semRepetir[1];
 const idx = todos.findIndex((p) => p.slug === post.slug);
 const proxima = [todos[idx + 1], todos[0], todos[1]].find((p) => p && p.slug !== post.slug && p !== leia1 && p !== leia2) || semRepetir[2];
-const rel = fila.filter((p) => p !== leia1 && p !== leia2 && p !== proxima).slice(0, 4);
+const anterior = [todos[idx - 1], todos[idx + 2]].find((p) => p && p.slug !== post.slug && p !== proxima && p !== leia1 && p !== leia2);
+const rel = fila.filter((p) => p !== leia1 && p !== leia2 && p !== proxima && p !== anterior).slice(0, 4);
+/* barra lateral "Mais recentes" (computador) */
+const recentes = todos.filter((p) => p.slug !== post.slug).slice(0, 4);
 const cta = CTA_TXT[post.slug] || CTA_TXT['cat-' + d.category] || CTA_TXT.padrao;
 const ctaMsg = cta[2].replace('{t}', d.title);
 const url = new URL(`/blog/${post.slug}/`, Astro.site).href;
@@ -38,12 +41,12 @@ const jsonld: object[] = [
 if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
 ---
 <Base title={d.seo_title || `${d.title} | João Maia Consórcios`} description={d.summary} ctx={`blog: ${post.slug}`} ogType="article" image={d.cover} jsonld={jsonld}>
-  {ANUNCIOS && <div class="wrap" style="padding-top:24px"><div class="ad h90">Anúncio topo · 728x90 desktop / 320x100 celular</div></div>}
-  <div class="wrap post" style={ANUNCIOS ? undefined : "padding-top:40px"}>
+  <div class="wrap post" style="padding-top:40px">
     <article>
       <nav class="crumb" aria-label="Você está em"><a href="/">Início</a> / <a href="/blog/">Blog</a> / <a href={`/blog/?categoria=${d.category}`}>{CATS[d.category]}</a></nav>
       <h1>{d.title}</h1>
       <div class="byline"><span class="av" aria-hidden="true">JM</span><div class="by-txt"><span><b style="color:var(--ink)">João Maia</b>, consultor de consórcios</span><span class="by-meta"><time datetime={d.date.toISOString()}>{fmtData(d.date)}</time></span></div></div>
+      {ANUNCIOS && <div class="ad h250 ad-titulo">Anúncio · logo abaixo do título · 728x90 ou 336x280</div>}
       {d.cover
         ? <img src={d.cover} alt={d.cover_alt || d.title} width="1200" height="630" style="width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:16px" />
         : <div class="cv" style="aspect-ratio:1200/630;border-radius:16px"><Fragment set:html={ICONS[d.category] || ICONS.imovel} /><span>{CATS[d.category]}</span></div>}
@@ -60,12 +63,22 @@ if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQP
           <div>{d.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
         </>
       )}
-      {proxima && (
-        <a class="prox-mat" href={`/blog/${proxima.slug}/`} data-link-interno="proxima">
-          <span class="prox-k">Próxima matéria</span>
-          <strong>{proxima.data.title}</strong>
-          <span class="prox-go" aria-hidden="true">→</span>
-        </a>
+      {(proxima || anterior) && (
+        <nav class="post-nav" aria-label="Outras matérias">
+          {proxima && (
+            <a class="prox-mat" href={`/blog/${proxima.slug}/`} data-link-interno="proxima">
+              <span class="prox-k">Próxima matéria</span>
+              <strong>{proxima.data.title}</strong>
+              <span class="prox-go" aria-hidden="true">→</span>
+            </a>
+          )}
+          {anterior && (
+            <a class="ant-mat" href={`/blog/${anterior.slug}/`} data-link-interno="anterior">
+              <span class="ant-go" aria-hidden="true">←</span>
+              <span class="ant-tx"><span class="prox-k">Matéria anterior</span><strong>{anterior.data.title}</strong></span>
+            </a>
+          )}
+        </nav>
       )}
       <div class="author"><span class="av" aria-hidden="true">JM</span><div><b>Escrito por João Maia</b><p style="color:var(--ink-soft);font-size:15px">Consultor Ademicon em Ribeirão Preto. Explica consórcio sem enrolação para quem vai conquistar o primeiro imóvel ou o primeiro carro.</p></div><a class="btn btn-night" href="/#simulador">Fazer o teste</a></div>
       {ANUNCIOS && <div class="ad h250">Anúncio final · fim do artigo</div>}
@@ -74,6 +87,17 @@ if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQP
     <aside>
       <div class="side"><span class="kicker">Teste de 1 minuto</span><b style="font-family:var(--f-display);font-size:22px;line-height:1.15">O consórcio é para você?</b><p>Quatro perguntas e você descobre o caminho que combina com o seu momento.</p><a class="btn btn-orange" href="/#simulador">Fazer o teste</a></div>
       {ANUNCIOS && <div class="ad h600">Anúncio lateral · 300x600<br>só desktop</div>}
+      {recentes.length > 0 && (
+        <div class="recentes">
+          <span class="mono" style="color:var(--ink-soft)">Mais recentes</span>
+          {recentes.map((p) => (
+            <a href={`/blog/${p.slug}/`} data-link-interno="lateral">
+              {p.data.cover ? <img src={p.data.cover} alt="" loading="lazy" width="1200" height="630" /> : <span class="rc-ic" aria-hidden="true"></span>}
+              <span>{p.data.title}</span>
+            </a>
+          ))}
+        </div>
+      )}
       <div class="catbox"><span class="mono" style="color:var(--ink-soft)">Categorias</span>{Object.entries(CATS).map(([k, c]) => <a href={`/blog/?categoria=${k}`}>{c}</a>)}</div>
     </aside>
   </div>
