@@ -84,6 +84,8 @@ Uma rotina do GitHub (`.github/workflows/publicar-agendadas.yml`) confere a cada
 
 Se o horário ficar vazio, a matéria é publicada assim que for salva (se a data for hoje ou passada).
 
+Para ver o que está agendado: na lista de artigos do painel, clique em **Filtrar por > Só agendadas**. As agendadas também aparecem com "AGENDADA ·" antes do título. Quando a matéria entra no ar, a marca sai sozinha.
+
 ### Links entre matérias (para aumentar as páginas vistas)
 
 O site coloca sozinho, em toda matéria:
