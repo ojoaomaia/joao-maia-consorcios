@@ -55,9 +55,9 @@ if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQP
       {ANUNCIOS && <div class="ad h250" id="ad-meio" hidden>Anúncio · após o 2º parágrafo</div>}
       {leia1 && <LeiaTambem post={leia1} id="leia-1" pos="meio-1" />}
       {leia2 && <LeiaTambem post={leia2} id="leia-2" pos="meio-2" />}
-      <div class="inline-cta" id="cta-meio" hidden><div><b style="font-size:19px;font-family:var(--f-display)">{cta[0]}</b><span>{cta[1]}</span></div><a class="btn btn-orange" data-cta={`artigo-${post.slug}`} data-wa={ctaMsg} href="#">{cta[3] || 'Falar com o João'}</a></div>
+      <div class="inline-cta" id="cta-meio" hidden><div><b style="font-size:19px;font-family:var(--f-display)">{cta[0]}</b><span>{cta[1]}</span></div><a class="btn btn-orange" data-cta={`artigo-${post.slug}`} data-wa={ctaMsg} href="#">{cta[3]}</a></div>
 
-      {cta[3] && <div class="inline-cta" id="cta-fim"><div><b style="font-size:19px;font-family:var(--f-display)">{cta[0]}</b><span>{cta[1]}</span></div><a class="btn btn-orange" data-cta={`artigo-fim-${post.slug}`} data-wa={ctaMsg} href="#">{cta[3]}</a></div>}
+      <div class="inline-cta" id="cta-fim"><div><b style="font-size:19px;font-family:var(--f-display)">{cta[0]}</b><span>{cta[1]}</span></div><a class="btn btn-orange" data-cta={`artigo-fim-${post.slug}`} data-wa={ctaMsg} href="#">{cta[3]}</a></div>
 
       {d.faq.length > 0 && (
         <>
@@ -82,12 +82,12 @@ if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQP
           )}
         </nav>
       )}
-      <div class="author"><span class="av" aria-hidden="true">JM</span><div><b>Escrito por João Maia</b><p style="color:var(--ink-soft);font-size:15px">Consultor Ademicon em Ribeirão Preto. Explica consórcio sem enrolação para quem vai conquistar o primeiro imóvel ou o primeiro carro.</p></div><a class="btn btn-night" href="/#simulador">Fazer o teste</a></div>
+      <div class="author"><span class="av" aria-hidden="true">JM</span><div><b>Escrito por João Maia</b><p style="color:var(--ink-soft);font-size:15px">Consultor Ademicon em Ribeirão Preto. Explica consórcio sem enrolação para quem vai conquistar o primeiro imóvel ou o primeiro carro.</p></div><a class="btn btn-night" href="/#simulador">Fazer o teste de 1 minuto</a></div>
       {ANUNCIOS && <div class="ad h250">Anúncio final · fim do artigo</div>}
       {rel.length > 0 && (<><h2 style="font-size:24px">Leia também</h2><div class="cards cards-blog cards-rel">{rel.map((p) => <Card post={p} />)}</div></>)}
     </article>
     <aside>
-      <div class="side"><span class="kicker">Teste de 1 minuto</span><b style="font-family:var(--f-display);font-size:22px;line-height:1.15">O consórcio é para você?</b><p>Quatro perguntas e você descobre o caminho que combina com o seu momento.</p><a class="btn btn-orange" href="/#simulador">Fazer o teste</a></div>
+      <div class="side"><span class="kicker">Teste de 1 minuto</span><b style="font-family:var(--f-display);font-size:22px;line-height:1.15">O consórcio é para você?</b><p>Quatro perguntas e você descobre o caminho que combina com o seu momento.</p><a class="btn btn-orange" href="/#simulador">Fazer o teste de 1 minuto</a></div>
       {ANUNCIOS && <div class="ad h600">Anúncio lateral · 300x600<br>só desktop</div>}
       {recentes.length > 0 && (
         <div class="recentes">

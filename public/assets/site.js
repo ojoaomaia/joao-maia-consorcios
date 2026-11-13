@@ -188,7 +188,7 @@ document.addEventListener('click', function(e){
         '<ul class="tq-sum"><li><span>Objetivo</span>' + esc(label('obj')) + '</li><li><span>Valor</span>' + esc(label('valor')) + '</li><li><span>Prazo</span>' + esc(label('prazo')) + '</li><li><span>Reserva</span>' + esc(label('reserva')) + '</li></ul>' +
         '<div class="two"><div class="field"><label for="tq-nome">Seu nome</label><input id="tq-nome" autocomplete="given-name" maxlength="60" placeholder="Como posso te chamar?"></div><div class="field"><label for="tq-cid">Cidade</label><input id="tq-cid" autocomplete="address-level2" maxlength="60" value="Ribeirão Preto"></div></div>' +
         '<label class="tq-ok"><input type="checkbox" id="tq-ok"> <span>Concordo em enviar estas respostas pelo WhatsApp, conforme a <a href="/privacidade/">política de privacidade</a>.</span></label><p class="tq-ok-err" id="tq-ok-err" hidden>Marque a caixa acima para continuar.</p>' +
-        '<a class="btn btn-orange" id="wa-teste" data-cta="teste-' + id + '" href="#" target="_blank" rel="noopener">Receber minha análise no WhatsApp</a>' +
+        '<a class="btn btn-orange" id="wa-teste" data-cta="teste-' + id + '" href="#" target="_blank" rel="noopener">Quero minha análise grátis</a>' +
         '<button type="button" class="tq-back" data-reset>Refazer o teste</button></div>';
       var up = function(){ $('#wa-teste').href = wa(msg($('#tq-nome').value.trim(), $('#tq-cid').value.trim())); waIcons($('#tq')); };
       $('#tq-nome').addEventListener('input', up); $('#tq-cid').addEventListener('input', up); up();

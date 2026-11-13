@@ -18,24 +18,24 @@ export const ICONS: Record<string, string> = {
   comparativo: '<svg class="ic" viewBox="0 0 120 100" aria-hidden="true"><path d="M60 12v78"/><path d="M30 90h60"/><path d="M14 30h92"/><path d="M24 30 10 62h28z"/><path d="M96 30 82 62h28z"/><path d="M10 62a14 8 0 0 0 28 0M82 62a14 8 0 0 0 28 0"/><circle cx="60" cy="12" r="4"/></svg>'
 };
 
-/* Chamada no fim de cada artigo, ligada ao tema: [título, apoio, mensagem do WhatsApp]. {t} = título do artigo.
+/* Chamada no meio e no fim de cada artigo, ligada ao tema: [título, apoio, mensagem do WhatsApp, texto do botão]. {t} = título do artigo.
    Vale primeiro o nome do arquivo do artigo (slug); se não houver, vale a categoria. */
-export const CTA_TXT: Record<string, [string, string, string, string?]> = {
+export const CTA_TXT: Record<string, [string, string, string, string]> = {
   'como-funciona-o-lance-no-consorcio': ['Quer este guia resumido em 1 página?', 'Os três tipos de lance, como chegar ao valor e os erros mais comuns, num PDF para salvar no celular. Eu te mando no WhatsApp.', 'Olá João! Li o artigo sobre lance e quero receber o guia do lance em 1 página.', 'Receber o guia'],
-  'consorcio-ou-financiamento': ['Quer comparar com os seus números?', 'Me diga o valor do bem e eu mostro lado a lado consórcio e financiamento.', 'Olá João! Li o artigo "{t}" e quero comparar consórcio e financiamento no meu caso.'],
-  'fgts-no-consorcio-de-imovel': ['Quer saber se o seu FGTS entra no plano?', 'Eu confiro as regras com você e mostro onde o saldo pode ajudar: no lance ou na compra.', 'Olá João! Li o artigo sobre FGTS e quero saber se posso usar o meu no consórcio.'],
-  'parcela-atrasada-no-consorcio': ['Está com parcela em atraso?', 'Me chama que eu te ajudo a ver o caminho para regularizar e voltar às assembleias.', 'Olá João! Li o artigo sobre parcela atrasada e preciso de ajuda com o meu consórcio.'],
-  'consorcio-de-carro': ['Quer trocar de carro sem pagar juros?', 'Eu simulo a parcela do carro que você quer e mostro a estratégia de lance para antecipar.', 'Olá João! Li o artigo sobre consórcio de carro e quero uma simulação.'],
-  'consorcio-com-nome-sujo': ['Está com o nome negativado e quer um consórcio?', 'Eu te explico como funciona a análise e monto um plano para a carta sair sem travar.', 'Olá João! Li o artigo sobre consórcio com nome sujo e quero entender o meu caso.'],
-  'quanto-tempo-demora-para-ser-contemplado': ['Quer uma previsão realista da sua contemplação?', 'Eu olho os números do grupo com você e mostro a estratégia de lance que faz sentido.', 'Olá João! Li o artigo sobre quanto tempo demora para ser contemplado e quero planejar o meu caso.'],
-  '13-salario-para-dar-lance-no-consorcio': ['Quer usar o seu 13º no lance?', 'Eu olho o histórico do grupo com você e mostro quanto faz sentido ofertar.', 'Olá João! Li o artigo sobre usar o 13º salário no lance e quero montar uma estratégia.'],
-  'consorcio-e-furada': ['Quer saber se o consórcio combina com você?', 'Eu te digo com honestidade, inclusive se não for o melhor caminho agora.', 'Olá João! Li o artigo "Consórcio é furada?" e quero saber se o consórcio faz sentido para mim.'],
-  'consorcio-de-200-mil-parcela': ['Quer ver a sua carta de 200 mil na prática?', 'Eu simulo parcela, prazo e estratégia de lance com os seus números, sem compromisso.', 'Olá João! Li o artigo sobre consórcio de 200 mil e quero uma simulação para o meu caso.'],
-  'cat-imovel': ['Quer ver o consórcio de imóvel no seu caso?', 'Eu monto a simulação com você, sem compromisso.', 'Olá João! Li o artigo "{t}" e quero uma simulação de consórcio de imóvel.'],
-  'cat-veiculo': ['Quer ver o consórcio de veículo no seu caso?', 'Eu monto a simulação com você, sem compromisso.', 'Olá João! Li o artigo "{t}" e quero uma simulação de consórcio de veículo.'],
-  'cat-lance': ['Quer montar a sua estratégia de lance?', 'Eu olho o histórico do grupo com você.', 'Olá João! Li o artigo "{t}" e quero montar uma estratégia de lance.'],
-  'cat-comparativo': ['Quer comparar com os seus números?', 'Eu mostro lado a lado, sem compromisso.', 'Olá João! Li o artigo "{t}" e quero comparar no meu caso.'],
-  padrao: ['Quer ver isso no seu caso?', 'Eu monto a simulação com estratégia de lance, sem compromisso.', 'Olá João! Li o artigo "{t}" e quero uma simulação.']
+  'consorcio-ou-financiamento': ['Quer comparar com os seus números?', 'Me diga o valor do bem e eu mostro lado a lado consórcio e financiamento.', 'Olá João! Li o artigo "{t}" e quero comparar consórcio e financiamento no meu caso.', 'Comparar com os meus números'],
+  'fgts-no-consorcio-de-imovel': ['Quer saber se o seu FGTS entra no plano?', 'Eu confiro as regras com você e mostro onde o saldo pode ajudar: no lance ou na compra.', 'Olá João! Li o artigo sobre FGTS e quero saber se posso usar o meu no consórcio.', 'Ver se o meu FGTS entra'],
+  'parcela-atrasada-no-consorcio': ['Está com parcela em atraso?', 'Me chama que eu te ajudo a ver o caminho para regularizar e voltar às assembleias.', 'Olá João! Li o artigo sobre parcela atrasada e preciso de ajuda com o meu consórcio.', 'Quero regularizar'],
+  'consorcio-de-carro': ['Quer trocar de carro sem pagar juros?', 'Eu simulo a parcela do carro que você quer e mostro a estratégia de lance para antecipar.', 'Olá João! Li o artigo sobre consórcio de carro e quero uma simulação.', 'Simular o meu carro'],
+  'consorcio-com-nome-sujo': ['Está com o nome negativado e quer um consórcio?', 'Eu te explico como funciona a análise e monto um plano para a carta sair sem travar.', 'Olá João! Li o artigo sobre consórcio com nome sujo e quero entender o meu caso.', 'Entender o meu caso'],
+  'quanto-tempo-demora-para-ser-contemplado': ['Quer uma previsão realista da sua contemplação?', 'Eu olho os números do grupo com você e mostro a estratégia de lance que faz sentido.', 'Olá João! Li o artigo sobre quanto tempo demora para ser contemplado e quero planejar o meu caso.', 'Planejar a minha contemplação'],
+  '13-salario-para-dar-lance-no-consorcio': ['Quer usar o seu 13º no lance?', 'Eu olho o histórico do grupo com você e mostro quanto faz sentido ofertar.', 'Olá João! Li o artigo sobre usar o 13º salário no lance e quero montar uma estratégia.', 'Montar a minha estratégia'],
+  'consorcio-e-furada': ['Quer saber se o consórcio combina com você?', 'Eu te digo com honestidade, inclusive se não for o melhor caminho agora.', 'Olá João! Li o artigo "Consórcio é furada?" e quero saber se o consórcio faz sentido para mim.', 'Ver se combina comigo'],
+  'consorcio-de-200-mil-parcela': ['Quer ver a sua carta de 200 mil na prática?', 'Eu simulo parcela, prazo e estratégia de lance com os seus números, sem compromisso.', 'Olá João! Li o artigo sobre consórcio de 200 mil e quero uma simulação para o meu caso.', 'Simular a minha carta'],
+  'cat-imovel': ['Quer ver o consórcio de imóvel no seu caso?', 'Eu monto a simulação com você, sem compromisso.', 'Olá João! Li o artigo "{t}" e quero uma simulação de consórcio de imóvel.', 'Quero minha simulação grátis'],
+  'cat-veiculo': ['Quer ver o consórcio de veículo no seu caso?', 'Eu monto a simulação com você, sem compromisso.', 'Olá João! Li o artigo "{t}" e quero uma simulação de consórcio de veículo.', 'Quero minha simulação grátis'],
+  'cat-lance': ['Quer montar a sua estratégia de lance?', 'Eu olho o histórico do grupo com você.', 'Olá João! Li o artigo "{t}" e quero montar uma estratégia de lance.', 'Montar a minha estratégia'],
+  'cat-comparativo': ['Quer comparar com os seus números?', 'Eu mostro lado a lado, sem compromisso.', 'Olá João! Li o artigo "{t}" e quero comparar no meu caso.', 'Comparar com os meus números'],
+  padrao: ['Quer ver isso no seu caso?', 'Eu monto a simulação com estratégia de lance, sem compromisso.', 'Olá João! Li o artigo "{t}" e quero uma simulação.', 'Quero minha simulação grátis']
 };
 
 export const fmtData = (d: Date) => d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
