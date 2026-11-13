@@ -16,7 +16,7 @@ const usadas = Object.entries(CATS).filter(([k]) => posts.some((p) => p.data.cat
       <button type="button" data-f="todos" aria-pressed="true">Todos</button>
       {usadas.map(([k, v]) => <button type="button" data-f={k} aria-pressed="false">{v}</button>)}
     </div>
-    <div class="cards" id="blog-cards">{posts.map((p) => <Card post={p} />)}</div>
+    <div class="cards cards-blog" id="blog-cards">{posts.map((p, i) => <Card post={p} destaque={i === 0} />)}</div>
     <p id="blog-vazio" hidden style="color:var(--ink-soft)">Nenhum artigo nesta categoria ainda.</p>
   </div>
 </Base>
