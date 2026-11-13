@@ -20,8 +20,8 @@ export const ICONS: Record<string, string> = {
 
 /* Chamada no fim de cada artigo, ligada ao tema: [título, apoio, mensagem do WhatsApp]. {t} = título do artigo.
    Vale primeiro o nome do arquivo do artigo (slug); se não houver, vale a categoria. */
-export const CTA_TXT: Record<string, [string, string, string]> = {
-  'como-funciona-o-lance-no-consorcio': ['Quer montar a sua estratégia de lance?', 'Eu olho o histórico do grupo com você e mostro quanto faz sentido ofertar.', 'Olá João! Li o artigo sobre lance e quero montar uma estratégia de lance para o meu caso.'],
+export const CTA_TXT: Record<string, [string, string, string, string?]> = {
+  'como-funciona-o-lance-no-consorcio': ['Quer este guia resumido em 1 página?', 'Os três tipos de lance, como chegar ao valor e os erros mais comuns, num PDF para salvar no celular. Eu te mando no WhatsApp.', 'Olá João! Li o artigo sobre lance e quero receber o guia do lance em 1 página.', 'Receber o guia'],
   'consorcio-ou-financiamento': ['Quer comparar com os seus números?', 'Me diga o valor do bem e eu mostro lado a lado consórcio e financiamento.', 'Olá João! Li o artigo "{t}" e quero comparar consórcio e financiamento no meu caso.'],
   'fgts-no-consorcio-de-imovel': ['Quer saber se o seu FGTS entra no plano?', 'Eu confiro as regras com você e mostro onde o saldo pode ajudar: no lance ou na compra.', 'Olá João! Li o artigo sobre FGTS e quero saber se posso usar o meu no consórcio.'],
   'parcela-atrasada-no-consorcio': ['Está com parcela em atraso?', 'Me chama que eu te ajudo a ver o caminho para regularizar e voltar às assembleias.', 'Olá João! Li o artigo sobre parcela atrasada e preciso de ajuda com o meu consórcio.'],

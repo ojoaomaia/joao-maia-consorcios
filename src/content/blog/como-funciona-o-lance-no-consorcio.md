@@ -147,4 +147,4 @@ Por isso, confira sempre se a empresa aparece no [site do Banco Central](https:/
 - O melhor guia para o valor é o histórico de lances vencedores do seu grupo.
 - Planeje desde a entrada no grupo e preserve a sua reserva de emergência.
 
-Quer montar a sua estratégia de lance? [Faça o teste de 1 minuto](/#simulador) ou me chame no WhatsApp. Quem responde sou eu, pessoalmente.
+Quer montar a sua estratégia de lance? [Faça o teste de 1 minuto](/#simulador) ou peça o guia do lance em PDF logo abaixo. Quem responde sou eu, pessoalmente.

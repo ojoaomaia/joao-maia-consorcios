@@ -55,7 +55,9 @@ if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQP
       {ANUNCIOS && <div class="ad h250" id="ad-meio" hidden>Anúncio · após o 2º parágrafo</div>}
       {leia1 && <LeiaTambem post={leia1} id="leia-1" pos="meio-1" />}
       {leia2 && <LeiaTambem post={leia2} id="leia-2" pos="meio-2" />}
-      <div class="inline-cta" id="cta-meio" hidden><div><b style="font-size:19px;font-family:var(--f-display)">{cta[0]}</b><span>{cta[1]}</span></div><a class="btn btn-orange" data-cta={`artigo-${post.slug}`} data-wa={ctaMsg} href="#">Falar com o João</a></div>
+      <div class="inline-cta" id="cta-meio" hidden><div><b style="font-size:19px;font-family:var(--f-display)">{cta[0]}</b><span>{cta[1]}</span></div><a class="btn btn-orange" data-cta={`artigo-${post.slug}`} data-wa={ctaMsg} href="#">{cta[3] || 'Falar com o João'}</a></div>
+
+      {cta[3] && <div class="inline-cta" id="cta-fim"><div><b style="font-size:19px;font-family:var(--f-display)">{cta[0]}</b><span>{cta[1]}</span></div><a class="btn btn-orange" data-cta={`artigo-fim-${post.slug}`} data-wa={ctaMsg} href="#">{cta[3]}</a></div>}
 
       {d.faq.length > 0 && (
         <>
