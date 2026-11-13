@@ -30,6 +30,10 @@ const recentes = todos.filter((p) => p.slug !== post.slug).slice(0, 4);
 const cta = CTA_TXT[post.slug] || CTA_TXT['cat-' + d.category] || CTA_TXT.padrao;
 const ctaMsg = cta[2].replace('{t}', d.title);
 const url = new URL(`/blog/${post.slug}/`, Astro.site).href;
+/* compartilhar: o link leva ?origem=compartilhado para o GA4 mostrar quantas visitas vieram de matérias enviadas */
+const linkShare = `${url}?origem=compartilhado`;
+const waShare = `https://api.whatsapp.com/send?text=${encodeURIComponent(`Olha essa matéria sobre consórcio: ${d.title}\n${linkShare}`)}`;
+const QUEM: Record<string, string> = { imovel: 'pensando em comprar um imóvel', veiculo: 'pensando em trocar de carro', lance: 'que já tem consórcio ou quer entender o lance', comparativo: 'em dúvida entre consórcio e financiamento' };
 const jsonld: object[] = [
   { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: d.title, description: d.summary, datePublished: d.date.toISOString(), dateModified: d.date.toISOString(), inLanguage: 'pt-BR', mainEntityOfPage: url,
     image: new URL(d.cover || '/img/og-joao-maia-consorcios.png', Astro.site).href,
@@ -44,9 +48,9 @@ if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQP
 <Base title={d.seo_title || `${d.title} | João Maia Consórcios`} description={d.summary} ctx={`blog: ${post.slug}`} ogType="article" image={d.cover} jsonld={jsonld}>
   <div class="wrap post" style="padding-top:40px">
     <article>
-      <nav class="crumb" aria-label="Você está em"><a href="/">Início</a> / <a href="/blog/">Blog</a> / <a href={`/blog/?categoria=${d.category}`}>{CATS[d.category]}</a></nav>
+      <nav class="crumb" aria-label="Você está em"><a href="/">Início</a> / <a href="/blog/">Blog</a> / <a href={`/blog/categoria/${d.category}/`}>{CATS[d.category]}</a></nav>
       <h1>{d.title}</h1>
-      <div class="byline"><span class="av" aria-hidden="true">JM</span><div class="by-txt"><span><b style="color:var(--ink)">João Maia</b>, consultor de consórcios</span><span class="by-meta"><time datetime={d.date.toISOString()}>{fmtData(d.date)}</time></span></div></div>
+      <div class="byline"><span class="av" aria-hidden="true">JM</span><div class="by-txt"><span><b style="color:var(--ink)">João Maia</b>, consultor de consórcios</span><span class="by-meta"><time datetime={d.date.toISOString()}>{fmtData(d.date)}</time></span></div><a class="by-share" href={waShare} target="_blank" rel="noopener" data-share="whatsapp" data-local="topo" aria-label="Enviar esta matéria no WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg><span>Enviar</span></a></div>
       {ANUNCIOS && <div class="ad h250 ad-titulo">Anúncio · logo abaixo do título · 728x90 ou 336x280</div>}
       {d.cover
         ? <img src={d.cover} alt={d.cover_alt || d.title} width="1200" height="630" style="width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:16px" />
@@ -83,6 +87,7 @@ if (d.faq.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQP
           )}
         </nav>
       )}
+      <div class="share-box" id="compartilhar"><div><b>Conhece alguém {QUEM[d.category] || "pensando em consórcio"}?</b><span>Envie esta matéria. Decisão de compra grande quase sempre é feita a dois, ou em família.</span></div><div class="share-btns"><a class="btn btn-wa-share" href={waShare} target="_blank" rel="noopener" data-share="whatsapp" data-local="fim"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.6A9 9 0 1 1 21 12z"/></svg>Enviar no WhatsApp</a><button type="button" class="btn btn-line-dark" data-share="copiar" data-link={linkShare}>Copiar link</button></div></div>
       <div class="author"><span class="av" aria-hidden="true">JM</span><div><b>Escrito por João Maia</b><p style="color:var(--ink-soft);font-size:15px">Consultor Ademicon em Ribeirão Preto. Explica consórcio sem enrolação para quem vai conquistar o primeiro imóvel ou o primeiro carro.</p></div><a class="btn btn-night" data-cta="materia-teste" href="/#simulador">Fazer o teste de 1 minuto</a></div>
       {ANUNCIOS && <div class="ad h250">Anúncio final · fim do artigo</div>}
       {rel.length > 0 && (<><h2 style="font-size:24px">Leia também</h2><div class="cards cards-blog cards-rel">{rel.map((p) => <Card post={p} />)}</div></>)}

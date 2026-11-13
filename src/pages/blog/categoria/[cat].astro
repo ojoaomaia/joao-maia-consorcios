@@ -1,0 +1,47 @@
+---
+/* Página de cada categoria do blog: texto de abertura + todas as matérias publicadas do tema.
+   Só gera páginas de categorias que já têm matéria no ar. */
+import Base from '../../../layouts/Base.astro';
+import Card from '../../../components/Card.astro';
+import { getCollection } from 'astro:content';
+import { CATS, CAT_PAGINA, CTA_TXT } from '../../../consts';
+import { publicado } from '../../../lib/publicados';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog', ({ data }) => publicado(data))).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return Object.keys(CATS).filter((k) => posts.some((p) => p.data.category === k)).map((k) => ({ params: { cat: k }, props: { posts, cat: k } }));
+}
+const { posts, cat } = Astro.props;
+const lista = posts.filter((p) => p.data.category === cat);
+const usadas = Object.keys(CATS).filter((k) => posts.some((p) => p.data.category === k));
+const pg = CAT_PAGINA[cat];
+const cta = CTA_TXT['cat-' + cat] || CTA_TXT.padrao;
+const url = new URL(`/blog/categoria/${cat}/`, Astro.site).href;
+const jsonld = [
+  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: CATS[cat], description: pg.intro, url, inLanguage: 'pt-BR',
+    mainEntity: { '@type': 'ItemList', itemListElement: lista.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(`/blog/${p.slug}/`, Astro.site).href, name: p.data.title })) } },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: new URL('/', Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: new URL('/blog/', Astro.site).href },
+    { '@type': 'ListItem', position: 3, name: CATS[cat], item: url } ] }
+];
+const desc = pg.intro.length > 150 ? pg.intro.slice(0, pg.intro.lastIndexOf(' ', 146)) + '...' : pg.intro;
+---
+<Base title={`${pg.seo} | João Maia`} description={desc} ctx={`blog-${cat}`} jsonld={jsonld}>
+  <section class="darker blogtop">
+    <div class="wrap"><div class="head" style="margin:0">
+      <nav class="crumb crumb-dark" aria-label="Você está em"><a href="/">Início</a> / <a href="/blog/">Blog</a> / {CATS[cat]}</nav>
+      <span class="kicker">Blog · {lista.length} {lista.length === 1 ? 'matéria' : 'matérias'}</span>
+      <h1 class="h2like" set:html={pg.h1}></h1>
+      <p class="lead">{pg.intro}</p>
+    </div></div>
+  </section>
+  <div class="wrap light" style="padding-block:32px 88px">
+    <nav class="chips filters" aria-label="Temas do blog">
+      <a class="chip" href="/blog/">Todos</a>
+      {usadas.map((k) => <a class="chip" href={`/blog/categoria/${k}/`} aria-current={k === cat ? 'page' : undefined}>{CATS[k]}</a>)}
+    </nav>
+    <div class="cards cards-blog">{lista.map((p, i) => <Card post={p} destaque={i === 0} />)}</div>
+    <div class="inline-cta" style="margin-top:36px"><div><b style="font-size:19px;font-family:var(--f-display)">{cta[0]}</b><span>{cta[1]}</span></div><a class="btn btn-orange" data-cta={`categoria-${cat}`} data-wa={`Olá João! Vi as matérias sobre ${CATS[cat].toLowerCase()} no blog e quero conversar sobre o meu caso.`} href="#">{cta[3]}</a></div>
+  </div>
+</Base>

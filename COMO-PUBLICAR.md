@@ -90,6 +90,12 @@ Para ver o que está agendado: na lista de artigos do painel, clique em **Filtra
 
 A página do blog abre com a seção **"Comece por aqui"**, com 4 matérias. Para escolher quais, ligue **"Destacar no topo do blog"** na matéria, no painel. Marque até 4, de preferência as que mais ajudam a pessoa a decidir e a chamar no WhatsApp. Se marcar menos de 4, o resto é completado com as mais recentes. Abaixo vem **"Mais recentes"**, com as outras matérias e o filtro por categoria.
 
+### Compartilhar e páginas de tema
+
+- Toda matéria tem o botão **"Enviar"** ao lado do autor e a caixa **"Conhece alguém...?"** no fim, com **Enviar no WhatsApp** e **Copiar link**. O link enviado leva `?origem=compartilhado`, então as visitas e os contatos que vierem dele aparecem no GA4 (evento `compartilhar` e dimensão "Origem do visitante").
+- Cada tema do blog tem página própria em `/blog/categoria/imovel/`, `/veiculo/`, `/lance/` e `/comparativo/`, com texto de abertura (em `src/consts.ts`, `CAT_PAGINA`). Os botões de tema do blog levam para elas.
+- Página local: `/consorcio-em-ribeirao-preto/`, com a unidade, atendimento na região e perguntas frequentes.
+
 ### Links entre matérias (para aumentar as páginas vistas)
 
 O site coloca sozinho, em toda matéria:

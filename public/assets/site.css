@@ -645,3 +645,34 @@ a.ant-mat strong{font-family:var(--f-display);font-size:16px;line-height:1.25}
 .cards-topo{grid-template-columns:repeat(4,1fr)}
 @media (max-width:1100px){ .cards-topo{grid-template-columns:repeat(2,1fr)} }
 @media (max-width:760px){ .blog-sec{margin-bottom:32px} .blog-sec-t{font-size:22px;margin-bottom:14px} .cards-topo{grid-template-columns:1fr 1fr} }
+
+/* compartilhar matéria */
+.byline .by-share{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font:600 13px var(--f-body);color:var(--ink);border:1px solid var(--gray-200);background:var(--paper);border-radius:999px;padding:8px 13px;min-height:40px;text-decoration:none;flex:none}
+.byline .by-share:hover{border-color:var(--ink)}
+.share-box{display:flex;flex-wrap:wrap;gap:16px 20px;align-items:center;justify-content:space-between;background:var(--paper);border:1px solid var(--gray-200);border-left:4px solid #25D366;border-radius:16px;padding:20px 22px;margin:28px 0 20px}
+.share-box b{display:block;font-family:var(--f-display);font-size:19px;line-height:1.2;color:var(--ink);margin-bottom:4px}
+.share-box span{color:var(--ink-soft);font-size:15px;line-height:1.45}
+.share-btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn-wa-share{background:#1E9E53;color:#fff;border:0;display:inline-flex;align-items:center;gap:8px}
+.btn-wa-share:hover{background:#178A47;color:#fff}
+.btn-line-dark{background:transparent;color:var(--ink);border:1px solid var(--gray-200);cursor:pointer;font:inherit;font-weight:600}
+.btn-line-dark:hover{border-color:var(--ink)}
+@media (max-width:760px){ .byline .by-share span{display:none} .byline .by-share{padding:8px 10px} .share-box{padding:18px} .share-btns{width:100%} .share-btns .btn{flex:1;justify-content:center} }
+
+/* temas do blog como links (páginas de categoria) */
+.chips .chip{font:600 14px var(--f-body);border:1px solid var(--gray-200);color:var(--ink);background:var(--paper);border-radius:999px;padding:9px 15px;text-decoration:none;display:inline-flex;align-items:center}
+.chips .chip:hover{border-color:var(--ink)}
+.chips .chip[aria-current="page"]{background:var(--night);color:#fff;border-color:var(--night)}
+.crumb-dark,.crumb-dark a{color:#A1A1AA}
+.crumb-dark{display:block;margin-bottom:14px}
+@media (max-width:760px){ .chips .chip{min-height:44px;white-space:nowrap;flex:none} }
+
+/* página Consórcio em Ribeirão Preto */
+.rp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rp-item{background:var(--gray-50);border-top:3px solid var(--red);border-radius:14px;padding:22px}
+.rp-item b{display:block;font-family:var(--f-display);font-size:19px;line-height:1.2;margin-bottom:8px}
+.rp-item p{color:var(--ink-soft);font-size:15.5px}
+.rp-links{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.rp-links a{display:block;background:var(--paper);border:1px solid var(--gray-200);border-radius:12px;padding:15px 18px;font-weight:600;color:var(--ink);text-decoration:none}
+.rp-links a:hover{border-color:var(--ink)}
+@media (max-width:860px){ .rp-grid{grid-template-columns:1fr} }

@@ -1,0 +1,100 @@
+---
+/* Página local: "Consórcio em Ribeirão Preto". Mira quem pesquisa consórcio na cidade e na região.
+   Links para matérias só aparecem se a matéria já estiver publicada. */
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { ENDERECO, MAPS } from '../consts';
+import { publicado } from '../lib/publicados';
+
+const no_ar = new Set((await getCollection('blog', ({ data }) => publicado(data))).map((p) => p.slug));
+const leia = [
+  ['consorcio-ou-financiamento', 'Consórcio ou financiamento: qual vale mais a pena'],
+  ['fgts-no-consorcio-de-imovel', 'Como usar o FGTS no consórcio de imóvel'],
+  ['consorcio-de-carro', 'Consórcio de carro vale a pena?'],
+  ['como-funciona-o-lance-no-consorcio', 'Como funciona o lance no consórcio'],
+  ['consorcio-de-caminhao', 'Consórcio de caminhão'],
+  ['consorcio-de-terreno', 'Consórcio de terreno'],
+].filter(([s]) => no_ar.has(s));
+
+const faq = [
+  ['Preciso ir até a unidade para fazer o consórcio?', 'Não precisa. A simulação, as dúvidas e a escolha do plano podem ser feitas pelo WhatsApp ou por chamada de vídeo. Se preferir conversar pessoalmente, é só marcar um horário na unidade Alto da Boa Vista.'],
+  ['Atende quem mora fora de Ribeirão Preto?', 'Sim. Quem mora em cidades da região, como Sertãozinho, Jardinópolis, Cravinhos, Serrana ou Brodowski, é atendido do mesmo jeito, pelo WhatsApp e por chamada de vídeo.'],
+  ['A Ademicon é confiável?', 'A Ademicon é uma administradora autorizada e fiscalizada pelo Banco Central, com mais de 30 anos de mercado. Antes de assinar, você recebe o contrato com todas as condições por escrito.'],
+  ['Qual é o valor mínimo da carta de crédito?', 'Na unidade Alto da Boa Vista, as cartas começam em R$ 100 mil. Isso atende imóvel, terreno, construção, carro, caminhão e máquinas.'],
+  ['Posso usar o FGTS em um imóvel em Ribeirão Preto?', 'No consórcio de imóvel, sim, seguindo as regras do FGTS para imóvel residencial. Eu confiro com você se o seu caso se encaixa antes de qualquer decisão.'],
+  ['Quanto custa o atendimento?', 'Nada. A conversa, a simulação e a explicação das regras são sem custo e sem compromisso.'],
+];
+
+const url = new URL('/consorcio-em-ribeirao-preto/', Astro.site).href;
+const jsonld = [
+  { '@context': 'https://schema.org', '@type': 'Service', name: 'Consórcio em Ribeirão Preto', serviceType: 'Consultoria de consórcio', url,
+    provider: { '@type': 'FinancialService', name: 'João Maia Consórcios', telephone: '+55-16-98110-0028',
+      address: { '@type': 'PostalAddress', streetAddress: 'Rua Adolfo Serra, 1145, Alto da Boa Vista', postalCode: '14025-520', addressLocality: 'Ribeirão Preto', addressRegion: 'SP', addressCountry: 'BR' } },
+    areaServed: [{ '@type': 'City', name: 'Ribeirão Preto' }, { '@type': 'AdministrativeArea', name: 'Região de Ribeirão Preto, SP' }] },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Início', item: new URL('/', Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: 'Consórcio em Ribeirão Preto', item: url } ] }
+];
+---
+<Base title="Consórcio em Ribeirão Preto | Consultor Ademicon | João Maia" description="Consórcio em Ribeirão Preto com atendimento pessoal: simulação grátis, unidade Ademicon no Alto da Boa Vista e atendimento online na região." ctx="ribeirao-preto" jsonld={jsonld}>
+  <section class="darker blogtop">
+    <div class="wrap"><div class="head" style="margin:0">
+      <nav class="crumb crumb-dark" aria-label="Você está em"><a href="/">Início</a> / Ribeirão Preto</nav>
+      <span class="kicker">Ribeirão Preto e região</span>
+      <h1 class="h2like">Consórcio em Ribeirão Preto, <em>com atendimento de perto.</em></h1>
+      <p class="lead">Sou o João Maia, consultor de consórcios da Ademicon na unidade Alto da Boa Vista. Te ajudo a comprar imóvel, carro, caminhão ou máquina sem pagar juros, com a simulação feita no seu caso e alguém da cidade para acompanhar até a contemplação.</p>
+      <div class="row" style="margin-top:6px"><a class="btn btn-orange" data-cta="rp-topo" data-wa="Olá João! Sou de Ribeirão Preto e região e quero uma simulação de consórcio." href="#">Quero minha simulação grátis</a><a class="btn btn-line" href={MAPS} target="_blank" rel="noopener">Como chegar na unidade</a></div>
+      <p class="micro" style="color:var(--mist)">Sem compromisso. Quem responde sou eu, no mesmo dia útil.</p>
+    </div></div>
+  </section>
+
+  <section class="white">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Por que um consultor da cidade</span><h2>Consórcio é um plano longo. <em>Vale ter alguém perto.</em></h2></div>
+      <div class="rp-grid">
+        <div class="rp-item"><b>Atendimento presencial ou online</b><p>Você escolhe: conversa pelo WhatsApp, chamada de vídeo ou conversa na unidade, no Alto da Boa Vista.</p></div>
+        <div class="rp-item"><b>Acompanhamento até a carta sair</b><p>Eu acompanho as assembleias com você e monto a estratégia de lance com base no histórico do grupo.</p></div>
+        <div class="rp-item"><b>Planos para a realidade da região</b><p>Imóvel na cidade, terreno, construção, carro, caminhão e máquinas para quem trabalha com o agro. Cartas a partir de R$ 100 mil.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Onde me encontrar</span><h2>Unidade Ademicon <em>Alto da Boa Vista</em></h2>
+        <p class="lead">{ENDERECO}. O atendimento na unidade é com horário combinado pelo WhatsApp, para você não esperar.</p></div>
+      <div class="cbox">
+        <a data-cta="rp-whatsapp" data-wa="Olá João! Quero marcar um horário na unidade Alto da Boa Vista." href="#"><span>Marcar horário</span><b>Pelo WhatsApp</b><small style="color:var(--ink-soft)">+55 (16) 98110-0028</small></a>
+        <a href={MAPS} target="_blank" rel="noopener"><span>Endereço</span><b>Rua Adolfo Serra, 1145</b><small style="color:var(--orange-text);font-weight:700">Abrir no mapa →</small></a>
+        <a data-cta="rp-video" data-wa="Olá João! Moro na região de Ribeirão Preto e quero agendar uma chamada de vídeo para entender o consórcio." href="#"><span>Mora na região?</span><b>Chamada de vídeo</b><small style="color:var(--ink-soft)">Sertãozinho, Jardinópolis, Cravinhos, Serrana, Brodowski e outras</small></a>
+      </div>
+    </div>
+  </section>
+
+  {leia.length > 0 && (
+    <section class="white">
+      <div class="wrap narrow">
+        <div class="head"><span class="kicker">Antes de decidir</span><h2>Guias para entender o consórcio</h2></div>
+        <ul class="rp-links">{leia.map(([s, t]) => <li><a href={`/blog/${s}/`}>{t} →</a></li>)}</ul>
+        <p style="margin-top:14px"><a href="/blog/">Ver todas as matérias do blog</a></p>
+      </div>
+    </section>
+  )}
+
+  <section class="light">
+    <div class="wrap narrow">
+      <div class="head"><span class="kicker">Dúvidas de quem é da região</span><h2>Perguntas frequentes</h2></div>
+      {faq.map(([q, a]) => <details><summary>{q}</summary><p>{a}</p></details>)}
+    </div>
+  </section>
+
+  <section class="dark final">
+    <div class="wrap">
+      <span class="kicker">Próximo passo</span>
+      <h2>Quanto fica a <em>sua parcela?</em></h2>
+      <p class="lead">Me diga o bem que você quer e eu te mostro parcela, prazo e estratégia de lance, sem juros.</p>
+      <a class="btn btn-orange" data-cta="rp-final" data-wa="Olá João! Sou de Ribeirão Preto e região e quero saber quanto fica a minha parcela no consórcio." href="#">Quero minha simulação grátis</a>
+    </div>
+  </section>
+</Base>

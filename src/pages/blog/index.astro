@@ -23,11 +23,11 @@ const usadas = Object.entries(CATS).filter(([k]) => posts.some((p) => p.data.cat
       <div class="cards cards-blog cards-topo">{topo.map((p) => <Card post={p} />)}</div>
     </section>
     <h2 class="blog-sec-t" id="t-recentes">Mais recentes</h2>
-    <div class="chips filters" id="filters" role="group" aria-label="Filtrar por categoria">
-      <button type="button" data-f="todos" aria-pressed="true">Todos</button>
-      {usadas.map(([k, v]) => <button type="button" data-f={k} aria-pressed="false">{v}</button>)}
-    </div>
-    <div class="cards cards-blog" id="blog-cards">{posts.filter((p) => !noTopo.has(p.slug)).map((p, i) => <Card post={p} destaque={i === 0} />)}{posts.filter((p) => noTopo.has(p.slug)).map((p) => <Card post={p} noTopo={true} />)}</div>
+    <nav class="chips filters" aria-label="Temas do blog">
+      <a class="chip" href="/blog/" aria-current="page">Todos</a>
+      {usadas.map(([k, v]) => <a class="chip" href={`/blog/categoria/${k}/`}>{v}</a>)}
+    </nav>
+    <div class="cards cards-blog" id="blog-cards">{posts.filter((p) => !noTopo.has(p.slug)).map((p, i) => <Card post={p} destaque={i === 0} />)}</div>
     <p id="blog-vazio" hidden style="color:var(--ink-soft)">Nenhum artigo nesta categoria ainda.</p>
   </div>
 </Base>

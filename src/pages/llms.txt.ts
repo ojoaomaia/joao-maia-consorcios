@@ -11,7 +11,7 @@ export const GET: APIRoute = async ({ site }) => {
   const porCat = Object.entries(CATS).map(([k, nome]) => {
     const lista = posts.filter((p) => p.data.category === k);
     if (!lista.length) return '';
-    return `\n### ${nome}\n` + lista.map((p) => `- [${p.data.title}](${u(`/blog/${p.slug}/`)}): ${p.data.summary}`).join('\n');
+    return `\n### [${nome}](${u(`/blog/categoria/${k}/`)})\n` + lista.map((p) => `- [${p.data.title}](${u(`/blog/${p.slug}/`)}): ${p.data.summary}`).join('\n');
   }).join('\n');
   const txt = `# João Maia Consórcios
 
@@ -30,6 +30,7 @@ export const GET: APIRoute = async ({ site }) => {
 - [Teste de 1 minuto](${u('/#simulador')}): descubra se o consórcio combina com o seu momento
 - [Sobre o João](${u('/sobre/')})
 - [Contato](${u('/contato/')})
+- [Consórcio em Ribeirão Preto](${u('/consorcio-em-ribeirao-preto/')}): atendimento presencial na unidade Alto da Boa Vista e online para a região
 - [Blog](${u('/blog/')}): guias de consórcio explicados sem enrolação
 
 ## Artigos do blog

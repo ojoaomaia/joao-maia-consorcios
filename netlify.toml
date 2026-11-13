@@ -7,3 +7,11 @@
 
 [functions]
   directory = "netlify/functions"
+
+# links antigos do filtro do blog (/blog/?categoria=imovel) vão para a página da categoria
+[[redirects]]
+  from = "/blog/"
+  to = "/blog/categoria/:c/"
+  status = 301
+  force = true
+  query = { categoria = ":c" }

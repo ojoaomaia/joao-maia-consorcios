@@ -69,6 +69,17 @@ if (GA_ID) {
     });
   }
 }
+/* compartilhar matéria: WhatsApp (abre a lista de contatos) e copiar link. Evento "compartilhar" no GA4, separado dos cliques de contato. */
+document.addEventListener('click', function(e){
+  var b = e.target.closest('[data-share]'); if (!b) return;
+  var metodo = b.getAttribute('data-share');
+  gtag('event', 'compartilhar', { metodo: metodo, botao: 'compartilhar-' + (b.getAttribute('data-local') || metodo), pagina: location.pathname });
+  if (metodo !== 'copiar') return;
+  var link = b.getAttribute('data-link') || location.href, txt = b.textContent;
+  function ok(){ b.textContent = 'Link copiado ✓'; setTimeout(function(){ b.textContent = txt; }, 2200); }
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(link).then(ok, function(){ prompt('Copie o link:', link); });
+  else { var t = document.createElement('textarea'); t.value = link; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); ok(); } catch (x) {} t.remove(); }
+});
 /* medição de cliques: cada botão tem um nome em data-cta (ex.: topo-simulacao, materia-fim). Aparece no GA4 no parâmetro "botao". */
 function nomeBotao(a){ return a.getAttribute('data-cta') || a.id || 'link'; }
 function secaoDe(a){ var sec = a.closest('section,main,.mbar,header,footer'); return (sec && (sec.id || sec.className.split(' ').join('-'))) || ''; }

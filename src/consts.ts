@@ -10,6 +10,14 @@ export const CATS: Record<string, string> = {
   comparativo: 'Consórcio x financiamento'
 };
 
+/* Páginas de categoria do blog (/blog/categoria/...): título para o Google, título da página e texto de abertura */
+export const CAT_PAGINA: Record<string, { seo: string; h1: string; intro: string }> = {
+  imovel: { seo: 'Consórcio de imóvel: guias, FGTS, parcela e lance', h1: 'Consórcio de <em>imóvel</em>', intro: 'Tudo para sair do aluguel ou comprar o próximo imóvel sem pagar juros: quanto fica a parcela, como usar o FGTS, terreno, construção e o que muda em relação ao financiamento. Guias escritos por quem atende esse tipo de compra todo dia.' },
+  veiculo: { seo: 'Consórcio de veículo: carro, caminhão e quando compensa', h1: 'Consórcio de <em>veículo</em>', intro: 'Carro, moto, caminhão ou veículo para trabalhar: quando o consórcio compensa mais que o financiamento, como fica a parcela e como planejar a troca sem pagar juros.' },
+  lance: { seo: 'Lance e contemplação no consórcio: tipos e estratégia', h1: 'Lance e <em>contemplação</em>', intro: 'Como funciona o lance, quanto ofertar, lance embutido, 13º salário, assembleia e quanto tempo costuma levar para ser contemplado. O caminho para antecipar a sua carta sem dar passo errado.' },
+  comparativo: { seo: 'Consórcio x financiamento: custos, taxas e comparativos', h1: 'Consórcio <em>x financiamento</em>', intro: 'Comparativos honestos para decidir com números: consórcio ou financiamento, consórcio ou poupar, taxa de administração, fundo de reserva e quando o consórcio é, ou não é, a melhor escolha.' }
+};
+
 /* Ícones das capas do blog, no mesmo traço neon da animação */
 export const ICONS: Record<string, string> = {
   imovel: '<svg class="ic" viewBox="0 0 120 100" aria-hidden="true"><path d="M14 52 60 14l46 38"/><path d="M24 44v46h72V44"/><path d="M50 90V64h20v26"/><path d="M76 56h12v12H76z"/><path d="M80 24v-8h10v16"/><path d="M6 90h108"/></svg>',
