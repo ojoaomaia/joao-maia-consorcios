@@ -27,25 +27,34 @@ jobs:
         run: |
           node -e '
             const fs = require("fs");
-            const agora = Date.now(), umDia = 24 * 60 * 60 * 1000, lista = [];
+            const agora = Date.now(), umDia = 24 * 60 * 60 * 1000, conferir = [], liberadas = [];
             for (const f of fs.readdirSync("src/content/blog").filter((x) => x.endsWith(".md"))) {
-              const fm = (fs.readFileSync("src/content/blog/" + f, "utf8").match(/^---\n([\s\S]*?)\n---/) || [])[1] || "";
+              const caminho = "src/content/blog/" + f, txt = fs.readFileSync(caminho, "utf8");
+              const fm = (txt.match(/^---\n([\s\S]*?)\n---/) || [])[1] || "";
               const campo = (k) => ((fm.match(new RegExp("^" + k + ":[ \\t]*[\"\x27]?([^\"\x27\\n]*)", "m")) || [])[1] || "").trim();
               if (campo("draft") === "true") continue;
               const dia = campo("date").slice(0, 10), hora = campo("hora") || "00:00";
               if (!/^\d{4}-\d{2}-\d{2}$/.test(dia)) continue;
               const quando = new Date(dia + "T" + hora + ":00-03:00").getTime();
-              if (quando <= agora && agora - quando < umDia) lista.push(f.replace(/\.md$/, ""));
+              if (quando > agora) continue;
+              const slug = f.replace(/\.md$/, "");
+              if (campo("agendada") === "true") {
+                /* chegou a hora: tira a marca "agendada" (o painel deixa de mostrar no filtro de agendadas) */
+                fs.writeFileSync(caminho, txt.replace(/^agendada:[^\n]*\n/m, ""));
+                liberadas.push(slug);
+              } else if (agora - quando < umDia) conferir.push(slug);
             }
-            fs.writeFileSync("candidatas.txt", lista.join("\n"));
+            fs.writeFileSync("conferir.txt", conferir.join("\n"));
+            fs.writeFileSync("liberadas.txt", liberadas.join(" "));
           '
-          PUBLICAR=""
-          for slug in $(cat candidatas.txt); do
+          PUBLICAR="$(cat liberadas.txt)"
+          for slug in $(cat conferir.txt); do
             CODIGO=$(curl -sL -o /dev/null -w '%{http_code}' "$SITE/blog/$slug/")
             RECENTE=$(git log --since="60 minutes ago" --grep="$slug" --format=%h | head -1)
             echo "$slug: site respondeu $CODIGO${RECENTE:+, já houve tentativa recente ($RECENTE)}"
             if [ "$CODIGO" = "404" ] && [ -z "$RECENTE" ]; then PUBLICAR="$PUBLICAR $slug"; fi
           done
+          rm -f conferir.txt liberadas.txt
           echo "materias=$PUBLICAR" >> "$GITHUB_OUTPUT"
           echo "Para publicar agora:${PUBLICAR:- nenhuma}"
       - name: Atualiza o site
@@ -53,5 +62,6 @@ jobs:
         run: |
           git config user.name "João Maia"
           git config user.email "ojoaomaia@users.noreply.github.com"
-          git commit --allow-empty -m "Publica matérias agendadas:${{ steps.busca.outputs.materias }}"
+          git add src/content/blog
+          git commit --allow-empty -m "Publica matérias agendadas: ${{ steps.busca.outputs.materias }}"
           git push

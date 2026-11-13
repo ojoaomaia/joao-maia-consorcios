@@ -1,7 +1,8 @@
 /* Melhorias do painel do blog João Maia Consórcios:
    1. campo "contador": mostra quantos caracteres faltam ou sobram;
    2. pré-visualização com o visual do site;
-   3. "Checklist do Google", que confere as regras de SEO enquanto o artigo é escrito. */
+   3. "Checklist do Google", que confere as regras de SEO enquanto o artigo é escrito;
+   4. marca a matéria como "agendada" quando a data e o horário são futuros. */
 (function () {
   var CMS = window.CMS, h = window.h, createClass = window.createClass;
   if (!CMS || !h || !createClass) return;
@@ -120,6 +121,18 @@
       return h('div', { className: 'jm-prev' }, box, artigo);
     }
   });
+  /* ---------- 4. Agendamento: marca "agendada" ao salvar quando a data e o horário são futuros ---------- */
+  CMS.registerEventListener({
+    name: 'preSave',
+    handler: function (ev) {
+      var data = ev.entry.get('data');
+      var d = data.get('date'), hora = data.get('hora') || '00:00';
+      var dia = d ? (typeof d === 'string' ? d : new Date(d).toISOString()).slice(0, 10) : '';
+      var futura = !data.get('draft') && /^\d{4}-\d{2}-\d{2}$/.test(dia) && new Date(dia + 'T' + hora + ':00-03:00').getTime() > Date.now();
+      return futura ? data.set('agendada', true) : data.delete('agendada');
+    }
+  });
+
   CMS.registerPreviewStyle('/assets/site.css');
   CMS.registerPreviewStyle('/admin/painel-preview.css');
   CMS.registerPreviewTemplate('blog', Preview);
