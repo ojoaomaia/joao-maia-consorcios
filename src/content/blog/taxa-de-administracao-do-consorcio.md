@@ -4,7 +4,6 @@ seo_title: "Taxa de administração do consórcio: quanto custa [2026]"
 summary: "Entenda a taxa de administração do consórcio, a média do Banco Central e como transformar o percentual em reais antes de assinar."
 date: 2026-11-16
 hora: "07:30"
-agendada: true
 category: comparativo
 keyword: "taxa de administração do consórcio"
 cover: "/img/blog/taxa-de-administracao-do-consorcio-capa.webp"
