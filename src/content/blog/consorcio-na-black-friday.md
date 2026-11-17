@@ -4,7 +4,6 @@ seo_title: "Consórcio na Black Friday: vale a pena? [2026]"
 summary: "Consórcio na Black Friday vale a pena? Entenda a parcela reduzida até a contemplação, faça a conta do total e veja o que conferir."
 date: 2026-11-17
 hora: "07:30"
-agendada: true
 category: comparativo
 keyword: "consórcio na Black Friday"
 cover: "/img/blog/consorcio-na-black-friday-capa.webp"
