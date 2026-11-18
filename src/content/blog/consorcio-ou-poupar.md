@@ -4,7 +4,6 @@ seo_title: "Consórcio ou poupar e comprar à vista? Compare [2026]"
 summary: "Consórcio ou poupar? Compare com números o custo do consórcio e o rendimento da poupança, o efeito do preço do bem e o seu perfil."
 date: 2026-11-18
 hora: "07:30"
-agendada: true
 category: comparativo
 keyword: "consórcio ou poupar"
 cover: "/img/blog/consorcio-ou-poupar-capa.webp"
