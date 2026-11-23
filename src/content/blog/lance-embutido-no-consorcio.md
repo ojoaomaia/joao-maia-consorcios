@@ -4,7 +4,6 @@ seo_title: "Lance embutido no consórcio: como funciona [2026]"
 summary: "Veja como funciona o lance embutido no consórcio, quanto a carta diminui, um exemplo com números e quando ele vale a pena."
 date: 2026-11-23
 hora: "07:30"
-agendada: true
 category: lance
 keyword: "lance embutido"
 cover: "/img/blog/lance-embutido-no-consorcio-capa.webp"
