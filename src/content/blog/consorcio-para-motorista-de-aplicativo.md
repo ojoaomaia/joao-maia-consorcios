@@ -4,7 +4,6 @@ seo_title: "Consórcio para motorista de aplicativo: vale a pena?"
 summary: "Consórcio para motorista de aplicativo vale a pena? Veja a conta com o carro alugado, a parcela aproximada, o lance e os cuidados."
 date: 2026-11-24
 hora: "07:30"
-agendada: true
 category: veiculo
 keyword: "consórcio para motorista de aplicativo"
 cover: "/img/blog/consorcio-para-motorista-de-aplicativo-capa.webp"
