@@ -4,7 +4,6 @@ seo_title: "Assembleia do consórcio: como funciona [2026]"
 summary: "Entenda a assembleia do consórcio: quando acontece, como são o sorteio e o lance, quem pode participar e como ver o resultado."
 date: 2026-11-25
 hora: "07:30"
-agendada: true
 category: lance
 keyword: "assembleia do consórcio"
 cover: "/img/blog/assembleia-do-consorcio-capa.webp"
